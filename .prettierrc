@@ -1,0 +1,37 @@
+{
+	"trailingComma": "es5",
+	"tabWidth": 4,
+	"printWidth": 120,
+	"htmlWhitespaceSensitivity": "css",
+	"insertPragma": false,
+	"proseWrap": "preserve",
+	"requirePragma": false,
+	"useTabs": true,
+	"singleQuote": false,
+	"vueIndentScriptAndStyle": false,
+	"embeddedLanguageFormatting": "auto",
+	"arrowParens": "avoid",
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"overrides": [
+		{
+			"files": "*.jsx",
+			"options": {
+				"singleQuote": false,
+				"singleAttributePerLine": true
+			}
+		},
+		{
+			"files": "*.html",
+			"options": {
+				"singleQuote": false,
+				"singleAttributePerLine": false
+			}
+		},
+		{
+			"files": "*.php",
+			"options": {
+				"parser": "html"
+			}
+		}
+	]
+}
