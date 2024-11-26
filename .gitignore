@@ -1,0 +1,62 @@
+# Node.js dependencies
+node_modules/
+
+# Tailwind CSS output
+public/css/style.css
+
+# CodeIgniter system files
+system/
+vendor/
+
+# Environment files
+.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+.localized
+Desktop.ini
+
+# Log files
+application/logs/*
+!application/logs/index.html
+*.log
+
+# Temp files
+tmp/
+*.tmp
+
+# Cache
+application/cache/*
+!application/cache/index.html
+
+# Composer dependencies
+composer.lock
+
+# Tests and mocks
+tests/mocks/database/ci_test.sqlite
+/tests/tests/
+/tests/results/
+
+# User guide
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+# IDE Files
+/nbproject/
+/.idea/*
+
+# Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# PHPStorm or IntelliJ IDEA
+.idea/
+
+# Visual Studio Code
+.vscode/
