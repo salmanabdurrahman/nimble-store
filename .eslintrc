@@ -1,0 +1,157 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended",
+		"airbnb",
+		"plugin:tailwindcss/recommended"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"react-hooks",
+		"prettier",
+		"jsx-a11y",
+		"import",
+		"tailwindcss"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"trailingComma": "es5",
+				"tabWidth": 4,
+				"printWidth": 120,
+				"singleQuote": false,
+				"arrowParens": "avoid",
+				"semi": true,
+				"htmlWhitespaceSensitivity": "css",
+				"insertPragma": false,
+				"proseWrap": "preserve",
+				"requirePragma": false,
+				"useTabs": true,
+				"vueIndentScriptAndStyle": false,
+				"embeddedLanguageFormatting": "auto"
+			}
+		],
+		"camelcase": ["error", { "properties": "always" }],
+		"consistent-return": "error",
+		"eqeqeq": ["error", "always"],
+		"func-names": ["warn", "as-needed"],
+		"no-var": "error",
+		"prefer-const": ["error", { "destructuring": "all" }],
+		"prefer-arrow-callback": "error",
+		"arrow-body-style": ["error", "as-needed"],
+		"no-use-before-define": ["error", { "functions": false, "classes": true }],
+		"no-magic-numbers": ["warn", { "ignore": [0, 1, -1] }],
+		"no-duplicate-imports": "error",
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index"
+				],
+				"newlines-between": "always",
+				"alphabetize": { "order": "asc", "caseInsensitive": true }
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{ "extensions": [".js", ".jsx", ".tsx"] }
+		],
+		"jsx-quotes": ["error", "prefer-double"],
+		"quotes": ["error", "double", { "avoidEscape": true }],
+		"react/jsx-boolean-value": ["error", "never"],
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"jsx-a11y/anchor-is-valid": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{ "argsIgnorePattern": "^_" }
+		],
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": "variable",
+				"format": ["camelCase", "UPPER_CASE"],
+				"leadingUnderscore": "allow"
+			},
+			{
+				"selector": "function",
+				"format": ["camelCase"]
+			},
+			{
+				"selector": "typeLike",
+				"format": ["PascalCase"]
+			}
+		],
+		"complexity": ["warn", { "max": 10 }],
+		"max-lines": ["warn", { "max": 300, "skipComments": true }],
+		"max-lines-per-function": ["warn", { "max": 50, "skipComments": true }],
+		"max-params": ["warn", { "max": 4 }],
+		"no-console": ["warn", { "allow": ["warn", "error"] }],
+		"no-nested-ternary": "error",
+		"no-shadow": ["error", { "builtinGlobals": false, "hoist": "all" }],
+		"no-underscore-dangle": ["warn", { "allowAfterThis": true }],
+		"object-shorthand": ["error", "always"],
+		"prefer-destructuring": [
+			"warn",
+			{
+				"VariableDeclarator": { "array": false, "object": true },
+				"AssignmentExpression": { "array": true, "object": false }
+			},
+			{
+				"enforceForRenamedProperties": false
+			}
+		],
+		"prefer-template": "error",
+		"sort-imports": [
+			"warn",
+			{
+				"ignoreDeclarationSort": true,
+				"ignoreCase": true
+			}
+		],
+		"spaced-comment": ["error", "always", { "exceptions": ["-", "+"] }],
+		"lines-between-class-members": [
+			"error",
+			"always",
+			{ "exceptAfterSingleLine": true }
+		],
+		"no-trailing-spaces": "error",
+		"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+		"consistent-this": ["error", "self"],
+		"no-lonely-if": "error",
+		"prefer-spread": "error",
+		"prefer-rest-params": "error",
+		"tailwindcss/classnames-order": "warn",
+		"tailwindcss/enforces-shorthand": "warn",
+		"tailwindcss/migration-from-tailwind-2": "error",
+		"tailwindcss/no-custom-classname": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
