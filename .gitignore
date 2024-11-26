@@ -33,6 +33,9 @@ application/cache/*
 # Composer dependencies
 composer.lock
 
+# Node.js lock file
+package-lock.json
+
 # Tests and mocks
 tests/mocks/database/ci_test.sqlite
 /tests/tests/
