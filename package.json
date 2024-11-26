@@ -1,11 +1,12 @@
 {
-	"name": "uas-pwl",
+	"name": "nimble-store",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-css": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/style.css --watch"
+		"build-css": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/style.css --watch",
+		"install": "npm i && composer install"
 	},
 	"keywords": [],
 	"author": "",

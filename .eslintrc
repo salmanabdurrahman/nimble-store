@@ -2,7 +2,7 @@
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"node": true
+		"node": true,
 	},
 	"extends": [
 		"eslint:recommended",
@@ -11,23 +11,16 @@
 		"plugin:jsx-a11y/recommended",
 		"plugin:prettier/recommended",
 		"airbnb",
-		"plugin:tailwindcss/recommended"
+		"plugin:tailwindcss/recommended",
 	],
 	"parserOptions": {
 		"ecmaFeatures": {
-			"jsx": true
+			"jsx": true,
 		},
 		"ecmaVersion": 12,
-		"sourceType": "module"
+		"sourceType": "module",
 	},
-	"plugins": [
-		"react",
-		"react-hooks",
-		"prettier",
-		"jsx-a11y",
-		"import",
-		"tailwindcss"
-	],
+	"plugins": ["react", "react-hooks", "prettier", "jsx-a11y", "import", "tailwindcss"],
 	"rules": {
 		"prettier/prettier": [
 			"error",
@@ -44,8 +37,8 @@
 				"requirePragma": false,
 				"useTabs": true,
 				"vueIndentScriptAndStyle": false,
-				"embeddedLanguageFormatting": "auto"
-			}
+				"embeddedLanguageFormatting": "auto",
+			},
 		],
 		"camelcase": ["error", { "properties": "always" }],
 		"consistent-return": "error",
@@ -61,22 +54,12 @@
 		"import/order": [
 			"warn",
 			{
-				"groups": [
-					"builtin",
-					"external",
-					"internal",
-					"parent",
-					"sibling",
-					"index"
-				],
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
 				"newlines-between": "always",
-				"alphabetize": { "order": "asc", "caseInsensitive": true }
-			}
+				"alphabetize": { "order": "asc", "caseInsensitive": true },
+			},
 		],
-		"react/jsx-filename-extension": [
-			1,
-			{ "extensions": [".js", ".jsx", ".tsx"] }
-		],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
 		"jsx-quotes": ["error", "prefer-double"],
 		"quotes": ["error", "double", { "avoidEscape": true }],
 		"react/jsx-boolean-value": ["error", "never"],
@@ -85,25 +68,22 @@
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"jsx-a11y/anchor-is-valid": "warn",
-		"@typescript-eslint/no-unused-vars": [
-			"warn",
-			{ "argsIgnorePattern": "^_" }
-		],
+		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
 		"@typescript-eslint/naming-convention": [
 			"error",
 			{
 				"selector": "variable",
 				"format": ["camelCase", "UPPER_CASE"],
-				"leadingUnderscore": "allow"
+				"leadingUnderscore": "allow",
 			},
 			{
 				"selector": "function",
-				"format": ["camelCase"]
+				"format": ["camelCase"],
 			},
 			{
 				"selector": "typeLike",
-				"format": ["PascalCase"]
-			}
+				"format": ["PascalCase"],
+			},
 		],
 		"complexity": ["warn", { "max": 10 }],
 		"max-lines": ["warn", { "max": 300, "skipComments": true }],
@@ -118,26 +98,22 @@
 			"warn",
 			{
 				"VariableDeclarator": { "array": false, "object": true },
-				"AssignmentExpression": { "array": true, "object": false }
+				"AssignmentExpression": { "array": true, "object": false },
 			},
 			{
-				"enforceForRenamedProperties": false
-			}
+				"enforceForRenamedProperties": false,
+			},
 		],
 		"prefer-template": "error",
 		"sort-imports": [
 			"warn",
 			{
 				"ignoreDeclarationSort": true,
-				"ignoreCase": true
-			}
+				"ignoreCase": true,
+			},
 		],
 		"spaced-comment": ["error", "always", { "exceptions": ["-", "+"] }],
-		"lines-between-class-members": [
-			"error",
-			"always",
-			{ "exceptAfterSingleLine": true }
-		],
+		"lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
 		"no-trailing-spaces": "error",
 		"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
 		"consistent-this": ["error", "self"],
@@ -147,11 +123,11 @@
 		"tailwindcss/classnames-order": "warn",
 		"tailwindcss/enforces-shorthand": "warn",
 		"tailwindcss/migration-from-tailwind-2": "error",
-		"tailwindcss/no-custom-classname": "off"
+		"tailwindcss/no-custom-classname": "off",
 	},
 	"settings": {
 		"react": {
-			"version": "detect"
-		}
-	}
+			"version": "detect",
+		},
+	},
 }
