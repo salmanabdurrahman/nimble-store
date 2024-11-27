@@ -91,3 +91,49 @@
     </div>
 </section>
 <!-- categories section -->
+<section class="w-full mt-[32px] lg:mt-[100px]">
+    <div class="container flex flex-col items-center justify-center gap-6 lg:gap-16">
+        <div class="flex items-center justify-between w-full">
+            <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal uppercase lg:text-[74px]">Categories</h3>
+            <div class="flex gap-2 items-center justify-center lg:gap-4">
+                <button type="button"
+                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
+                    <img src="<?= base_url('public/icons/categories/prev-button.png'); ?>" class="block w-4"
+                        alt="prev-button" loading="lazy">
+                </button>
+                <button type="button"
+                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
+                    <img src="<?= base_url('public/icons/categories/next-button.png'); ?>" class="block w-4"
+                        alt="next-button" loading="lazy">
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 items-center justify-center lg:grid-cols-2">
+            <!-- category -->
+            <div class="w-full h-full max-h-[348px] overflow-hidden relative lg:max-h-[600px]">
+                <img src="<?= base_url('public/images/categories/casual.png'); ?>" class="block w-full h-full"
+                    alt="casual" loading="lazy">
+                <h5
+                    class="font-rubik font-semibold text-2xl text-dark-charcoal absolute bottom-4 left-4 lg:text-4xl lg:left-12 lg:bottom-[30px]">
+                    Casual <span class="block">Shoes</span>
+                </h5>
+                <button type="button"
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
+                    <img src="<?= base_url('public/icons/categories/arrow-up.png'); ?>" class="block w-4" alt="arrow">
+                </button>
+            </div>
+            <div class="w-full h-full max-h-[348px] overflow-hidden relative lg:max-h-[600px]">
+                <img src="<?= base_url('public/images/categories/basketball.png'); ?>" class="block w-full h-full"
+                    alt="casual" loading="lazy">
+                <h5
+                    class="font-rubik font-semibold text-2xl text-dark-charcoal absolute bottom-4 left-4 lg:text-4xl lg:left-12 lg:bottom-[30px]">
+                    Basketball <span class="block">Shoes</span>
+                </h5>
+                <button type="button"
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
+                    <img src="<?= base_url('public/icons/categories/arrow-up.png'); ?>" class="block w-4" alt="arrow">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
