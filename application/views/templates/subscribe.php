@@ -1,6 +1,6 @@
 <!-- subscribe section -->
 <section
-    class="container mt-[30px] bg-royal-blue rounded-[16px] p-[16px] pb-[65px] text-white flex flex-col gap-[8px] items-start justify-center lg:py-[34px] lg:gap-[16px] lg:px-[72px] lg:pb-[90px] lg:mt-[100px] lg:rounded-none lg:rounded-t-[48px]">
+    class="container mt-[45px] bg-royal-blue rounded-[16px] p-[16px] pb-[65px] text-white flex flex-col gap-[8px] items-start justify-center lg:py-[34px] lg:gap-[16px] lg:px-[72px] lg:pb-[90px] lg:mt-[100px] lg:rounded-none lg:rounded-t-[48px]">
     <h2 class="font-rubik font-semibold text-[27px] leading-[1.1] lg:text-[48px] lg:max-w-[1006px]">Subscribe for
         Product Updates and Get Notified with the Latest Offers</h2>
     <p class="font-open-sans font-medium text-[14px] mb-[14px] lg:mb-[16px] lg:text-[20px]"><span

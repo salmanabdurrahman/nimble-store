@@ -32,7 +32,7 @@
         </div>
         <img src="<?= base_url('public/icons/header/hamburger-menu.png'); ?>" alt="hamburger-menu"
             class="block w-[20px] lg:hidden" loading="lazy">
-        <h3 class="font-rubik font-bold text-[25px] lg:text-[40px] cursor-pointer"
+        <h3 class="font-rubik font-bold text-[25px] lg:text-[40px] cursor-pointer text-dark-charcoal"
             onclick="location.href='<?= base_url('home'); ?>'">NIMBLE</h3>
         <div class="flex items-center gap-[9px] lg:gap-[40px]">
             <input type="text" name=""
