@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="<?= base_url('public/icons/favicon.png'); ?>" type="image/png" sizes="64x64">
+    <link rel="icon" href="<?= base_url('public/icons/header/favicon.png'); ?>" type="image/png" sizes="64x64">
     <title><?= $header_title; ?></title>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
             <a href="<?= base_url('contact'); ?>"
                 class="text-decoration-none font-rubik transition-all duration-300 font-medium text-lg hover:font-bold">Contact</a>
         </div>
-        <img src="<?= base_url('public/icons/hamburger-menu.png'); ?>" alt="hamburger-menu"
+        <img src="<?= base_url('public/icons/header/hamburger-menu.png'); ?>" alt="hamburger-menu"
             class="block w-[20px] lg:hidden" loading="lazy">
         <h3 class="font-rubik font-bold text-[25px] lg:text-[40px] cursor-pointer"
             onclick="location.href='<?= base_url('home'); ?>'">NIMBLE</h3>
@@ -38,9 +38,9 @@
             <input type="text" name=""
                 class="hidden lg:block rounded-[46px] py-[8px] px-[16px] shadow-[-1px_1px_5px_1px_rgb(0,0,0,0.1)] focus:outline-none focus:border-none focus:ring-0 font-rubik font-normal text-lg placeholder:text-[#99A2A5]"
                 placeholder="Find shoes" id="">
-            <img src="<?= base_url('public/icons/user-icon.png'); ?>" alt="user-icon"
+            <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
                 class="block w-[20px] cursor-pointer lg:w-[24px]" loading="lazy">
-            <img src="<?= base_url('public/icons/shopping-cart.png'); ?>" alt="shopping-cart"
+            <img src="<?= base_url('public/icons/header/shopping-cart.png'); ?>" alt="shopping-cart"
                 class="block w-[20px] cursor-pointer lg:w-[24px]" loading="lazy">
         </div>
     </header>

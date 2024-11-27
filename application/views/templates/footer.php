@@ -30,15 +30,15 @@
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Follow Us</h3>
             <div class="flex gap-[16px] items-start justify-center lg:gap-[24px]">
                 <a href="" class="block" target="_blank">
-                    <img src="<?= base_url('public/icons/facebook.png'); ?>" class="block w-[24px]" alt="facebook"
-                        target="_blank" loading="lazy">
+                    <img src="<?= base_url('public/icons/footer/facebook.png'); ?>" class="block w-[24px]"
+                        alt="facebook" target="_blank" loading="lazy">
                 </a>
                 <a href="" class="block" target="_blank">
-                    <img src="<?= base_url('public/icons/instagram.png'); ?>" class="block w-[24px]" alt="instagram"
-                        target="_blank" loading="lazy">
+                    <img src="<?= base_url('public/icons/footer/instagram.png'); ?>" class="block w-[24px]"
+                        alt="instagram" target="_blank" loading="lazy">
                 </a>
                 <a href="" class="block" target="_blank">
-                    <img src="<?= base_url('public/icons/tiktok.png'); ?>" class="block w-[24px]" alt="tiktok"
+                    <img src="<?= base_url('public/icons/footer/tiktok.png'); ?>" class="block w-[24px]" alt="tiktok"
                         target="_blank" loading="lazy">
                 </a>
             </div>
