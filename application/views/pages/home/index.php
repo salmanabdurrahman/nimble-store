@@ -30,3 +30,72 @@
         </div>
     </div>
 </section>
+<!-- new products section -->
+<section class="mt-[32px] flex flex-col items-center justify-center gap-[24px] container lg:mt-[100px] lg:gap-[32px]">
+    <div class="flex gap-[32px] items-center justify-between w-full">
+        <h3
+            class="font-rubik font-semibold text-2xl text-dark-charcoal leading-[95%] max-w-[172px] w-full lg:text-[74px] lg:max-w-[746px] uppercase">
+            Don’t miss
+            out new drops
+        </h3>
+        <button type="button"
+            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase">Shop
+            new drops</button>
+    </div>
+    <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
+        <!-- card -->
+        <div class="flex flex-col gap-2 w-full max-w-[171px] lg:max-w-[318px]">
+            <div
+                class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px] lg:max-w-[318px]">
+                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                    class="block w-full h-full max-w-[155px] max-h-[164px] rounded-xl lg:rounded-3xl lg:max-w-[302px] lg:max-h-[334px]"
+                    loading="lazy">
+            </div>
+            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
+                PARLEY RUNNING SHOES</h3>
+            <button type="button"
+                class="bg-dark-charcoal rounded-lg w-full max-w-[171px] font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] lg:max-w-[318px] uppercase">View
+                Product - <span class="text-golden-orange inline-block">$125</span></button>
+        </div>
+        <div class="flex flex-col gap-2 w-full max-w-[171px] lg:max-w-[318px]">
+            <div
+                class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px] lg:max-w-[318px]">
+                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                    class="block w-full h-full max-w-[155px] max-h-[164px] rounded-xl lg:rounded-3xl lg:max-w-[302px] lg:max-h-[334px]"
+                    loading="lazy">
+            </div>
+            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
+                PARLEY RUNNING SHOES</h3>
+            <button type="button"
+                class="bg-dark-charcoal rounded-lg w-full max-w-[171px] font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] lg:max-w-[318px] uppercase">View
+                Product - <span class="text-golden-orange inline-block">$125</span></button>
+        </div>
+        <div class="flex flex-col gap-2 w-full max-w-[171px] lg:max-w-[318px]">
+            <div
+                class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px] lg:max-w-[318px]">
+                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                    class="block w-full h-full max-w-[155px] max-h-[164px] rounded-xl lg:rounded-3xl lg:max-w-[302px] lg:max-h-[334px]"
+                    loading="lazy">
+            </div>
+            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
+                PARLEY RUNNING SHOES</h3>
+            <button type="button"
+                class="bg-dark-charcoal rounded-lg w-full max-w-[171px] font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] lg:max-w-[318px] uppercase">View
+                Product - <span class="text-golden-orange inline-block">$125</span></button>
+        </div>
+        <div class="flex flex-col gap-2 w-full max-w-[171px] lg:max-w-[318px]">
+            <div
+                class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px] lg:max-w-[318px]">
+                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                    class="block w-full h-full max-w-[155px] max-h-[164px] rounded-xl lg:rounded-3xl lg:max-w-[302px] lg:max-h-[334px]"
+                    loading="lazy">
+            </div>
+            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
+                PARLEY RUNNING SHOES</h3>
+            <button type="button"
+                class="bg-dark-charcoal rounded-lg w-full max-w-[171px] font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] lg:max-w-[318px] uppercase">View
+                Product - <span class="text-golden-orange inline-block">$125</span></button>
+        </div>
+    </div>
+</section>
+<!-- categories section -->
