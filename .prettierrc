@@ -26,12 +26,6 @@
 				"singleQuote": false,
 				"singleAttributePerLine": false
 			}
-		},
-		{
-			"files": "*.php",
-			"options": {
-				"parser": "html"
-			}
 		}
 	]
 }
