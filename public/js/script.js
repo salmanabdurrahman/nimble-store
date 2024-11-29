@@ -42,4 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			navLink.classList.add("font-bold");
 		});
 	});
+
+	// swiper halaman home
+	const swiper = new Swiper(".swiper", {
+		autoplay: {
+			loop: true,
+			delay: 4000,
+		},
+		navigation: {
+			prevEl: ".swiper-button-prev",
+			nextEl: ".swiper-button-next",
+		},
+		spaceBetween: 0,
+		effect: "slide",
+		lazy: true,
+	});
 });

@@ -10,34 +10,43 @@
         <div class="flex flex-col gap-[16px] items-start justify-center">
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Store</h3>
             <div class="flex flex-col gap-[8px] items-start justify-center">
-                <a href="<?= base_url('home'); ?>" class="text-decoration-none">Home</a>
-                <a href="<?= base_url('products'); ?>" class="text-decoration-none">Products</a>
-                <a href="<?= base_url('about'); ?>" class="text-decoration-none">About</a>
-                <a href="<?= base_url('contact'); ?>" class="text-decoration-none">Contact</a>
+                <a href="<?= base_url('home'); ?>"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Home</a>
+                <a href="<?= base_url('products'); ?>"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Products</a>
+                <a href="<?= base_url('about'); ?>"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">About</a>
+                <a href="<?= base_url('contact'); ?>"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Contact</a>
             </div>
         </div>
         <div class="flex flex-col gap-[16px] items-start justify-center">
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Categories</h3>
             <div class="flex flex-col gap-[8px] items-start justify-center">
-                <a href="#" class="text-decoration-none">Runners</a>
-                <a href="#" class="text-decoration-none">Sneakers</a>
-                <a href="#" class="text-decoration-none">Casuals</a>
-                <a href="#" class="text-decoration-none">Basketball</a>
-                <a href="#" class="text-decoration-none">Outdoor</a>
+                <a href="#"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Runners</a>
+                <a href="#"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Sneakers</a>
+                <a href="#"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Casuals</a>
+                <a href="#"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Basketball</a>
+                <a href="#"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Outdoor</a>
             </div>
         </div>
         <div class="flex flex-col gap-[16px] items-start justify-center">
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Follow Us</h3>
             <div class="flex gap-[16px] items-start justify-center lg:gap-[24px]">
-                <a href="" class="block" target="_blank">
+                <a href="" class="block duration-300 transition-all hover:scale-110" target="_blank">
                     <img src="<?= base_url('public/icons/footer/facebook.png'); ?>" class="block w-[24px]"
                         alt="facebook" target="_blank" loading="lazy">
                 </a>
-                <a href="" class="block" target="_blank">
+                <a href="" class="block duration-300 transition-all hover:scale-110" target="_blank">
                     <img src="<?= base_url('public/icons/footer/instagram.png'); ?>" class="block w-[24px]"
                         alt="instagram" target="_blank" loading="lazy">
                 </a>
-                <a href="" class="block" target="_blank">
+                <a href="" class="block duration-300 transition-all hover:scale-110" target="_blank">
                     <img src="<?= base_url('public/icons/footer/tiktok.png'); ?>" class="block w-[24px]" alt="tiktok"
                         target="_blank" loading="lazy">
                 </a>
@@ -47,6 +56,8 @@
     </div>
 </footer>
 </main>
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- js -->
 <script type="module" src="<?= base_url('public/js/script.js'); ?>"></script>
 </body>

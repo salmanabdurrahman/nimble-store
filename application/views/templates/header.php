@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- tailwindcss -->
     <link rel="stylesheet" href="<?= base_url('public/css/style.css'); ?>">
 </head>
@@ -43,9 +45,11 @@
                 class="hidden lg:block rounded-[46px] py-[8px] px-[16px] shadow-[-1px_1px_5px_1px_rgb(0,0,0,0.1)] focus:outline-none focus:border-none focus:ring-0 font-rubik font-normal text-lg placeholder:text-[#99A2A5]"
                 placeholder="Find shoes">
             <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
-                class="block w-[20px] cursor-pointer lg:w-[24px]" loading="lazy">
+                class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                loading="lazy">
             <img src="<?= base_url('public/icons/header/shopping-cart.png'); ?>" alt="shopping-cart"
-                class="block w-[20px] cursor-pointer lg:w-[24px]" loading="lazy">
+                class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                loading="lazy">
         </div>
     </header>
     <!-- nav untuk sm dan md -->

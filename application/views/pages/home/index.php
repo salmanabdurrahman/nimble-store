@@ -1,11 +1,36 @@
 <!-- hero section -->
-<section class="mt-[32px] flex flex-col gap-[24px] items-center justify-center lg:mt-[60px] container">
+<section
+    class="swiper swiper-container mt-[32px] flex flex-col gap-[24px] items-center justify-center lg:mt-[60px] container relative">
     <!-- <h1 class="font-rubik font-bold text-[48px] uppercase lg:text-[180px]">Easy to
         <span class="text-royal-blue">Move</span>
     </h1> -->
-    <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
-        class="block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]" alt="slider-image-1"
-        loading="lazy">
+    <div
+        class="swiper-wrapper w-full rounded-[24px] max-h-[750px] lg:rounded-[64px] flex items-center justify-start flex-nowrap">
+        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+            class="swiper-slide slide-1 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
+            alt="slider-image-1">
+        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+            class="swiper-slide slide-2 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
+            alt="slider-image-2">
+        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+            class="swiper-slide slide-3 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
+            alt="slider-image-3">
+        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+            class="swiper-slide slide-4 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
+            alt="slider-image-4">
+        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+            class="swiper-slide slide-5 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
+            alt="slider-image-5">
+    </div>
+    <div
+        class="flex items-center justify-between absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full z-10 mx-0">
+        <img src="<?= base_url('public/icons/home/prev-slider-button.png'); ?>"
+            class="swiper-button-prev block rounded-full size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
+            alt="prev-button" loading="lazy">
+        <img src="<?= base_url('public/icons/home/next-slider-button.png'); ?>"
+            class="swiper-button-next block rounded-full size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
+            alt="next-button" loading="lazy">
+    </div>
 </section>
 <!-- brands section -->
 <section class="mt-[45px] flex flex-col items-center justify-center gap-[30px] container lg:mt-[100px] lg:gap-[50px]">
