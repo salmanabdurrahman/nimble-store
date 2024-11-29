@@ -48,7 +48,7 @@
 </footer>
 </main>
 <!-- js -->
-<script type=" module" src="<?= base_url('public/js/script.js'); ?>"></script>
+<script type="module" src="<?= base_url('public/js/script.js'); ?>"></script>
 </body>
 
 </html>
