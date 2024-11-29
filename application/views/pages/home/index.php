@@ -3,7 +3,7 @@
     <!-- <h1 class="font-rubik font-bold text-[48px] uppercase lg:text-[180px]">Easy to
         <span class="text-royal-blue">Move</span>
     </h1> -->
-    <img src="<?= base_url('public/images/slider/slider-image-1.png'); ?>"
+    <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
         class="block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]" alt="slider-image-1"
         loading="lazy">
 </section>
@@ -13,20 +13,20 @@
     <div
         class="flex flex-col items-center justify-center gap-y-[27px] border-solid border-t-[3px] border-b-[3px] border-y-[rgba(35,35,33,0.2)] py-[15px] w-full lg:flex-row lg:gap-y-[0px] lg:gap-x-[138px]">
         <div class="flex gap-x-[64px] items-center justify-center lg:gap-x-[138px]">
-            <img src="<?= base_url('public/images/brands/adidas.png'); ?>" class="block w-full" alt="adidas"
+            <img src="<?= base_url('public/images/home/adidas.png'); ?>" class="block w-full" alt="adidas"
                 loading="lazy">
-            <img src="<?= base_url('public/images/brands/converse.png'); ?>" class="block w-full" alt="converse"
-                loading="lazy">
-        </div>
-        <div class="flex gap-x-[64px] items-center justify-center lg:gap-x-[138px]">
-            <img src="<?= base_url('public/images/brands/puma.png'); ?>" class="block w-full" alt="puma" loading="lazy">
-            <img src="<?= base_url('public/images/brands/reebok.png'); ?>" class="block w-full" alt="reebok"
+            <img src="<?= base_url('public/images/home/converse.png'); ?>" class="block w-full" alt="converse"
                 loading="lazy">
         </div>
         <div class="flex gap-x-[64px] items-center justify-center lg:gap-x-[138px]">
-            <img src="<?= base_url('public/images/brands/new-balance.png'); ?>" class="block w-full" alt="new-balance"
+            <img src="<?= base_url('public/images/home/puma.png'); ?>" class="block w-full" alt="puma" loading="lazy">
+            <img src="<?= base_url('public/images/home/reebok.png'); ?>" class="block w-full" alt="reebok"
                 loading="lazy">
-            <img src="<?= base_url('public/images/brands/nike.png'); ?>" class="block w-full" alt="nike" loading="lazy">
+        </div>
+        <div class="flex gap-x-[64px] items-center justify-center lg:gap-x-[138px]">
+            <img src="<?= base_url('public/images/home/new-balance.png'); ?>" class="block w-full" alt="new-balance"
+                loading="lazy">
+            <img src="<?= base_url('public/images/home/nike.png'); ?>" class="block w-full" alt="nike" loading="lazy">
         </div>
     </div>
 </section>
@@ -46,7 +46,7 @@
         <!-- card -->
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
                     class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
@@ -57,7 +57,7 @@
         </div>
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
                     class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
@@ -68,7 +68,7 @@
         </div>
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
                     class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
@@ -79,7 +79,7 @@
         </div>
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/dummy/dummy-product.png'); ?>" alt="dummy-product"
+                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
                     class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
@@ -98,32 +98,32 @@
             <div class="flex gap-2 items-center justify-center lg:gap-4">
                 <button type="button"
                     class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
-                    <img src="<?= base_url('public/icons/categories/prev-button.png'); ?>" class="block w-4"
-                        alt="prev-button" loading="lazy">
+                    <img src="<?= base_url('public/icons/home/prev-button.png'); ?>" class="block w-4" alt="prev-button"
+                        loading="lazy">
                 </button>
                 <button type="button"
                     class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
-                    <img src="<?= base_url('public/icons/categories/next-button.png'); ?>" class="block w-4"
-                        alt="next-button" loading="lazy">
+                    <img src="<?= base_url('public/icons/home/next-button.png'); ?>" class="block w-4" alt="next-button"
+                        loading="lazy">
                 </button>
             </div>
         </div>
         <div class="grid grid-cols-1 items-center justify-center lg:grid-cols-2">
             <!-- category -->
             <div class="w-full h-full max-h-[348px] overflow-hidden relative lg:max-h-[600px]">
-                <img src="<?= base_url('public/images/categories/casual.png'); ?>" class="block w-full h-full"
-                    alt="casual" loading="lazy">
+                <img src="<?= base_url('public/images/home/casual.png'); ?>" class="block w-full h-full" alt="casual"
+                    loading="lazy">
                 <h5
                     class="font-rubik font-semibold text-2xl text-dark-charcoal absolute bottom-4 left-4 lg:text-4xl lg:left-12 lg:bottom-[30px]">
                     Casual <span class="block">Shoes</span>
                 </h5>
                 <button type="button"
                     class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
-                    <img src="<?= base_url('public/icons/categories/arrow-up.png'); ?>" class="block w-4" alt="arrow">
+                    <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>
             <div class="w-full h-full max-h-[348px] overflow-hidden relative lg:max-h-[600px]">
-                <img src="<?= base_url('public/images/categories/basketball.png'); ?>" class="block w-full h-full"
+                <img src="<?= base_url('public/images/home/basketball.png'); ?>" class="block w-full h-full"
                     alt="casual" loading="lazy">
                 <h5
                     class="font-rubik font-semibold text-2xl text-dark-charcoal absolute bottom-4 left-4 lg:text-4xl lg:left-12 lg:bottom-[30px]">
@@ -131,7 +131,7 @@
                 </h5>
                 <button type="button"
                     class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
-                    <img src="<?= base_url('public/icons/categories/arrow-up.png'); ?>" class="block w-4" alt="arrow">
+                    <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>
         </div>
