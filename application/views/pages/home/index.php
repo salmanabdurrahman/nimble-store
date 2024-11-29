@@ -8,7 +8,7 @@
         loading="lazy">
 </section>
 <!-- brands section -->
-<section class="mt-[32px] flex flex-col items-center justify-center gap-[30px] container lg:mt-[100px] lg:gap-[50px]">
+<section class="mt-[45px] flex flex-col items-center justify-center gap-[30px] container lg:mt-[100px] lg:gap-[50px]">
     <h3 class="font-rubik text-[30px] font-semibold leading-[95%] text-dark-charcoal lg:text-[74px]">OUR BRANDS</h3>
     <div
         class="flex flex-col items-center justify-center gap-y-[27px] border-solid border-t-[3px] border-b-[3px] border-y-[rgba(35,35,33,0.2)] py-[15px] w-full lg:flex-row lg:gap-y-[0px] lg:gap-x-[138px]">
@@ -31,7 +31,7 @@
     </div>
 </section>
 <!-- new products section -->
-<section class="mt-[32px] flex flex-col items-center justify-center gap-[24px] container lg:mt-[100px] lg:gap-[32px]">
+<section class="mt-[45px] flex flex-col items-center justify-center gap-[24px] container lg:mt-[100px] lg:gap-[32px]">
     <div class="flex gap-[32px] items-center justify-between w-full">
         <h3
             class="font-rubik font-semibold text-2xl text-dark-charcoal leading-[95%] max-w-[172px] w-full lg:text-[74px] lg:max-w-[746px] uppercase">
@@ -91,7 +91,7 @@
     </div>
 </section>
 <!-- categories section -->
-<section class="w-full mt-[32px] lg:mt-[100px]">
+<section class="w-full mt-[45px] lg:mt-[100px]">
     <div class="container flex flex-col items-center justify-center gap-6 lg:gap-16">
         <div class="flex items-center justify-between w-full">
             <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal uppercase lg:text-[74px]">Categories</h3>
