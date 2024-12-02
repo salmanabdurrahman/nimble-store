@@ -21,7 +21,7 @@
         </div>
         <div class="flex flex-col gap-2 items-start justify-center w-full lg:gap-4">
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Size</h4>
-            <div class="flex flex-wrap gap-2 items-center justify-start">
+            <div class="flex flex-wrap gap-2 items-center justify-start lg:gap-1 w-full">
                 <?php for ($i = 37; $i <= 45; $i++) {
                     echo '<span class="rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 flex items-center justify-center text-center w-full max-w-12 transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white cursor-pointer">';
                     echo $i;
