@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	// swiper halaman home
+	// swiper hero section
 	const swiper = new Swiper(".swiper", {
 		autoplay: {
 			loop: true,
@@ -56,5 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		spaceBetween: 0,
 		effect: "slide",
 		lazy: true,
+	});
+
+	// swiper categories section
+	const swiperCategories = new Swiper(".swiper-categories", {
+		spaceBetween: 0,
+		effect: "slide",
+		lazy: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+		},
 	});
 });
