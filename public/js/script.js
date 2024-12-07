@@ -14,35 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		smallNavbar.classList.add("h-0", "hidden");
 	});
 
-	// active link
-	const navLinks = document.querySelectorAll(".nav-link");
-
-	function setActiveLink() {
-		const activeLinkId = localStorage.getItem("activeLink") || "nav-link-1";
-		navLinks.forEach(navLink => {
-			navLink.classList.remove("font-bold");
-			if (navLink.id === activeLinkId) {
-				navLink.classList.add("font-bold");
-			}
-		});
-	}
-
-	setActiveLink();
-
-	navLinks.forEach(navLink => {
-		navLink.addEventListener("click", function (event) {
-			const navId = event.target.id;
-
-			localStorage.setItem("activeLink", navId);
-
-			navLinks.forEach(link => {
-				link.classList.remove("font-bold");
-			});
-
-			navLink.classList.add("font-bold");
-		});
-	});
-
 	// swiper hero section
 	const swiper = new Swiper(".swiper", {
 		autoplay: {

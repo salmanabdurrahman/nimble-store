@@ -24,16 +24,16 @@
         class="container p-[15px] flex items-center justify-between bg-off-white rounded-[12px] lg:py-[18px] px-[32px] lg:rounded-[24px]">
         <div class="hidden items-center justify-center gap-[40px] lg:flex">
             <a href="<?= base_url('home'); ?>"
-                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg hover:font-bold"
+                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg font-medium"
                 id="nav-link-1">Home</a>
             <a href="<?= base_url('products'); ?>"
-                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg hover:font-bold"
+                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg font-medium"
                 id="nav-link-2">Products</a>
             <a href="<?= base_url('about'); ?>"
-                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg hover:font-bold"
+                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg font-medium"
                 id="nav-link-3">About</a>
             <a href="<?= base_url('contact'); ?>"
-                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg hover:font-bold"
+                class="text-decoration-none nav-link font-rubik transition-all duration-300 text-lg font-medium"
                 id="nav-link-4">Contact</a>
         </div>
         <img src="<?= base_url('public/icons/header/hamburger-menu.png'); ?>" alt="hamburger-menu"
@@ -58,13 +58,13 @@
         <img src="<?= base_url('public/icons/header/close-button.png'); ?>" alt="close-button"
             class="block cursor-pointer w-[24px]" loading="lazy" id="hamburger-close-button">
         <div class="flex flex-col gap-10 items-start justify-center">
-            <a href="<?= base_url('home'); ?>" class="font-rubik nav-link text-base text-dark-charcoal"
+            <a href="<?= base_url('home'); ?>" class="font-rubik nav-link text-base font-medium text-dark-charcoal"
                 id="nav-link-1">Home</a>
-            <a href="<?= base_url('products'); ?>" class="font-rubik nav-link text-base text-dark-charcoal"
+            <a href="<?= base_url('products'); ?>" class="font-rubik nav-link text-base font-medium text-dark-charcoal"
                 id="nav-link-2">Products</a>
-            <a href="<?= base_url('about'); ?>" class="font-rubik nav-link text-base text-dark-charcoal"
+            <a href="<?= base_url('about'); ?>" class="font-rubik nav-link text-base font-medium text-dark-charcoal"
                 id="nav-link-3">About</a>
-            <a href="<?= base_url('contact'); ?>" class="font-rubik nav-link text-base text-dark-charcoal"
+            <a href="<?= base_url('contact'); ?>" class="font-rubik nav-link text-base font-medium text-dark-charcoal"
                 id="nav-link-4">Contact</a>
         </div>
         <div>
