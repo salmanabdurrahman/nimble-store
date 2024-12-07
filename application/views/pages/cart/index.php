@@ -13,7 +13,7 @@
         <!-- cart items -->
         <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
             <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
-                class="block w-full h-[216px] object-fill rounded-3xl lg:h-[225px]" alt="dummy-product" loading="lazy">
+                class="block w-full h-[216px] rounded-3xl object-cover lg:h-[225px]" alt="dummy-product" loading="lazy">
             <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
                 <div class="flex flex-col gap-1 w-full lg:gap-2">
                     <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
@@ -31,13 +31,13 @@
                 <div class="flex items-center justify-between w-full">
                     <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
                     <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                        class="block w-6 object-fill lg:w-8 cursor-pointer" loading="lazy">
+                        class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
                 </div>
             </div>
         </div>
         <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
             <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
-                class="block w-full h-[216px] object-fill rounded-3xl lg:h-[225px]" alt="dummy-product" loading="lazy">
+                class="block w-full h-[216px] object-cover rounded-3xl lg:h-[225px]" alt="dummy-product" loading="lazy">
             <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
                 <div class="flex flex-col gap-1 w-full lg:gap-2">
                     <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
@@ -55,7 +55,7 @@
                 <div class="flex items-center justify-between w-full">
                     <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
                     <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                        class="block w-6 object-fill lg:w-8 cursor-pointer" loading="lazy">
+                        class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
                 </div>
             </div>
         </div>
@@ -98,7 +98,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -109,7 +110,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -120,7 +122,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -131,7 +134,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>

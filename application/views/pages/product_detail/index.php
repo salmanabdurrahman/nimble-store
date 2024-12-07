@@ -2,7 +2,7 @@
 <section
     class="mt-[32px] flex flex-col gap-6 container items-center justify-center lg:mt-[60px] lg:flex-row lg:gap-[70px] lg:items-stretch">
     <img src="<?= base_url('public/images/product_detail/dummy_product.png'); ?>"
-        class="block w-full h-full max-h-[280px] rounded-2xl object-fill lg:max-h-[872px]" alt="dummy-product"
+        class="block w-full h-full max-h-[280px] rounded-2xl object-cover lg:max-h-[872px]" alt="dummy-product"
         loading="lazy">
     <div class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
@@ -55,7 +55,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -66,7 +67,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -77,7 +79,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>
@@ -88,7 +91,8 @@
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] rounded-xl lg:rounded-3xl lg:max-h-[334px]" loading="lazy">
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
                 PARLEY RUNNING SHOES</h3>

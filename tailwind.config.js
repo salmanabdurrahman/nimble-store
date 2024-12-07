@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./application/**/*.{php,html}", "./public/**/*.{php,html}"],
+	safelist: ["object-cover"],
 	theme: {
 		extend: {
 			container: {
