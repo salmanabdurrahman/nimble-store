@@ -156,7 +156,7 @@
                     old</label>
             </div>
         </div>
-        <button type="button"
+        <button type="submit"
             class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full capitalize">Review
             And Pay</button>
     </form>
