@@ -1,5 +1,6 @@
+<!-- ======= CART SECTION START ======= -->
 <section class="flex flex-col gap-6 items-start justify-center container lg:gap-[47px] lg:flex-row">
-    <!-- cart section -->
+    <!-- CART -->
     <div
         class="mt-[35px] lg:mt-[60px] bg-off-white w-full rounded-2xl p-4 flex flex-col gap-2 items-start justify-center lg:w-2/3 lg:p-6">
         <h3 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-[32px]">Your Bag</h3>
@@ -10,7 +11,7 @@
             to
             make them yours
         </p>
-        <!-- cart items -->
+        <!-- CART ITEMS -->
         <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
             <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
                 class="block w-full h-[216px] rounded-3xl object-cover lg:h-[225px]" alt="dummy-product" loading="lazy">
@@ -60,7 +61,7 @@
             </div>
         </div>
     </div>
-    <!-- summary section -->
+    <!-- SUMMARY -->
     <div
         class="lg:mt-[60px] bg-off-white w-full rounded-2xl p-4 flex flex-col gap-4 items-start justify-center lg:w-1/3 lg:p-6 lg:gap-6">
         <h3 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-[32px]">Order Summary</h3>
@@ -90,11 +91,13 @@
             class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full">Checkout</button>
     </div>
 </section>
-<!-- other products section -->
+<!-- ======= CART SECTION END ======= -->
+
+<!-- ======= NEW PRODUCTS SECTION START ======= -->
 <section class="w-full mt-[45px] flex flex-col container items-start justify-center gap-6 lg:mt-[100px] lg:gap-8">
     <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">You May Also Like</h3>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
-        <!-- card -->
+        <!-- CARD -->
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
@@ -145,3 +148,4 @@
         </div>
     </div>
 </section>
+<!-- ======= NEW PRODUCTS SECTION END ======= -->

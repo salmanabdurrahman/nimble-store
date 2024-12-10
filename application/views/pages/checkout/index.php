@@ -1,14 +1,14 @@
+<!-- ======= CHECKOUT SECTION START ======= -->
 <section
     class="flex flex-col items-start justify-center gap-6 container lg:gap-[47px] lg:flex-row w-full lg:justify-between">
-    <!-- detail section -->
+    <!-- DETAIL section -->
     <div
         class="w-full flex flex-col gap-6 items-start mt-[32px] justify-center lg:gap-[47px] lg:mt-[60px] lg:order-2 lg:w-[466px]">
-        <!-- order details section -->
         <div
             class="w-full bg-off-white rounded-2xl p-4 flex flex-col gap-2 items-start justify-center lg:order-2 lg:w-[466px]">
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl lg:mb-4">
                 Order Details</h3>
-            <!-- cart items -->
+            <!-- CART ITEMS -->
             <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1 lg:flex">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
                     class="block w-full h-[179px] rounded-3xl object-cover lg:h-[158px] lg:w-[140px]"
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <!-- order summary section -->
+        <!-- ORDER SUMMARY -->
         <div
             class="bg-off-white w-full rounded-2xl p-4 flex flex-col gap-4 items-start justify-center lg:w-[466px] lg:p-6 lg:gap-6 lg:order-1 ">
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-[32px]">Order Summary</h3>
@@ -88,7 +88,7 @@
             </div>
         </div>
     </div>
-    <!-- form section -->
+    <!-- FORM INPUTS -->
     <form method="post" action=""
         class="w-full lg:mt-[60px] flex flex-col items-start justify-center gap-5 lg:order-1 lg:gap-8">
         <div class="w-full flex flex-col gap-2 items-start justify-center">
@@ -161,3 +161,4 @@
             And Pay</button>
     </form>
 </section>
+<!-- ======= CHECKOUT SECTION END ======= -->

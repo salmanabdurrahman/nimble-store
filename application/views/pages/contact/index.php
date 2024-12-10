@@ -1,6 +1,7 @@
+<!-- ======= CONTACT FORMS SECTION START ======= -->
 <section
     class="mt-[32px] bg-off-white container w-full rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-6 items-start justify-center lg:mt-[60px] lg:gap-[120px] lg:pt-5 lg:pb-[45px] lg:rounded-3xl lg:flex-row lg:items-center lg:justify-center">
-    <!-- contact form -->
+    <!-- CONTACT FORM -->
     <div class="flex flex-col gap-5 items-start justify-center lg:gap-6 w-full lg:max-w-[480px]">
         <div class="flex flex-col gap-2 items-start justify-center w-full">
             <h3 class="font-rubik font-semibold text-[28px] text-dark-charcoal lg:text-4xl">Get in <span
@@ -26,7 +27,7 @@
             </button>
         </form>
     </div>
-    <!-- logos section -->
+    <!-- LOGOS -->
     <div class="flex flex-col items-start justify-center gap-[45px] w-full lg:gap-[70px] lg:max-w-[200px]">
         <div class="flex items-center justify-start w-full gap-[15px]">
             <img src="<?= base_url('public/icons/contact/phone.png'); ?>" class="block w-6 lg:w-[28px]" alt="phone"
@@ -54,11 +55,15 @@
         </div>
     </div>
 </section>
-<!-- embed google map -->
+<!-- ======= CONTACT FORMS SECTION END ======= -->
+
+<!-- ======= EMBEDDED MAP SECTION START ======= -->
 <section
     class="w-full mt-[45px] lg:mt-[100px] container flex items-center justify-center p-2 lg:p-4 bg-off-white rounded-2xl  lg:rounded-3xl">
+    <!-- MAP -->
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3953.3418525332468!2d110.4077242750047!3d-7.753519592265391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDUnMTIuNyJTIDExMMKwMjQnMzcuMSJF!5e0!3m2!1sid!2sid!4v1733578388155!5m2!1sid!2sid"
         style="border:0;" class="w-full h-[250px] lg:h-[500px] rounded-2xl  lg:rounded-3xl" allowfullscreen=""
         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+<!-- ======= EMBEDDED MAP SECTION END ======= -->

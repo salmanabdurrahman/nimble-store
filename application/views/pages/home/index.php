@@ -1,4 +1,4 @@
-<!-- hero section -->
+<!-- ======= HERO SECTION START ======= -->
 <section
     class="swiper swiper-container mt-[32px] flex flex-col gap-[24px] items-center justify-center lg:mt-[60px] container relative">
     <!-- <h1 class="font-rubik font-bold text-[48px] uppercase lg:text-[180px]">Easy to
@@ -32,7 +32,9 @@
             alt="next-button" loading="lazy">
     </div>
 </section>
-<!-- brands section -->
+<!-- ======= HERO SECTION END ======= -->
+
+<!-- ======= BRAND SECTION START ======= -->
 <section class="mt-[45px] flex flex-col items-center justify-center gap-[30px] container lg:mt-[100px] lg:gap-[50px]">
     <h3 class="font-rubik text-[30px] font-semibold leading-[95%] text-dark-charcoal lg:text-[74px]">OUR BRANDS</h3>
     <div
@@ -55,7 +57,9 @@
         </div>
     </div>
 </section>
-<!-- new products section -->
+<!-- ======= BRAND SECTION END ======= -->
+
+<!-- ======= NEW PRODUCTS SECTION START ======= -->
 <section class="mt-[45px] flex flex-col items-center justify-center gap-[24px] container lg:mt-[100px] lg:gap-[32px]">
     <div class="flex gap-[32px] items-center justify-between w-full">
         <h3
@@ -68,7 +72,7 @@
             new drops</button>
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
-        <!-- card -->
+        <!-- CARD -->
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
@@ -119,7 +123,9 @@
         </div>
     </div>
 </section>
-<!-- categories section -->
+<!-- ======= NEW PRODUCTS SECTION END ======= -->
+
+<!-- ======= CATEGORIES SECTION START ======= -->
 <section class="w-full mt-[45px] lg:mt-[100px]">
     <div class="container flex flex-col items-center justify-center gap-6 lg:gap-16">
         <div class="flex items-center justify-between w-full">
@@ -138,7 +144,7 @@
             </div>
         </div>
         <div class="grid grid-cols-1 items-center justify-center lg:grid-cols-2">
-            <!-- category -->
+            <!-- CATEGORY -->
             <div class="w-full h-full max-h-[348px] overflow-hidden relative lg:max-h-[600px]">
                 <img src="<?= base_url('public/images/home/casual.png'); ?>" class="block w-full h-full" alt="casual"
                     loading="lazy">
@@ -166,3 +172,4 @@
         </div>
     </div>
 </section>
+<!-- ======= CATEGORIES SECTION END ======= -->

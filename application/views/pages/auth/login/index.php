@@ -1,4 +1,4 @@
-<!-- login section -->
+<!-- ======= LOGIN SECTION START ======= -->
 <section
     class="mt-[32px] bg-off-white container w-full rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-5 items-center justify-center lg:mt-[60px] lg:gap-6 lg:pt-5 lg:pb-[45px] lg:rounded-3xl">
     <div class="flex flex-col gap-2 items-center justify-center lg:max-w-[480px]">
@@ -24,6 +24,7 @@
     </div>
     <h3 class="font-open-sans font-semibold text-dark-charcoal text-xl lg:text-xl lg:max-w-[480px] lg:text-center">OR
     </h3>
+    <!-- FORM INPUTS -->
     <form action="" method="post"
         class="flex flex-col gap-5 items-center justify-center w-full lg:max-w-[480px] lg:gap-6">
         <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
@@ -49,3 +50,4 @@
         </button>
     </form>
 </section>
+<!-- ======= LOGIN SECTION END ======= -->

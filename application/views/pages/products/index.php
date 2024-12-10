@@ -1,4 +1,4 @@
-<!-- product ads -->
+<!-- ======= PRODUCT ADS SECTION START ======= -->
 <section
     class="mt-[32px] container lg:mt-[60px] relative w-full items-start flex flex-col justify-center gap-6 lg:gap-8">
     <img src="<?= base_url('public/images/products/product-ads.png'); ?>"
@@ -26,11 +26,15 @@
         <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80">122 items</p>
     </div>
 </section>
-<!-- products -->
+<!-- ======= PRODUCT ADS SECTION END ======= -->
+
+<!-- ======= ALL PRODUCTS SECTION START ======= -->
 <section class="mt-6 items-start justify-start flex lg:gap-[18.75px] container lg:mt-8">
     <div class="hidden lg:flex flex-col gap-6 items-start justify-start w-full max-w-[315.5px]">
+        <!-- FILTERS -->
         <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal">Filters</h3>
         <div class="flex flex-col items-start justify-start gap-4 w-full">
+            <!-- SIZES -->
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">Size</h4>
             <div class="flex items-center justify-start gap-4 flex-wrap">
                 <button type="button"
@@ -56,6 +60,7 @@
             </div>
         </div>
         <div class="flex flex-col items-start justify-start gap-4 w-full">
+            <!-- COLOR -->
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">
                 Color
             </h4>
@@ -68,6 +73,7 @@
             </div>
         </div>
         <div class="flex flex-col items-start justify-start gap-4 w-full">
+            <!-- CATEGORY -->
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">
                 Category
             </h4>
@@ -101,7 +107,7 @@
         </div>
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-[38px] lg:grid-cols-3">
-        <!-- card -->
+        <!-- CARD -->
         <div class="flex flex-col gap-2 w-full">
             <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
                 <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
@@ -212,3 +218,4 @@
         </div>
     </div>
 </section>
+<!-- ======= ALL PRODUCTS SECTION END ======= -->
