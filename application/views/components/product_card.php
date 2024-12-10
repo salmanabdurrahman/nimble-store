@@ -9,3 +9,4 @@
         class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase">View
         Product - <span class="text-golden-orange inline-block">$<?= $product['price']; ?></span></button>
 </div>
+<!-- ini adalah card -->
