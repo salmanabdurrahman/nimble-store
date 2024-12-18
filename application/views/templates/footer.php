@@ -1,4 +1,4 @@
-<!-- footer section -->
+<!-- ======= FOOTER SECTION START ======= -->
 <footer
     class="container flex flex-col gap-[40px] bg-[#232321] rounded-[24px] py-[24px] px-[16px] text-white font-open-sans font-medium text-base -mt-[30px] lg:rounded-[48px] lg:py-[50px] lg:px-[72px] lg:flex-row lg:text-[20px] lg:items-center lg:justify-between lg:-mt-[50px]">
     <div class="flex flex-col gap-[16px] items-start justify-center lg:max-w-[391px]">
@@ -21,6 +21,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-[16px] items-start justify-center">
+            <!-- CATEGORIES -->
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Categories</h3>
             <div class="flex flex-col gap-[8px] items-start justify-center">
                 <?php foreach ($categories as $category) { ?>
@@ -49,10 +50,13 @@
         <h3 class="font-rubik font-bold text-[50px] text-[#9C9C9C] lg:hidden mt-[14px] mb-[40px]">NIMBLE</h3>
     </div>
 </footer>
+<!-- ======= FOOTER SECTION END ======= -->
+
 </main>
-<!-- swiper js -->
+<!-- ======= MAIN SECTION END ======= -->
+<!-- SWIPER JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- js -->
+<!-- JS -->
 <script type="module" src="<?= base_url('public/js/script.js'); ?>"></script>
 </body>
 

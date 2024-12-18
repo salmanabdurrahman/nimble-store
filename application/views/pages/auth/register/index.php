@@ -1,4 +1,4 @@
-<!-- register section -->
+<!-- ======= REGISTER SECTION START ======= -->
 <section
     class="mt-[32px] bg-off-white container w-full rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-5 items-center justify-center lg:mt-[60px] lg:gap-6 lg:pt-5 lg:pb-[45px] lg:rounded-3xl">
     <div class="flex flex-col gap-2 items-center justify-center lg:max-w-[480px]">
@@ -24,9 +24,11 @@
     </div>
     <h3 class="font-open-sans font-semibold text-dark-charcoal text-xl lg:text-xl lg:max-w-[480px] lg:text-center">OR
     </h3>
+    <!-- FORM INPUTS -->
     <form action="" method="post"
         class="flex flex-col gap-5 items-center justify-center w-full lg:max-w-[480px] lg:gap-6">
         <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
+            <!-- NAME -->
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Your Name</h4>
             <input type="text" name="fullname"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
@@ -36,6 +38,7 @@
                 placeholder="Username">
         </div>
         <div class="flex flex-col gap-4 items-center justify-center w-full lg:gap-5">
+            <!-- GENDERS -->
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Gender</h4>
             <div class="flex gap-[30px] items-center justify-center w-full">
                 <div class="flex gap-2 items-center justify-start">
@@ -53,6 +56,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
+            <!-- LOGIN DETAILS -->
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Login Details</h4>
             <input type="tel" name="phone"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
@@ -80,3 +84,4 @@
         </button>
     </form>
 </section>
+<!-- ======= REGISTER SECTION END ======= -->

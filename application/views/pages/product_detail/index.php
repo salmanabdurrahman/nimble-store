@@ -1,6 +1,7 @@
-<!-- detail section -->
+<!-- ======= DETAIL SECTION START ======= -->
 <section
     class="mt-[32px] flex flex-col gap-6 container items-center justify-center lg:mt-[60px] lg:flex-row lg:gap-[70px] lg:items-stretch">
+    <!-- PRODUCT -->
     <img src="<?= base_url('public/uploads/' . $product['image_url']); ?>"
         class="block w-full h-full max-h-[280px] rounded-2xl object-cover lg:max-h-[872px]" alt="dummy-product"
         loading="lazy">
@@ -19,6 +20,7 @@
         <div class="flex flex-col gap-2 items-start justify-center w-full lg:gap-4">
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Size</h4>
             <div class="flex flex-wrap gap-2 items-center justify-start lg:gap-1 w-full">
+                <!-- SIZES -->
                 <?php for ($i = 37; $i <= 45; $i++) {
                     echo '<span class="rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 flex items-center justify-center text-center w-full max-w-12 transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white cursor-pointer">';
                     echo $i;
@@ -27,10 +29,12 @@
             </div>
         </div>
         <div class="flex flex-col gap-2 items-center justify-center w-full">
+            <!-- CART BUTTON -->
             <button type="button"
                 class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
                 on>Add
                 To Cart</button>
+            <!-- BUY BUTTON -->
             <button type="button"
                 class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]">Buy
                 It Now</button>
@@ -45,7 +49,9 @@
         </div>
     </div>
 </section>
-<!-- other products section -->
+<!-- ======= DETAIL SECTION END ======= -->
+
+<!-- ======= NEW PRODUCTS SECTION START ======= -->
 <section class="w-full mt-[45px] flex flex-col container items-start justify-center gap-6 lg:mt-[100px] lg:gap-8">
     <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">You May Also Like</h3>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
@@ -69,3 +75,4 @@
 
     </div>
 </section>
+<!-- ======= NEW PRODUCTS SECTION END ======= -->

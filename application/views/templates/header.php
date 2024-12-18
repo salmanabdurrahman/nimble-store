@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="<?= base_url('public/icons/header/favicon.png'); ?>" type="image/png" sizes="64x64">
     <title><?= $header_title; ?></title>
-    <!-- google fonts -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <!-- swiper css -->
+    <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- tailwindcss -->
+    <!-- TAILWIND CSS -->
     <link rel="stylesheet" href="<?= base_url('public/css/style.css'); ?>">
 </head>
 
 <body class="bg-light-gray relative py-[24px] px-[16px] lg:pt-[32px] lg:pb-[68px] lg:px-[60px]">
-    <!-- header -->
+    <!-- ======= HEADER SECTION START ======= -->
     <header
         class="container p-[15px] flex items-center justify-between bg-off-white rounded-[12px] lg:py-[18px] px-[32px] lg:rounded-[24px]">
         <div class="hidden items-center justify-center gap-[40px] lg:flex">
@@ -52,7 +52,9 @@
                 loading="lazy">
         </div>
     </header>
-    <!-- nav untuk sm dan md -->
+    <!-- ======= HEADER SECTION END ======= -->
+
+    <!-- NAV UNTUK SM DAN MD -->
     <nav class="rounded-2xl fixed z-[999] top-[24px] left-4 right-4 bg-off-white flex-col gap-9 py-[20.5px] px-[30px] lg:hidden transition-all duration-300 h-0 hidden origin-center shadow-md"
         id="small-navbar">
         <img src="<?= base_url('public/icons/header/close-button.png'); ?>" alt="close-button"
@@ -73,5 +75,6 @@
                 placeholder="Find shoes">
         </div>
     </nav>
-    <!-- main -->
+
+    <!-- ======= MAIN SECTION START ======= -->
     <main class="relative">
