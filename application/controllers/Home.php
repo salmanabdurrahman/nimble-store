@@ -5,7 +5,13 @@ class Home extends CI_Controller
     {
         $data['header_title'] = 'Nimble | Home';
         $this->load->view('templates/header', $data);
-        $this->load->view('pages/home/index');
+
+        $this->load->model('Products_model');
+        $query['categories'] = $this->db->get('categories')->result_array();
+        $query['recent_products'] = $this->Products_model->get_recent_products(4);
+
+        $this->load->view('pages/home/index',$query);
+        
         $this->load->view('templates/subscribe');
         $this->load->view('templates/footer');
 

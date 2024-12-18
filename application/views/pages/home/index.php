@@ -69,54 +69,21 @@
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
         <!-- card -->
-        <div class="flex flex-col gap-2 w-full">
-            <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
-                    loading="lazy">
+        <?php
+        foreach ($recent_products as $key => $item) { ?>
+            <div class="flex flex-col gap-2 w-full">
+                <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
+                    <img src="<?= base_url('public/uploads/' . $item['image_url']); ?>" alt="dummy-product"
+                        class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                        loading="lazy">
+                </div>
+                <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase"> <?php echo $item['name']; ?> </h3>
+                <button type="button"
+                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
+                    onclick="window.location.href = '<?php echo base_url('product_detail');?>?id=<?php echo $item['id']; ?>'">View
+                    Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?></span></button>
             </div>
-            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
-                PARLEY RUNNING SHOES</h3>
-            <button type="button"
-                class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase">View
-                Product - <span class="text-golden-orange inline-block">$125</span></button>
-        </div>
-        <div class="flex flex-col gap-2 w-full">
-            <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
-                    loading="lazy">
-            </div>
-            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
-                PARLEY RUNNING SHOES</h3>
-            <button type="button"
-                class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase">View
-                Product - <span class="text-golden-orange inline-block">$125</span></button>
-        </div>
-        <div class="flex flex-col gap-2 w-full">
-            <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
-                    loading="lazy">
-            </div>
-            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
-                PARLEY RUNNING SHOES</h3>
-            <button type="button"
-                class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase">View
-                Product - <span class="text-golden-orange inline-block">$125</span></button>
-        </div>
-        <div class="flex flex-col gap-2 w-full">
-            <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>" alt="dummy-product"
-                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
-                    loading="lazy">
-            </div>
-            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">ADIDAS 4DFWD X
-                PARLEY RUNNING SHOES</h3>
-            <button type="button"
-                class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase">View
-                Product - <span class="text-golden-orange inline-block">$125</span></button>
-        </div>
+        <?php } ?>
     </div>
 </section>
 <!-- categories section -->
@@ -147,7 +114,8 @@
                     Casual <span class="block">Shoes</span>
                 </h5>
                 <button type="button"
-                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]"
+                    onclick="window.location.href = '<?= base_url('products'); ?>?id_category=3'" >
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>
@@ -159,7 +127,8 @@
                     Basketball <span class="block">Shoes</span>
                 </h5>
                 <button type="button"
-                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]">
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]"
+                    onclick="window.location.href = '<?= base_url('products'); ?>?id_category=4'">
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>
