@@ -24,16 +24,10 @@
             <!-- CATEGORIES -->
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Categories</h3>
             <div class="flex flex-col gap-[8px] items-start justify-center">
-                <a href="#"
-                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Runners</a>
-                <a href="#"
-                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Sneakers</a>
-                <a href="#"
-                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Casuals</a>
-                <a href="#"
-                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Basketball</a>
-                <a href="#"
-                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange">Outdoor</a>
+                <?php foreach ($categories as $category) { ?>
+                    <a href="<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>"
+                        class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange"><?= $category['name']; ?></a>
+                <?php } ?>
             </div>
         </div>
         <div class="flex flex-col gap-[16px] items-start justify-center">

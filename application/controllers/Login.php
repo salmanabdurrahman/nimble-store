@@ -5,8 +5,10 @@ class Login extends CI_Controller
     {
         $data['header_title'] = 'Nimble | Login';
         $this->load->view('templates/header', $data);
+        $this->load->model('Products_model');
+        $query['categories'] = $this->db->get('categories')->result_array();
         $this->load->view('pages/auth/login/index');
         $this->load->view('templates/subscribe');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer', $query);
     }
 }
