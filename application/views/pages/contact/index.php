@@ -12,10 +12,10 @@
         </div>
         <form action="" method="post" class="flex flex-col gap-5 items-start justify-center w-full lg:gap-6">
             <input type="text" name="name"
-                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
+                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
                 placeholder="Name*">
             <input type="email" name="email"
-                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
+                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
                 placeholder="Email*">
             <textarea name="message" id="" cols="30" rows="5" class="rounded-lg border border-solid
                 border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal
@@ -67,3 +67,36 @@
         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <!-- ======= EMBEDDED MAP SECTION END ======= -->
+
+<!-- ======= SWEETALERT START ======= -->
+<?php if ($this->session->flashdata('success')): ?>
+    <script>
+        swal({
+            title: "Success!",
+            text: "<?= $this->session->flashdata('success'); ?>",
+            icon: "success",
+            button: "OK",
+        });
+    </script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')): ?>
+    <script>
+        swal({
+            title: "Error!",
+            text: "<?= $this->session->flashdata('error'); ?>",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+<?php endif; ?>
+<!-- ======= SWEETALERT END ======= -->
+
+<script>
+    swal({
+        title: "Test SweetAlert!",
+        text: "This is a test.",
+        icon: "success",
+        button: "OK",
+    });
+</script>
