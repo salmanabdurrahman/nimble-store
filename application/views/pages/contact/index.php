@@ -13,13 +13,13 @@
         <form action="" method="post" class="flex flex-col gap-5 items-start justify-center w-full lg:gap-6">
             <input type="text" name="name"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
-                placeholder="Name*">
+                placeholder="Name*" required>
             <input type="email" name="email"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
-                placeholder="Email*">
+                placeholder="Email*" required>
             <textarea name="message" id="" cols="30" rows="5" class="rounded-lg border border-solid
                 border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal
-                text-dark-charcoal text-base placeholder:text=[#79767C]" placeholder="Message*"></textarea>
+                text-dark-charcoal text-base placeholder:text=[#79767C]" placeholder="Message*" required></textarea>
             <button type="submit"
                 class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2">Submit
                 <img src="<?= base_url('public/icons/register/arrow-forward.png'); ?>" alt="arrow"
@@ -71,32 +71,23 @@
 <!-- ======= SWEETALERT START ======= -->
 <?php if ($this->session->flashdata('success')): ?>
     <script>
-        swal({
+        Swal.fire({
             title: "Success!",
             text: "<?= $this->session->flashdata('success'); ?>",
             icon: "success",
-            button: "OK",
+            confirmButtonText: "OK"
         });
     </script>
 <?php endif; ?>
 
 <?php if ($this->session->flashdata('error')): ?>
     <script>
-        swal({
+        Swal.fire({
             title: "Error!",
             text: "<?= $this->session->flashdata('error'); ?>",
             icon: "error",
-            button: "OK",
+            confirmButtonText: "OK"
         });
     </script>
 <?php endif; ?>
 <!-- ======= SWEETALERT END ======= -->
-
-<script>
-    swal({
-        title: "Test SweetAlert!",
-        text: "This is a test.",
-        icon: "success",
-        button: "OK",
-    });
-</script>
