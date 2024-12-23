@@ -131,38 +131,38 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm font-semibold text-gray-800">1</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div
-                                                class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 flex items-center justify-center">
-                                                <div class="flex items-center gap-x-3">
-                                                    <img class="inline-block size-[38px] rounded-full"
-                                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                                        alt="Avatar">
+                                    <?php foreach ($products as $product) { ?>
+                                        <tr>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm font-semibold text-gray-800"><?php echo $product['id'] ?></span>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">ADIDAS 4DFWD X PARLEY</span>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">Lorem ipsum dolor sit amet
-                                                    consectetur adipisicing elit. Cupiditate, magni!</span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="size-px whitespace-nowrap">
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div
+                                                    class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 flex items-center justify-center">
+                                                    <div class="flex items-center gap-x-3">
+                                                        <img class="inline-block w-[200px]"
+                                                            src="<?= base_url('public/uploads/' . $product['image_url']); ?>"
+                                                            alt="Avatar">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800"><?php echo $product['name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800"> <?php echo $product['description'] ?> </span>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
                                                 <span
                                                     class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
@@ -175,54 +175,56 @@
                                                 </span>
                                             </div>
                                         </td> -->
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">$125</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">12</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Running</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">45</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">White</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Adidas</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span class="text-sm text-gray-500">28 Dec, 12:12</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-1.5 gap-2 flex items-center">
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_product'); ?>">
-                                                    Edit
-                                                </a>
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="#">
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800">$<?php echo $product['price'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['stock'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['category_name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['size_name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                <span class="size-6 rounded-full bg-[#<?php echo $product['color_name']; ?>] lg:size-8"></span>
+                                                    <span class="block text-sm text-gray-800 capitalize">#<?php echo $product['color_name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['brand'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span class="text-sm text-gray-500"><?php echo $product['created_at'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-1.5 gap-2 flex items-center">
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        href="<?= base_url('Admin/update_product/' . $product['id'] ); ?>">
+                                                        Edit
+                                                    </a>
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        href="<?= base_url('Admin/delete_product/' . $product['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        <?php } ?>
+                                        </tr>
                                 </tbody>
                             </table>
                             <!-- FOOTER -->
@@ -230,7 +232,7 @@
                                 class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                                 <div>
                                     <p class="text-sm text-gray-600">
-                                        <span class="font-semibold text-gray-800">12</span> results
+                                        <span class="font-semibold text-gray-800"><?php echo $count_all_products ?></span> results
                                     </p>
                                 </div>
                             </div>

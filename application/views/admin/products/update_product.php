@@ -13,7 +13,7 @@
                         Manage your product data, description, price and more.
                     </p>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/update_product_action')?>" method="post" enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
@@ -63,9 +63,10 @@
                         </div>
                         <div class="sm:col-span-9">
                             <div class="sm:flex">
+                                <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="name" value="<?php echo $product['name']; ?>" placeholder="ADIDAS 4DFWD X PARLEY">
                             </div>
                         </div>
                         <!-- DESCRIPTION -->
@@ -83,7 +84,7 @@
                             <div class="sm:flex">
                                 <textarea id="af-account-phone"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="description" cols="30" rows="5" placeholder="Product description"></textarea>
+                                    name="description" cols="30" rows="5" placeholder="Product description"><?php echo $product['description']; ?></textarea>
                             </div>
                         </div>
                         <!-- PRICE -->
@@ -96,7 +97,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="price" placeholder="125">
+                                    name="price" value="<?php echo $product['price']; ?>" placeholder="125">
                             </div>
                         </div>
                         <!-- STOCK -->
@@ -106,9 +107,9 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="stock" placeholder="10">
+                                name="stock" value="<?php echo $product['stock']; ?>" placeholder="10">
                         </div>
                         <!-- CATEGORY -->
                         <div class="sm:col-span-3">
@@ -117,9 +118,9 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="category" placeholder="Running">
+                                name="category" value="<?php echo $product['category_id']; ?>" placeholder="Running">
                         </div>
                         <!-- SIZE -->
                         <div class="sm:col-span-3">
@@ -128,9 +129,9 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="size" placeholder="35">
+                                name="size" value="<?php echo $product['size_id']; ?>" placeholder="35">
                         </div>
                         <!-- COLOR -->
                         <div class="sm:col-span-3">
@@ -139,9 +140,9 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="color" placeholder="Black">
+                                name="color" value="<?php echo $product['color_id']; ?>" placeholder="Black">
                         </div>
                         <!-- BRAND -->
                         <div class="sm:col-span-3">
@@ -150,9 +151,9 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="brand" placeholder="Adidas">
+                                name="brand" value="<?php echo $product['brand']; ?>" placeholder="Adidas">
                         </div>
                     </div>
                     <!-- BUTTON CANCEL AND SAVE -->

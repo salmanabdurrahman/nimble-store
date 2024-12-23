@@ -13,7 +13,7 @@
                         Manage your product data, description, price and more.
                     </p>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/add_product_action')?>" method="post" enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
@@ -106,7 +106,7 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                 name="stock" placeholder="10">
                         </div>
@@ -117,7 +117,7 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                 name="category" placeholder="Running">
                         </div>
@@ -128,7 +128,7 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                 name="size" placeholder="35">
                         </div>
@@ -139,7 +139,7 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                 name="color" placeholder="Black">
                         </div>
@@ -150,7 +150,7 @@
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="email"
+                            <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                 name="brand" placeholder="Adidas">
                         </div>
