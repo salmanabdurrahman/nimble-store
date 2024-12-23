@@ -14,6 +14,8 @@
         rel="stylesheet">
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- SWEETALERT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- TAILWIND CSS -->
     <link rel="stylesheet" href="<?= base_url('public/css/style.css'); ?>">
 </head>

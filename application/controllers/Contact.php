@@ -6,6 +6,7 @@ class Contact extends CI_Controller
         $data['header_title'] = 'Nimble | Contact';
         $this->load->model('Contact_model');
         $this->load->model('Products_model');
+        $this->load->library('session');
         $query['categories'] = $this->db->get('categories')->result_array();
 
         if ($this->input->post()) {
@@ -27,6 +28,7 @@ class Contact extends CI_Controller
             } else {
                 // Set flashdata error
                 $this->session->set_flashdata('error', validation_errors());
+                redirect('contact');
             }
         }
 
