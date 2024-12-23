@@ -174,6 +174,7 @@
                                 </thead>
                                 <!-- TABLE BODY -->
                                 <tbody class="divide-y divide-gray-200">
+                                    <?php foreach ($users as $user) {?>
                                     <tr>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
@@ -189,19 +190,19 @@
                                                 class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 flex items-center justify-center">
                                                 <div class="flex items-center gap-x-3">
                                                     <img class="inline-block size-[38px] rounded-full"
-                                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                                        src="<?= base_url('public/uploads/users/'. $user['profile_picture'])?>"
                                                         alt="Avatar">
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">salmanabd</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $user['username']; ?></span>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">Salman Abdurrahman</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $user['full_name']; ?></span>
                                             </div>
                                         </td>
                                         <!-- <td class="size-px whitespace-nowrap">
@@ -219,63 +220,62 @@
                                         </td> -->
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800">salman@gmail.com</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $user['email']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Male</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['gender']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">08123456789</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['phone']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Jawa Barat</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['address_province']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Karawang</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['address_city']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Karawang</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['address_district']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Karawang</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['address_subdistrict']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Karawang</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['street_name']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">Depannya ada anjing
-                                                    galak</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['address_description']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">41314</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['zip_code']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm text-gray-800 capitalize">User</span>
+                                                <span class="block text-sm text-gray-800 capitalize"><?php echo $user['role']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="text-sm text-gray-500">28 Dec, 12:12</span>
+                                                <span class="text-sm text-gray-500"><?php echo $user['created_at']; ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
@@ -290,6 +290,7 @@
                                                 </a>
                                             </div>
                                         </td>
+                                        <?php } ?>
                                     </tr>
                                 </tbody>
                             </table>
