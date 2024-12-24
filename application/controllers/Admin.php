@@ -3,9 +3,12 @@ class Admin extends CI_Controller
 {
     public function __construct()
     {
+        // yg gak kepake hapus aja
         parent::__construct();
         $this->load->model('Admin_model');
         $this->load->model('Admin_users_models');
+        $this->load->model('Comments_model');
+
     }
 
     // DASHBOARD
@@ -307,11 +310,15 @@ class Admin extends CI_Controller
     public function comments()
     {
         $data['header_title'] = 'Nimble | Dashboard';
+        $data['comments'] = $this->Comments_model->get_comments();
+        $data['count_all_comment'] = $this->Comments_model-> count_all_comments();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
-        $this->load->view('admin/comments/comments');
+        $this->load->view('admin/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
+
+
 
     public function add_comment()
     {
@@ -322,12 +329,73 @@ class Admin extends CI_Controller
         $this->load->view('templates/admin_footer');
     }
 
-    public function update_comment()
+    public function add_comment_action()
+    {
+        $product_name = $this->input->post('product_id');
+        $user_id = $this->input->post('user_id');
+        $comment = $this->input->post('comment');
+        $rating = $this->input->post('rating');
+
+        $data = array(
+            'product_id' => $product_name,
+            'user_id' => $user_id,
+            'comment' => $comment,
+            'rating' => $rating
+        );
+
+        $this->Comments_model->add_comment($data);
+
+        if ($this->db->affected_rows()) {
+            redirect('Admin/products');
+        } else {
+            redirect('Admin/add_product');
+        }
+    }
+
+
+    public function update_comment($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
+        $data['comment'] = $this->Comments_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
-        $this->load->view('admin/comments/update_comment');
+        $this->load->view('admin/comments/update_comment',$data);
         $this->load->view('templates/admin_footer');
+    }
+
+    public function update_add_comment_action()
+    {
+        $comment_id = $this->input->post('id');
+        $product_id = $this->input->post('product_id');
+        $user_id = $this->input->post('user_id');
+        $comment = $this->input->post('comment');
+        $rating = $this->input->post('rating');
+
+
+
+        $data = array(
+            'product_id' => $product_id,
+            'user_id' => $user_id,
+            'comment' => $comment,
+            'rating' => $rating
+        );
+
+        $this->Comments_model->update_comment($data,$comment_id);
+
+        if ($this->db->affected_rows()) {
+            redirect('Admin/comments');
+        } else {
+            echo "Failed to update/add comment";
+        }
+    }
+
+    public function delete_comment($id)
+    {
+        $this->Comments_model->delete_comment($id);
+        if ($this->db->affected_rows()) {
+            redirect('admin/comments');
+        } else {
+            echo "Data gagal dihapus";
+        }
     }
 }
