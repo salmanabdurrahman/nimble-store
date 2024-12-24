@@ -56,7 +56,7 @@
                                             </div>
                                         </th>
                                         <th scope="col" class="px-6 py-3 text-start">
-                                            <div class="flex items-center gap-x-2">
+                                               <div class="flex items-center gap-x-2">
                                                 <span
                                                     class="text-xs font-semibold uppercase tracking-wide text-gray-800">
                                                     Username
@@ -91,6 +91,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
+                                    <?php foreach ($comments as $comment) {?>
                                     <tr>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
@@ -98,7 +99,7 @@
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span class="block text-sm font-semibold text-gray-800">1</span>
+                                                <span class="block text-sm font-semibold text-gray-800"><?php echo $comment['id'] ?></span>
                                             </div>
                                         </td>
                                         <!-- <td class="h-px w-72 whitespace-nowrap">
@@ -112,17 +113,17 @@
                                         </td> -->
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span class="block text-sm text-gray-800">ADIDAS 4DFWD X PARLEY</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $comment ['product_name'] ?></span>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span class="block text-sm text-gray-800">salmanabd</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $comment ['user_name']?></span>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span class="block text-sm text-gray-800">Sepatunya sangat bagus</span>
+                                                <span class="block text-sm text-gray-800"><?php echo $comment ['comment']?></span>
                                             </div>
                                         </td>
                                         <!-- <td class="size-px whitespace-nowrap">
@@ -145,21 +146,22 @@
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span class="text-sm text-gray-500">28 Dec, 12:12</span>
+                                                <span class="text-sm text-gray-500"><?php echo $comment['created_at'] ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-1.5 gap-2 flex items-center">
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_comment'); ?>">
+                                                    href="<?= base_url('admin/update_comment/'.$comment['id']); ?>">
                                                     Edit
                                                 </a>
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="#">
+                                                    href="<?= base_url('Admin/delete_comment/'.$comment['id']); ?>" onclick="return confirm('Apakah adan yakin ingin menghapus comment ini')">
                                                     Delete
                                                 </a>
                                             </div>
                                         </td>
+                                        <?php } ?>
                                     </tr>
                                 </tbody>
                             </table>
@@ -168,7 +170,7 @@
                                 class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                                 <div>
                                     <p class="text-sm text-gray-600">
-                                        <span class="font-semibold text-gray-800">12</span> results
+                                        <span class="font-semibold text-gray-800"><?php echo $count_all_comment ?></span> results
                                     </p>
                                 </div>
                             </div>
