@@ -7,7 +7,7 @@
             <div class="bg-white rounded-xl shadow p-4 sm:p-7">
                 <div class="mb-8">
                     <h2 class="text-xl font-bold text-gray-800">
-                        Add Comment
+                        Update Comment
                     </h2>
                     <p class="text-sm text-gray-600">
                         Manage your comment data, product and more.
@@ -101,7 +101,7 @@
                     <div class="mt-10 flex justify-end gap-x-2">
                         <button type="button"
                             class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50"
-                            onclick="window.location.href = '<?= base_url('admin/comments'); ?>';">
+                            onclick="window.location.href = '<?= base_url('user/comments'); ?>';">
                             Cancel
                         </button>
                         <button type="submit"
