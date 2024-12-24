@@ -20,10 +20,13 @@ class Admin extends CI_Controller
     // USERS
     public function users()
     {
+        $this->load->model('Admin_users_models');
+        $query['users'] = $this->Admin_users_models->get_users();
+        $query['total_users'] = $this->Admin_users_models->count_users();
         $data['header_title'] = 'Nimble | Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
-        $this->load->view('admin/users/users');
+        $this->load->view('admin/users/users', $query);
         $this->load->view('templates/admin_footer');
     }
 
@@ -162,7 +165,7 @@ class Admin extends CI_Controller
         if ($this->db->affected_rows()) {
             redirect('Admin/products');
         } else {
-            redirect('Admin/update_product/'.$id);
+            redirect('Admin/update_product/' . $id);
         }
     }
 
