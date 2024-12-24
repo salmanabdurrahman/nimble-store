@@ -182,7 +182,8 @@
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="block text-sm font-semibold text-gray-800">1</span>
+                                                <span
+                                                    class="block text-sm font-semibold text-gray-800"><?php echo $user['id'] ?></span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
@@ -295,11 +296,12 @@
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-1.5 gap-2 flex items-center">
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_user'); ?>">
+                                                    href="<?= base_url('admin/update_user/' . $user['id']); ?>">
                                                     Edit
                                                 </a>
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="#">
+                                                    onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')"
+                                                    href="<?= base_url('Admin/delete_user/' . $user['id']) ?>">
                                                     Delete
                                                 </a>
                                             </div>

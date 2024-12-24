@@ -13,7 +13,8 @@
                         Manage your name, password and account settings.
                     </p>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/add_users_action') ?>" method="post"
+                    enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
