@@ -13,7 +13,7 @@
                         Manage your comment data, product and more.
                     </p>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/update_add_comment_action')?>" method="post" enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
@@ -50,9 +50,11 @@
                         </div>
                         <div class="sm:col-span-9">
                             <div class="sm:flex">
+                                <input type="hidden" name="id" value="<?php echo $comment['id']?>">
+                                <input type="hidden" name="product_id" value="<?php echo $comment['product_id']?>">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="name" value="<?php echo $comment['product_name']?>" placeholder="ADIDAS 4DFWD X PARLEY" readonly >
                             </div>
                         </div>
                         <!-- USERNAME -->
@@ -63,9 +65,10 @@
                         </div>
                         <div class="sm:col-span-9">
                             <div class="sm:flex">
+                                <input type="hidden" name="user_id" value="<?php echo $comment['user_id'] ?>">
                                 <input id="af-account-full-name" type="text"
-                                    class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="username" placeholder="salmanabd">
+                                    class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"                                
+                                    name="username" value="<?php echo $comment['user_name']?>;" placeholder="salmanabd" readonly>
                             </div>
                         </div>
                         <!-- COMMENT -->
@@ -80,7 +83,7 @@
                             <div class="sm:flex">
                                 <textarea id="af-account-phone"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="comment" cols="30" rows="5" placeholder="Product comment"></textarea>
+                                    name="comment" cols="30" rows="5" placeholder="Product comment"><?php echo $comment['comment']?></textarea>
                             </div>
                         </div>
                         <!-- RATING -->
@@ -93,7 +96,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="rating" placeholder="1 - 5">
+                                    name="rating" placeholder="1 - 5" value="<?php echo $comment['rating']?>" >
                             </div>
                         </div>
                     </div>
@@ -105,7 +108,7 @@
                             Cancel
                         </button>
                         <button type="submit"
-                            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                             name="submit">
                             Save changes
                         </button>
