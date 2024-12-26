@@ -25,8 +25,8 @@
             <h3 class="font-rubik font-semibold text-[20px] text-golden-orange lg:text-[24px]">Categories</h3>
             <div class="flex flex-col gap-[8px] items-start justify-center">
                 <?php foreach ($categories as $category) { ?>
-                    <a href="<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>"
-                        class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange"><?= $category['name']; ?></a>
+                <a href="<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>"
+                    class="text-decoration-none duration-300 transition-all hover:scale-105 hover:text-golden-orange"><?= $category['name']; ?></a>
                 <?php } ?>
             </div>
         </div>

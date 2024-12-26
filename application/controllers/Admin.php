@@ -8,7 +8,6 @@ class Admin extends CI_Controller
         $this->load->model('Admin_model');
         $this->load->model('Admin_users_models');
         $this->load->model('Comments_model');
-
     }
 
     // DASHBOARD
