@@ -10,8 +10,8 @@ class Home extends CI_Controller
         $query['categories'] = $this->db->get('categories')->result_array();
         $query['recent_products'] = $this->Products_model->get_recent_products(4);
 
-        $this->load->view('pages/home/index',$query);
-        
+        $this->load->view('pages/home/index', $query);
+
         $this->load->view('templates/subscribe');
         $this->load->view('templates/footer');
 

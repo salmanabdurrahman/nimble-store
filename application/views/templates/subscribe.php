@@ -5,7 +5,8 @@
     <p class="font-open-sans font-medium text-[14px] mb-[14px] lg:mb-[16px] lg:text-[20px]"><span
             class="text-golden-orange">Get special offers</span> by registering your email</p>
     <!-- FORM -->
-    <form action="<?php echo site_url('Subscribe/add_subscribe_action'); ?>" method="post" class="flex items-center gap-[4px] w-full lg:gap-[20px] justify-start">
+    <form action="<?php echo site_url('Subscribe/add_subscribe_action'); ?>" method="post"
+        class="flex items-center gap-[4px] w-full lg:gap-[20px] justify-start">
         <input type="email" name="email"
             class="py-[10.5px] px-[16px] font-open-sans text-base font-normal rounded-[8px] bg-royal-blue ring-1 border-none ring-off-white placeholder:text-light-gray focus:outline-none focus:border-none focus:ring-1 focus:ring-off-white w-full lg:max-w-[458px] lg:py-[16px] lg:text-lg lg:placeholder:text-lg"
             placeholder="Email address" id="email">

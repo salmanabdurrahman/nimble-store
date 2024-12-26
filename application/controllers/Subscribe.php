@@ -21,18 +21,18 @@ class Subscribe extends CI_Controller
         }
     }
     public function test_insert()
-{
-    $this->load->model('Subscribe_model');
-    $data = [
-        'email' => 'test@example.com',
-    ];
+    {
+        $this->load->model('Subscribe_model');
+        $data = [
+            'email' => 'test@example.com',
+        ];
 
-    if ($this->Subscribe_model->insert_subscribe($data)) {
-        echo 'Insert successful!';
-    } else {
-        echo 'Insert failed!';
+        if ($this->Subscribe_model->insert_subscribe($data)) {
+            echo 'Insert successful!';
+        } else {
+            echo 'Insert failed!';
+        }
     }
-}
 
 }
 
