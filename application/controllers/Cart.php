@@ -6,6 +6,7 @@ class Cart extends CI_Controller
         $data['header_title'] = 'Nimble | Cart';
         $this->load->view('templates/header', $data);
         $this->load->model('Products_model');
+        // $data['carts'] = $this->Cart_model->get_carts();
         $data['random_product'] = $this->Products_model->get_random_products(4);
         $query['categories'] = $this->db->get('categories')->result_array();
         $this->load->view('pages/cart/index', $data);

@@ -12,54 +12,32 @@
             make them yours
         </p>
         <!-- CART ITEMS -->
-        <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
-            <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
-                class="block w-full h-[216px] rounded-3xl object-cover lg:h-[225px]" alt="dummy-product" loading="lazy">
-            <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
-                <div class="flex flex-col gap-1 w-full lg:gap-2">
-                    <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
-                    </h4>
-                    <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Men’s Road Running
-                        Shoes</p>
-                    <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Enamel Blue/
-                        University White
-                    </p>
-                </div>
-                <div class="flex gap-4 items-center justify-start w-full">
-                    <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size 10</p>
-                    <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Quantity 1</p>
-                </div>
-                <div class="flex items-center justify-between w-full">
-                    <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
-                    <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                        class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
-                </div>
-            </div>
-        </div>
-        <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
-            <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
-                class="block w-full h-[216px] object-cover rounded-3xl lg:h-[225px]" alt="dummy-product" loading="lazy">
-            <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
-                <div class="flex flex-col gap-1 w-full lg:gap-2">
-                    <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
-                    </h4>
-                    <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Men’s Road Running
-                        Shoes</p>
-                    <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Enamel Blue/
-                        University White
-                    </p>
-                </div>
-                <div class="flex gap-4 items-center justify-start w-full">
-                    <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size 10</p>
-                    <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Quantity 1</p>
-                </div>
-                <div class="flex items-center justify-between w-full">
-                    <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
-                    <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                        class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
+        <?php for ($i = 0; $i < 5; $i++) { ?>
+            <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
+                <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
+                    class="block w-full h-[216px] rounded-3xl object-cover lg:h-[225px]" alt="dummy-product" loading="lazy">
+                <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
+                    <div class="flex flex-col gap-1 w-full lg:gap-2">
+                        <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
+                        </h4>
+                        <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Men’s Road Running
+                            Shoes</p>
+                        <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Enamel Blue/
+                            University White
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-center justify-start w-full">
+                        <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size 10</p>
+                        <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Quantity 1</p>
+                    </div>
+                    <div class="flex items-center justify-between w-full">
+                        <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
+                        <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
+                            class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
     <!-- SUMMARY -->
     <div
