@@ -11,7 +11,8 @@
         </span>
         <div class="lg:flex flex-col items-start justify-center w-full hidden">
             <h3 class="font-rubik font-semibold text-4xl text-dark-charcoal">Running Shoes</h3>
-            <p class="font-open-sans font-semibold text-base text-dark-charcoal/80"><?php echo $count_all_products ?></p>
+            <p class="font-open-sans font-semibold text-base text-dark-charcoal/80"><?php echo $count_all_products ?>
+            </p>
         </div>
         <span
             class="flex items-center justify-between py-2 px-4 bg-off-white rounded-lg w-full lg:rounded-2xl lg:p-4  lg:max-w-[184px]">
@@ -38,8 +39,9 @@
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">Size</h4>
             <div class="flex items-center justify-start gap-4 flex-wrap">
                 <?php foreach ($sizes as $size) { ?>
-                    <button type="button" class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
-                        onclick="window.location.href = '<?= base_url('products'); ?>?id_size=<?= $size['id']; ?>'"><?= $size['name']; ?></button>
+                <button type="button"
+                    class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
+                    onclick="window.location.href = '<?= base_url('products'); ?>?id_size=<?= $size['id']; ?>'"><?= $size['name']; ?></button>
                 <?php } ?>
             </div>
         </div>
@@ -51,8 +53,8 @@
             </h4>
             <div class="flex items-center justify-start gap-[18.75px] flex-wrap">
                 <?php foreach ($colors as $color) { ?>
-                    <button type="button" class="w-12 h-12 block rounded-lg bg-[#<?= $color['name'] ?>]"
-                        onclick="window.location.href = '<?= base_url('products'); ?>?id_color=<?= $color['id']; ?>'"></button>
+                <button type="button" class="w-12 h-12 block rounded-lg bg-[#<?= $color['name'] ?>]"
+                    onclick="window.location.href = '<?= base_url('products'); ?>?id_color=<?= $color['id']; ?>'"></button>
                 <?php } ?>
             </div>
         </div>
@@ -61,11 +63,12 @@
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">Category</h4>
             <div class="flex flex-col items-start justify-start gap-4 flex-wrap">
                 <?php foreach ($categories as $category) { ?>
-                    <div class="flex items-center justify-start gap-4 w-full">
-                        <input type="checkbox" name="category" id="category<?= $category['id']; ?>" class="text-xl"
-                            onclick="window.location.href = '<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>'">
-                        <label for="category<?= $category['id']; ?>" class="font-open-sans text-base font-semibold text-dark-charcoal"><?= $category['name']; ?></label>
-                    </div>
+                <div class="flex items-center justify-start gap-4 w-full">
+                    <input type="checkbox" name="category" id="category<?= $category['id']; ?>" class="text-xl"
+                        onclick="window.location.href = '<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>'">
+                    <label for="category<?= $category['id']; ?>"
+                        class="font-open-sans text-base font-semibold text-dark-charcoal"><?= $category['name']; ?></label>
+                </div>
                 <?php } ?>
             </div>
         </div>
@@ -75,22 +78,22 @@
         <!-- CARD -->
         <?php
         foreach ($products as $key => $item) { ?>
-            <div class="flex flex-col gap-2 w-full">
-                <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
-                    <img src="<?= base_url('public/uploads/' . $item['image_url']); ?>" alt="dummy-product"
-                        class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
-                        loading="lazy">
-                </div>
-                <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">
-                    <?php echo $item['name']; ?>
-                </h3>
-                <button type="button"
-                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
-                    onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">
-                    View Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?>
-                    </span>
-                </button>
+        <div class="flex flex-col gap-2 w-full">
+            <div class="mb-2 w-full bg-off-white rounded-2xl h-[171px] p-2 lg:rounded-[28px] lg:h-[350px]">
+                <img src="<?= base_url('public/uploads/' . $item['image_url']); ?>" alt="dummy-product"
+                    class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
+                    loading="lazy">
             </div>
+            <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">
+                <?php echo $item['name']; ?>
+            </h3>
+            <button type="button"
+                class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
+                onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">
+                View Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?>
+                </span>
+            </button>
+        </div>
         <?php } ?>
     </div>
 </section>

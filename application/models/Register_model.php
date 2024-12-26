@@ -1,5 +1,5 @@
 <?php
-class Contact_model extends CI_Model
+class Register_model extends CI_Model
 {
     public function __construct()
     {
@@ -7,7 +7,7 @@ class Contact_model extends CI_Model
         $this->load->database();
     }
 
-    public function insert_user($data)
+    public function register_user($data)
     {
         return $this->db->insert('users', $data);
     }

@@ -25,7 +25,7 @@
     <h3 class="font-open-sans font-semibold text-dark-charcoal text-xl lg:text-xl lg:max-w-[480px] lg:text-center">OR
     </h3>
     <!-- FORM INPUTS -->
-    <form action="" method="post"
+    <form action="<?php echo site_url('Login/authenticate') ?>" method="post" enctype="multipart/form-data"
         class="flex flex-col gap-5 items-center justify-center w-full lg:max-w-[480px] lg:gap-6">
         <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Username</h4>
