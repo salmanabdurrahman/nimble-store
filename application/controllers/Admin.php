@@ -304,7 +304,6 @@ class Admin extends CI_Controller
             echo "Data gagal dihapus";
         }
     }
-
     // COMMENTS
     public function comments()
     {

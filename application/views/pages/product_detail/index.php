@@ -1,4 +1,15 @@
 <!-- ======= DETAIL SECTION START ======= -->
+<?php
+// Ambil tanggal produk dari database
+$productDate = $product['created_at']; // Pastikan field ini ada di database Anda
+
+// Cek apakah produk ditambahkan dalam 7 hari terakhir
+$sevenDaysAgo = strtotime('-7 days'); // Mendapatkan timestamp 7 hari yang lalu
+$productTimestamp = strtotime($productDate); // Mengonversi tanggal produk ke timestamp
+
+// Jika produk ditambahkan dalam 7 hari terakhir, tampilkan "New Release"
+$isNewRelease = $productTimestamp >= $sevenDaysAgo;
+?>
 <section
     class="mt-[32px] flex flex-col gap-6 container items-center justify-center lg:mt-[60px] lg:flex-row lg:gap-[70px] lg:items-stretch">
     <!-- PRODUCT -->
@@ -7,9 +18,11 @@
         loading="lazy">
     <div class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
-            <span
-                class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
-                Release</span>
+            <?php if ($isNewRelease) { ?>
+                <span
+                    class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
+                    Release</span>
+            <?php } ?>
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal uppercase lg:text-[32px]">
                 <?= $product['name']; ?>
             </h3>
@@ -23,19 +36,19 @@
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Size</h4>
             <div class="flex flex-wrap gap-2 items-center justify-start lg:gap-1 w-full">
                 <!-- SIZES -->
-                <?php for ($i = 37; $i <= 45; $i++) { ?>
-                    <span
-                        class="rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 flex items-center justify-center text-center w-full max-w-12 transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white cursor-pointer">
-                        <?= $i; ?>
-                    </span>
-                <?php } ?>
+                <?php foreach ($sizes as $size) {
+                    echo '<span class="rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 flex items-center justify-center text-center w-full max-w-12 transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white cursor-pointer">';
+                    echo $size['name'];
+                    echo '</span>';
+                } ?>
             </div>
         </div>
         <div class="flex flex-col gap-2 items-center justify-center w-full">
             <button type="button"
-                class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]">
-                Add To Cart
-            </button>
+                class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
+                onclick="window.location.href = '<?php echo base_url('cart'); ?>'" >Add
+                To Cart</button>
+            <!-- BUY BUTTON -->
             <button type="button"
                 class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]">
                 Buy It Now
