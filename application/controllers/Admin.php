@@ -14,7 +14,7 @@ class Admin extends CI_Controller
     // DASHBOARD
     public function dashboard()
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/dashboard');
@@ -27,7 +27,7 @@ class Admin extends CI_Controller
         $this->load->model('Admin_users_models');
         $query['users'] = $this->Admin_users_models->get_users();
         $query['total_users'] = $this->Admin_users_models->count_users();
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/users', $query);
@@ -36,7 +36,7 @@ class Admin extends CI_Controller
 
     public function add_user()
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/add_user');
@@ -45,19 +45,19 @@ class Admin extends CI_Controller
 
     public function add_users_action()
     {
-        $fullname       = $this->input->post('fullname');
-        $username       = $this->input->post('username');
-        $email          = $this->input->post('email');
-        $password       = $this->input->post('password');
-        $phone          = $this->input->post('phone');
-        $gender         = $this->input->post('gender');
-        $province       = $this->input->post('province');
-        $city           = $this->input->post('city');
-        $district       = $this->input->post('district');
-        $subdistrict    = $this->input->post('subdistrict');
-        $street         = $this->input->post('street');
-        $description    = $this->input->post('description');
-        $zip_code       = $this->input->post('zip_code');
+        $fullname = $this->input->post('fullname');
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $phone = $this->input->post('phone');
+        $gender = $this->input->post('gender');
+        $province = $this->input->post('province');
+        $city = $this->input->post('city');
+        $district = $this->input->post('district');
+        $subdistrict = $this->input->post('subdistrict');
+        $street = $this->input->post('street');
+        $description = $this->input->post('description');
+        $zip_code = $this->input->post('zip_code');
 
         $config['upload_path'] = './public/uploads/users';
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
@@ -72,19 +72,19 @@ class Admin extends CI_Controller
         }
 
         $data = array(
-            'full_name'   => $fullname,
-            'username'   => $username,
-            'email'      => $email,
-            'password'   => $password,
-            'phone'      => $phone,
-            'gender'     => $gender,
-            'address_province'   => $province,
-            'address_city'       => $city,
-            'address_district'   => $district,
+            'full_name' => $fullname,
+            'username' => $username,
+            'email' => $email,
+            'password' => $password,
+            'phone' => $phone,
+            'gender' => $gender,
+            'address_province' => $province,
+            'address_city' => $city,
+            'address_district' => $district,
             'address_subdistrict' => $subdistrict,
-            'street_name'     => $street,
+            'street_name' => $street,
             'address_description' => $description,
-            'zip_code'   => $zip_code,
+            'zip_code' => $zip_code,
             'profile_picture' => $picture
         );
 
@@ -100,7 +100,6 @@ class Admin extends CI_Controller
     public function update_user($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
-        $data['user'] = $this->Admin_users_models->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/update_user', $data);
@@ -110,19 +109,19 @@ class Admin extends CI_Controller
     public function update_user_action()
     {
         $id = $this->input->post('id');
-        $fullname       = $this->input->post('fullname');
-        $username       = $this->input->post('username');
-        $email          = $this->input->post('email');
-        $password       = $this->input->post('password');
-        $phone          = $this->input->post('phone');
-        $gender         = $this->input->post('gender');
-        $province       = $this->input->post('province');
-        $city           = $this->input->post('city');
-        $district       = $this->input->post('district');
-        $subdistrict    = $this->input->post('subdistrict');
-        $street         = $this->input->post('street');
-        $description    = $this->input->post('description');
-        $zip_code       = $this->input->post('zip_code');
+        $fullname = $this->input->post('fullname');
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $phone = $this->input->post('phone');
+        $gender = $this->input->post('gender');
+        $province = $this->input->post('province');
+        $city = $this->input->post('city');
+        $district = $this->input->post('district');
+        $subdistrict = $this->input->post('subdistrict');
+        $street = $this->input->post('street');
+        $description = $this->input->post('description');
+        $zip_code = $this->input->post('zip_code');
 
         $user = $this->Admin_users_models->get_users_by_id($id)->row_array();
         $picture_old = $user['profile_picture'];
@@ -140,19 +139,19 @@ class Admin extends CI_Controller
         }
 
         $data = array(
-            'full_name'   => $fullname,
-            'username'   => $username,
-            'email'      => $email,
-            'password'   => $password,
-            'phone'      => $phone,
-            'gender'     => $gender,
-            'address_province'   => $province,
-            'address_city'       => $city,
-            'address_district'   => $district,
+            'full_name' => $fullname,
+            'username' => $username,
+            'email' => $email,
+            'password' => $password,
+            'phone' => $phone,
+            'gender' => $gender,
+            'address_province' => $province,
+            'address_city' => $city,
+            'address_district' => $district,
             'address_subdistrict' => $subdistrict,
-            'street_name'     => $street,
+            'street_name' => $street,
             'address_description' => $description,
-            'zip_code'   => $zip_code,
+            'zip_code' => $zip_code,
             'profile_picture' => $picture
         );
 
@@ -181,7 +180,7 @@ class Admin extends CI_Controller
         $this->load->model('Admin_model');
         $query['products'] = $this->Admin_model->get_product();
         $query['count_all_products'] = $this->Admin_model->count_all_products();
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/products/products', $query);
@@ -190,7 +189,7 @@ class Admin extends CI_Controller
 
     public function add_product()
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/products/add_product');
@@ -242,7 +241,7 @@ class Admin extends CI_Controller
 
     public function update_product($id)
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $data['product'] = $this->Admin_model->get_product_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
@@ -309,8 +308,6 @@ class Admin extends CI_Controller
     public function comments()
     {
         $data['header_title'] = 'Nimble | Dashboard';
-        $data['comments'] = $this->Comments_model->get_comments();
-        $data['count_all_comment'] = $this->Comments_model-> count_all_comments();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/comments', $data);
@@ -321,7 +318,7 @@ class Admin extends CI_Controller
 
     public function add_comment()
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/add_comment');
@@ -355,10 +352,9 @@ class Admin extends CI_Controller
     public function update_comment($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
-        $data['comment'] = $this->Comments_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
-        $this->load->view('admin/comments/update_comment',$data);
+        $this->load->view('admin/comments/update_comment', $data);
         $this->load->view('templates/admin_footer');
     }
 
@@ -379,7 +375,7 @@ class Admin extends CI_Controller
             'rating' => $rating
         );
 
-        $this->Comments_model->update_comment($data,$comment_id);
+        $this->Comments_model->update_comment($data, $comment_id);
 
         if ($this->db->affected_rows()) {
             redirect('Admin/comments');
