@@ -9,6 +9,8 @@ class Products_model extends CI_Model
 
     public function get_products()
     {
+        // Menambahkan pengurutan descending berdasarkan 'created_at' atau kolom lain jika diperlukan
+        $this->db->order_by('created_at', 'DESC');  // Urutkan berdasarkan 'created_at' secara menurun
         $query = $this->db->get('products');
         return $query->result_array();
     }
@@ -22,6 +24,7 @@ class Products_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+
     public function get_recent_products($limit = 4)
     {
         // Mengambil 4 produk terbaru berdasarkan tanggal pembuatan (created_at)
@@ -59,6 +62,7 @@ class Products_model extends CI_Model
         $this->db->from('products');
         $this->db->join('colors', 'products.color_id = colors.id', 'left');
         $this->db->where('products.color_id', $color_id); // Filter berdasarkan ID warna
+        $this->db->order_by('created_at', 'DESC'); // Urutkan berdasarkan created_at secara menurun
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -69,10 +73,10 @@ class Products_model extends CI_Model
         $this->db->from('products');
         $this->db->join('colors', 'products.color_id = colors.id', 'left');
         $this->db->where('products.size_id', $size_id); // Filter berdasarkan ID ukuran
+        $this->db->order_by('created_at', 'DESC'); // Urutkan berdasarkan created_at secara menurun
         $query = $this->db->get();
         return $query->result_array();
     }
-
 
     public function get_products_by_category($category_id)
     {
@@ -80,6 +84,7 @@ class Products_model extends CI_Model
         $this->db->from('products');
         $this->db->join('colors', 'products.color_id = colors.id', 'left');
         $this->db->where('products.category_id', $category_id); // Filter berdasarkan ID kategori
+        $this->db->order_by('created_at', 'DESC'); // Urutkan berdasarkan created_at secara menurun
         $query = $this->db->get();
         return $query->result_array();
     }
