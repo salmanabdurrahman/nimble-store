@@ -6,8 +6,6 @@ class Admin extends CI_Controller
         // yg gak kepake hapus aja
         parent::__construct();
         $this->load->model('Admin_model');
-        $this->load->model('Admin_users_models');
-        $this->load->model('Comments_model');
     }
 
     // DASHBOARD
@@ -23,9 +21,9 @@ class Admin extends CI_Controller
     // USERS
     public function users()
     {
-        $this->load->model('Admin_users_models');
-        $query['users'] = $this->Admin_users_models->get_users();
-        $query['total_users'] = $this->Admin_users_models->count_users();
+        $this->load->model('Admin_model');
+        $query['users'] = $this->Admin_model->get_users();
+        $query['total_users'] = $this->Admin_model->count_users();
         $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
@@ -87,7 +85,7 @@ class Admin extends CI_Controller
             'profile_picture' => $picture
         );
 
-        $this->Admin_users_models->add_user($data);
+        $this->Admin_model->add_user($data);
 
         if ($this->db->affected_rows()) {
             redirect('Admin/users');
@@ -100,7 +98,7 @@ class Admin extends CI_Controller
     {
         $data['header_title'] = 'Nimble | Dashboard';
         $this->load->view('templates/admin_header', $data);
-        $data['user'] = $this->Admin_users_models->get_users_by_id($id)->row_array();
+        $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/update_user', $data);
         $this->load->view('templates/admin_footer');
@@ -123,7 +121,7 @@ class Admin extends CI_Controller
         $description = $this->input->post('description');
         $zip_code = $this->input->post('zip_code');
 
-        $user = $this->Admin_users_models->get_users_by_id($id)->row_array();
+        $user = $this->Admin_model->get_users_by_id($id)->row_array();
         $picture_old = $user['profile_picture'];
 
         $config['upload_path'] = './public/uploads/users';
@@ -155,7 +153,7 @@ class Admin extends CI_Controller
             'profile_picture' => $picture
         );
 
-        $this->Admin_users_models->update_user($data, $id);
+        $this->Admin_model->update_user($data, $id);
 
         if ($this->db->affected_rows()) {
             redirect('Admin/users');
@@ -166,7 +164,7 @@ class Admin extends CI_Controller
 
     public function delete_user($id_user)
     {
-        $this->Admin_users_models->delete_user($id_user);
+        $this->Admin_model->delete_user($id_user);
         if ($this->db->affected_rows()) {
             redirect('Admin/users');
         } else {
@@ -308,8 +306,8 @@ class Admin extends CI_Controller
     public function comments()
     {
         $data['header_title'] = 'Nimble | Dashboard';
-        $data['comments'] = $this->Comments_model->get_comments();
-        $data['count_all_comment'] = $this->Comments_model->count_all_comments();
+        $data['comments'] = $this->Admin_model->get_comments();
+        $data['count_all_comment'] = $this->Admin_model->count_all_comments();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/comments', $data);
@@ -341,7 +339,7 @@ class Admin extends CI_Controller
             'rating' => $rating
         );
 
-        $this->Comments_model->add_comment($data);
+        $this->Admin_model->add_comment($data);
 
         if ($this->db->affected_rows()) {
             redirect('Admin/products');
@@ -354,7 +352,7 @@ class Admin extends CI_Controller
     public function update_comment($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
-        $data['comment'] = $this->Comments_model->get_comment_by_id($id)->row_array();
+        $data['comment'] = $this->Admin_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/update_comment', $data);
@@ -378,7 +376,7 @@ class Admin extends CI_Controller
             'rating' => $rating
         );
 
-        $this->Comments_model->update_comment($data, $comment_id);
+        $this->Admin_model->update_comment($data, $comment_id);
 
         if ($this->db->affected_rows()) {
             redirect('Admin/comments');
@@ -389,7 +387,7 @@ class Admin extends CI_Controller
 
     public function delete_comment($id)
     {
-        $this->Comments_model->delete_comment($id);
+        $this->Admin_model->delete_comment($id);
         if ($this->db->affected_rows()) {
             redirect('admin/comments');
         } else {
