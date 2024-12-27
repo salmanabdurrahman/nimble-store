@@ -1,4 +1,6 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
 class Login extends CI_Controller
 {
 
@@ -22,35 +24,51 @@ class Login extends CI_Controller
 
     public function authenticate()
     {
-        // Ambil data dari form
+        // // Ambil data dari form
+        // $username = $this->input->post('username');
+        // $password = $this->input->post('password');
+
+        // // Validasi login
+        // $user = $this->Login_model->validate($username, $password);
+
+        // if ($user) {
+        //     // Jika valid, set session dan redirect
+        //     $this->session->set_userdata('user_id', $user->id);
+        //     redirect('admin/products'); // Ganti dengan halaman yang sesuai
+        // } else {
+        //     // Jika tidak valid, kembali ke halaman login dengan pesan error
+        //     $this->session->set_flashdata('error', 'Username atau password salah');
+        //     redirect('login');
+        // }
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-
-        // Validasi login
-        $user = $this->Login_model->validate($username, $password);
-
-        if ($user) {
-            // Jika valid, set session dan redirect
-            $this->session->set_userdata('user_logged_in', true);
-            $this->session->set_userdata('user_id', $user->id);
-            $this->session->set_userdata('user_email', $user->email);
-            if ($user->role == 'admin') {
-                $this->session->set_userdata('role', 'admin');
-                redirect('admin/dashboard');
+        $response = $this->db->get_where('users', array('username' => $username, 'password' => $password))->row_array();
+        if ($response) {
+            $data = array(
+                'role' => $response['role'],
+                'profile_picture' => $response['profile_picture'],
+                'email' => $response['email']
+            );
+            $this->session->set_userdata($data);
+            if ($response['role'] == 'admin') {
+                redirect(base_url('admin/products'));
+            } elseif ($response['role'] == 'user') {
+                redirect(base_url('user/dashboard'));
             } else {
-                $this->session->set_userdata('role', 'user');
-                redirect('user/dashboard'); // Ganti dengan halaman yang sesuai
+                redirect(base_url('login'));
             }
-        } else {
-            // Jika tidak valid, kembali ke halaman login dengan pesan error
-            $this->session->set_flashdata('error', 'Username atau password salah');
-            redirect('login');
+            // if ($response->role == 'admin') {
+            //     redirect(base_url('admin/dashboard'));
+            // } elseif ($response->role == 'user') {
+            //     $this->session->set_userdata($data);
+            //     redirect(base_url('user/dashboard'));
+            // }
         }
     }
 
     public function logout()
     {
-        $this->session->unset_userdata('user_id');
-        redirect('login');
+        $this->session->sess_destroy();
+        redirect(base_url('Login'));
     }
 }

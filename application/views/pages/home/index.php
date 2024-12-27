@@ -81,7 +81,9 @@
                         class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
                         loading="lazy">
                 </div>
-                <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase"> <?php echo $item['name']; ?> </h3>
+                <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">
+                    <?php echo $item['name']; ?>
+                </h3>
                 <button type="button"
                     class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
                     onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">View

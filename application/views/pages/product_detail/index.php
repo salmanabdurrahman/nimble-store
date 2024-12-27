@@ -19,9 +19,9 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     <div class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
             <?php if ($isNewRelease) { ?>
-            <span
-                class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
-                Release</span>
+                <span
+                    class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
+                    Release</span>
             <?php } ?>
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal uppercase lg:text-[32px]">
                 <?= $product['name']; ?>
@@ -66,39 +66,94 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
 
 <!-- ======= REVIEWS SECTION START ======= -->
 <section class="w-full mt-[45px] flex flex-col container items-start justify-center gap-6 lg:mt-[100px] lg:gap-8">
-    <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">Reviews</h3>
+    <div class="w-full flex items-center justify-between">
+        <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">Reviews</h3>
+        <button type="button"
+            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-3 lg:px-8 lg:max-w-[270px] uppercase"
+            id="button-add-review">Add
+            Review</button>
+    </div>
+    <!-- COMMENTS -->
     <div class="grid grid-cols-1 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
         <?php if (!empty($comments)) { ?>
-        <?php foreach ($comments as $comment) { ?>
-        <div class="flex flex-col items-center justify-center w-full bg-off-white p-4 rounded-[16px] gap-4">
-            <div class="flex items-start justify-between w-full">
-                <div class="flex flex-col gap-2 items-start justify-start max-w-[85%]">
-                    <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">
-                        <?= isset($comment['user_name']) ? $comment['user_name'] : 'No users'; ?>
-                    </h4>
-                    <p class="font-open-sans font-normal text-sm text-dark-charcoal/80 lg:text-base">
-                        <?= isset($comment['comment']) ? $comment['comment'] : 'No comment'; ?>
-                    </p>
-                    <div class="flex items-center justify-start gap-1 w-full">
-                        <?php if (isset($comment['rating'])) {
+            <?php foreach ($comments as $comment) { ?>
+                <div class="flex flex-col items-center justify-center w-full bg-off-white p-4 rounded-[16px] gap-4">
+                    <div class="flex items-start justify-between w-full">
+                        <div class="flex flex-col gap-2 items-start justify-start max-w-[85%]">
+                            <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">
+                                <?= isset($comment['user_name']) ? $comment['user_name'] : 'No users'; ?>
+                            </h4>
+                            <p class="font-open-sans font-normal text-sm text-dark-charcoal/80 lg:text-base">
+                                <?= isset($comment['comment']) ? $comment['comment'] : 'No comment'; ?>
+                            </p>
+                            <div class="flex items-center justify-start gap-1 w-full">
+                                <?php if (isset($comment['rating'])) {
                                     for ($i = 1; $i <= $comment['rating']; $i++) { ?>
-                        <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
-                            class="block size-4 lg:size-6" loading="lazy">
-                        <?php }
+                                        <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
+                                            class="block size-4 lg:size-6" loading="lazy">
+                                    <?php }
                                 } ?>
-                        <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
-                            <?= number_format($comment['rating'], 1); ?>
-                        </p>
+                                <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
+                                    <?= number_format($comment['rating'], 1); ?>
+                                </p>
+                            </div>
+                        </div>
+                        <img src="<?= isset($comment['profile_picture']) ? $comment['profile_picture'] : base_url('public/uploads/' . $comment['user_profile']); ?>"
+                            class="block size-12 lg:size-16 rounded-full object-cover" alt="user-profile" loading="lazy">
                     </div>
                 </div>
-                <img src="<?= isset($comment['profile_picture']) ? $comment['profile_picture'] : base_url('public/uploads/'.$comment['user_profile']); ?>"
-                    class="block size-12 lg:size-16 rounded-full object-cover" alt="user-profile" loading="lazy">
-            </div>
-        </div>
-        <?php } ?>
+            <?php } ?>
         <?php } else { ?>
-        <p>No reviews available for this product.</p>
+            <p>No reviews available for this product.</p>
         <?php } ?>
     </div>
 </section>
 <!-- ======= REVIEWS SECTION END ======= -->
+
+<!-- ======= ADD REVIEWS SECTION START ======= -->
+<section
+    class="mt-[32px] bg-off-white container w-full rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-5 items-center justify-center lg:mt-[60px] lg:gap-6 lg:pt-6 lg:pb-[45px] lg:rounded-3xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 lg:w-[600px] hidden"
+    id="add-review">
+    <div class="flex flex-col gap-2 items-center justify-center lg:max-w-[480px]">
+        <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-4xl">Add Review</h3>
+    </div>
+    <!-- FORM INPUTS -->
+    <form action="<?php echo site_url('Product/add_review') ?>" method="post"
+        class="flex flex-col gap-5 items-center justify-center w-full lg:max-w-[480px] lg:gap-6">
+        <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
+            <textarea name="comment" id="comment" rows="4"
+                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
+                placeholder="Comment"></textarea>
+            <input type="number" name="rating" id="rating" min="1" max="5"
+                class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
+                placeholder="Rating (1-5)">
+        </div>
+        <button type="submit"
+            class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2">Add
+            Review
+            <img src="<?= base_url('public/icons/register/arrow-forward.png'); ?>" alt="arrow"
+                class="block w-4 text-base text-white" loading="lazy">
+        </button>
+        <button type="button"
+            class="rounded-lg bg-off-white py-4 px-[74px] w-full text-dark-charcoal font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2 border border-solid border-dark-charcoal"
+            id="cancel-add-review">Cancel
+        </button>
+    </form>
+</section>
+<!-- ======= ADD REVIEWS SECTION END ======= -->
+
+<script>
+    const buttonAddReview = document.getElementById('button-add-review');
+    const cancelAddReview = document.getElementById('cancel-add-review');
+    const addReview = document.getElementById('add-review');
+
+    document.addEventListener('click', function (event) {
+        if (event.target === buttonAddReview) {
+            addReview.classList.remove('hidden');
+        }
+
+        if (event.target === cancelAddReview) {
+            addReview.classList.add('hidden');
+        }
+    });
+</script>

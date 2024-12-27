@@ -1,4 +1,6 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
 class Contact extends CI_Controller
 {
     public function index()
@@ -6,7 +8,8 @@ class Contact extends CI_Controller
         $data['header_title'] = 'Nimble | Contact';
         $this->load->model('Contact_model');
         $this->load->model('Products_model');
-        $this->load->library('session');
+        $this->load->library(['form_validation', 'session']);
+        $this->load->helper('url');
         $query['categories'] = $this->db->get('categories')->result_array();
 
         if ($this->input->post()) {
@@ -26,8 +29,8 @@ class Contact extends CI_Controller
                 $this->session->set_flashdata('success', 'Your message has been sent successfully!');
                 redirect('contact');
             } else {
-                // Set flashdata error
-                $this->session->set_flashdata('error', validation_errors());
+                // Jika validasi gagal, set flashdata error
+                $this->session->set_flashdata('error', validation_errors('<li>', '</li>'));
                 redirect('contact');
             }
         }
@@ -38,6 +41,3 @@ class Contact extends CI_Controller
         $this->load->view('templates/footer', $query);
     }
 }
-
-
-
