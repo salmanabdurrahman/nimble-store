@@ -31,7 +31,7 @@ class Product_Detail extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('pages/product_detail/index', $data); // Ensure data is passed to the view
         $this->load->view('templates/subscribe');
-        $this->load->view('templates/footer',$query);
+        $this->load->view('templates/footer', $query);
     }
 
 }

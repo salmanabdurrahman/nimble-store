@@ -39,14 +39,14 @@ class User extends CI_Controller
     //     $this->load->view('templates/admin_footer');
     // }
 
-    // public function update_user()
-    // {
-    //     $data['header_title'] = 'Nimble | User Dashboard';
-    //     $this->load->view('templates/admin_header', $data);
-    //     $this->load->view('templates/dashboard_layout');
-    //     $this->load->view('admin/users/update_user');
-    //     $this->load->view('templates/admin_footer');
-    // }
+    public function update_user()
+    {
+        $data['header_title'] = 'Nimble | User Dashboard';
+        $this->load->view('templates/admin_header', $data);
+        $this->load->view('templates/dashboard_user_layout');
+        $this->load->view('user/user/update_user');
+        $this->load->view('templates/admin_footer');
+    }
 
     // // PRODUCTS
     // public function products()
