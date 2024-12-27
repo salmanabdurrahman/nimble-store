@@ -68,10 +68,12 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
 <section class="w-full mt-[45px] flex flex-col container items-start justify-center gap-6 lg:mt-[100px] lg:gap-8">
     <div class="w-full flex items-center justify-between">
         <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">Reviews</h3>
-        <button type="button"
-            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-3 lg:px-8 lg:max-w-[270px] uppercase"
-            id="button-add-review">Add
-            Review</button>
+        <?php if ($this->session->userdata('user_logged_in')): ?>
+            <button type="button"
+                class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-3 lg:px-8 lg:max-w-[270px] uppercase"
+                id="button-add-review">Add
+                Review</button>
+        <?php endif; ?>
     </div>
     <!-- COMMENTS -->
     <div class="grid grid-cols-1 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
@@ -91,7 +93,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
                                     for ($i = 1; $i <= $comment['rating']; $i++) { ?>
                                         <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
                                             class="block size-4 lg:size-6" loading="lazy">
-                                    <?php }
+                                <?php }
                                 } ?>
                                 <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
                                     <?= number_format($comment['rating'], 1); ?>
@@ -147,7 +149,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     const cancelAddReview = document.getElementById('cancel-add-review');
     const addReview = document.getElementById('add-review');
 
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         if (event.target === buttonAddReview) {
             addReview.classList.remove('hidden');
         }
