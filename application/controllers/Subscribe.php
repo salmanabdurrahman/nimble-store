@@ -7,6 +7,7 @@ class Subscribe extends CI_Controller
     {
         $this->load->model('Subscribe_model');
         $this->load->library(['form_validation', 'session']);
+        $this->load->helper('url');
 
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|trim');
 
