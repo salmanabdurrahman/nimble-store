@@ -22,7 +22,7 @@
                                 <div>
                                     <div class="inline-flex gap-x-2">
                                         <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                                            href="<?= base_url('admin/add_comment'); ?>">
+                                            href="<?= base_url('user/add_comment'); ?>">
                                             <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
                                                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -91,7 +91,6 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
-                                    <?php foreach ($comments as $comment) { ?>
                                     <tr>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
@@ -99,8 +98,7 @@
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm font-semibold text-gray-800"><?php echo $comment['id'] ?></span>
+                                                <span class="block text-sm font-semibold text-gray-800">1</span>
                                             </div>
                                         </td>
                                         <!-- <td class="h-px w-72 whitespace-nowrap">
@@ -114,20 +112,17 @@
                                         </td> -->
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['product_name'] ?></span>
+                                                <span class="block text-sm text-gray-800">ADIDAS 4DFWD X PARLEY</span>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['user_name'] ?></span>
+                                                <span class="block text-sm text-gray-800">salmanabd</span>
                                             </div>
                                         </td>
                                         <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['comment'] ?></span>
+                                                <span class="block text-sm text-gray-800">Sepatunya sangat bagus</span>
                                             </div>
                                         </td>
                                         <!-- <td class="size-px whitespace-nowrap">
@@ -150,24 +145,21 @@
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="text-sm text-gray-500"><?php echo $comment['created_at'] ?></span>
+                                                <span class="text-sm text-gray-500">28 Dec, 12:12</span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-1.5 gap-2 flex items-center">
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_comment/' . $comment['id']); ?>">
+                                                    href="<?= base_url('user/update_comment'); ?>">
                                                     Edit
                                                 </a>
                                                 <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('Admin/delete_comment/' . $comment['id']); ?>"
-                                                    onclick="return confirm('Apakah adan yakin ingin menghapus comment ini')">
+                                                    href="#">
                                                     Delete
                                                 </a>
                                             </div>
                                         </td>
-                                        <?php } ?>
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,9 +168,7 @@
                                 class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                                 <div>
                                     <p class="text-sm text-gray-600">
-                                        <span
-                                            class="font-semibold text-gray-800"><?php echo $count_all_comment ?></span>
-                                        results
+                                        <span class="font-semibold text-gray-800">12</span> results
                                     </p>
                                 </div>
                             </div>

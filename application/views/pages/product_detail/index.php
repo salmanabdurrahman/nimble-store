@@ -19,9 +19,9 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     <div class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
             <?php if ($isNewRelease) { ?>
-                <span
-                    class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
-                    Release</span>
+            <span
+                class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
+                Release</span>
             <?php } ?>
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal uppercase lg:text-[32px]">
                 <?= $product['name']; ?>
@@ -46,7 +46,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
         <div class="flex flex-col gap-2 items-center justify-center w-full">
             <button type="button"
                 class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
-                onclick="window.location.href = '<?php echo base_url('cart'); ?>'" >Add
+                onclick="window.location.href = '<?php echo base_url('cart'); ?>'">Add
                 To Cart</button>
             <!-- BUY BUTTON -->
             <button type="button"
@@ -69,35 +69,35 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">Reviews</h3>
     <div class="grid grid-cols-1 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
         <?php if (!empty($comments)) { ?>
-            <?php foreach ($comments as $comment) { ?>
-                <div class="flex flex-col items-center justify-center w-full bg-off-white p-4 rounded-[16px] gap-4">
-                    <div class="flex items-start justify-between w-full">
-                        <div class="flex flex-col gap-2 items-start justify-start max-w-[85%]">
-                            <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">
-                                <?= isset($comment['user_name']) ? $comment['user_name'] : 'No users'; ?>
-                            </h4>
-                            <p class="font-open-sans font-normal text-sm text-dark-charcoal/80 lg:text-base">
-                                <?= isset($comment['comment']) ? $comment['comment'] : 'No comment'; ?>
-                            </p>
-                            <div class="flex items-center justify-start gap-1 w-full">
-                                <?php if (isset($comment['rating'])) {
+        <?php foreach ($comments as $comment) { ?>
+        <div class="flex flex-col items-center justify-center w-full bg-off-white p-4 rounded-[16px] gap-4">
+            <div class="flex items-start justify-between w-full">
+                <div class="flex flex-col gap-2 items-start justify-start max-w-[85%]">
+                    <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">
+                        <?= isset($comment['user_name']) ? $comment['user_name'] : 'No users'; ?>
+                    </h4>
+                    <p class="font-open-sans font-normal text-sm text-dark-charcoal/80 lg:text-base">
+                        <?= isset($comment['comment']) ? $comment['comment'] : 'No comment'; ?>
+                    </p>
+                    <div class="flex items-center justify-start gap-1 w-full">
+                        <?php if (isset($comment['rating'])) {
                                     for ($i = 1; $i <= $comment['rating']; $i++) { ?>
-                                        <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
-                                            class="block size-4 lg:size-6" loading="lazy">
-                                <?php }
+                        <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
+                            class="block size-4 lg:size-6" loading="lazy">
+                        <?php }
                                 } ?>
-                                <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
-                                    <?= number_format($comment['rating'], 1); ?>
-                                </p>
-                            </div>
-                        </div>
-                        <img src="<?= isset($comment['profile_picture']) ? $comment['profile_picture'] : base_url('public/uploads/'.$comment['user_profile']); ?>"
-                            class="block size-12 lg:size-16 rounded-full object-cover" alt="user-profile" loading="lazy">
+                        <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
+                            <?= number_format($comment['rating'], 1); ?>
+                        </p>
                     </div>
                 </div>
-            <?php } ?>
+                <img src="<?= isset($comment['profile_picture']) ? $comment['profile_picture'] : base_url('public/uploads/'.$comment['user_profile']); ?>"
+                    class="block size-12 lg:size-16 rounded-full object-cover" alt="user-profile" loading="lazy">
+            </div>
+        </div>
+        <?php } ?>
         <?php } else { ?>
-            <p>No reviews available for this product.</p>
+        <p>No reviews available for this product.</p>
         <?php } ?>
     </div>
 </section>

@@ -14,7 +14,7 @@ class Products_model extends CI_Model
         $query = $this->db->get('products');
         return $query->result_array();
     }
-    
+
     public function get_product_by_id($id)
     {
         $this->db->select('products.*, colors.name AS color_name');
