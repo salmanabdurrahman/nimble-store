@@ -45,13 +45,18 @@
         <div class="flex items-center gap-[9px] lg:gap-[40px]"></div>
         <div class="flex items-center gap-[9px] lg:gap-[40px]">
             <!-- belum login -->
-            <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
-                class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
-                loading="lazy" onclick="location.href='<?= base_url('login'); ?>'">
+            <?php if (!$this->session->userdata('user_logged_in')): ?>
+                <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
+                    class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                    loading="lazy" onclick="location.href='<?= base_url('login'); ?>'">
+            <?php endif; ?>
             <!-- udah login -->
-            <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
-                class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
-                loading="lazy" onclick="location.href='<?= base_url('user/dashboard'); ?>'">
+            <?php if ($this->session->userdata('user_logged_in')): ?>
+                <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
+                    class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                    loading="lazy" onclick="location.href='<?= base_url('user/dashboard'); ?>'">
+            <?php endif; ?>
+            <!-- Keranjang belanja -->
             <img src="<?= base_url('public/icons/header/shopping-cart.png'); ?>" alt="shopping-cart"
                 class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
                 loading="lazy" onclick="location.href='<?= base_url('cart'); ?>'">

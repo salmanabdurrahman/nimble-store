@@ -6,6 +6,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Login_model');
+        $this->load->library('session');
     }
 
     public function index()
@@ -30,8 +31,16 @@ class Login extends CI_Controller
 
         if ($user) {
             // Jika valid, set session dan redirect
+            $this->session->set_userdata('user_logged_in', true);
             $this->session->set_userdata('user_id', $user->id);
-            redirect('admin/products'); // Ganti dengan halaman yang sesuai
+            $this->session->set_userdata('user_email', $user->email);
+            if ($user->role == 'admin') {
+                $this->session->set_userdata('role', 'admin');
+                redirect('admin/dashboard');
+            } else {
+                $this->session->set_userdata('role', 'user');
+                redirect('user/dashboard'); // Ganti dengan halaman yang sesuai
+            }
         } else {
             // Jika tidak valid, kembali ke halaman login dengan pesan error
             $this->session->set_flashdata('error', 'Username atau password salah');
@@ -39,8 +48,9 @@ class Login extends CI_Controller
         }
     }
 
-    // public function logout() {
-    //     $this->session->unset_userdata('user_id');
-    //     redirect('login');
-    // }
+    public function logout()
+    {
+        $this->session->unset_userdata('user_id');
+        redirect('login');
+    }
 }
