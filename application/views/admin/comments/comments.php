@@ -92,18 +92,18 @@
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
                                     <?php foreach ($comments as $comment) { ?>
-                                    <tr>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm font-semibold text-gray-800"><?php echo $comment['id'] ?></span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="h-px w-72 whitespace-nowrap">
+                                        <tr>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span
+                                                        class="block text-sm font-semibold text-gray-800"><?php echo $comment['id'] ?></span>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="h-px w-72 whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
                                                 <div class="flex items-center gap-x-3">
                                                     <img class="inline-block size-[38px] rounded-full"
@@ -112,25 +112,25 @@
                                                 </div>
                                             </div>
                                         </td> -->
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['product_name'] ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['user_name'] ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $comment['comment'] ?></span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="size-px whitespace-nowrap">
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $comment['product_name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $comment['user_name'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $comment['comment'] ?></span>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3 text-start">
                                                 <span
                                                     class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
@@ -143,30 +143,30 @@
                                                 </span>
                                             </div>
                                         </td> -->
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span class="block text-sm text-gray-800">4</span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3 text-start">
-                                                <span
-                                                    class="text-sm text-gray-500"><?php echo $comment['created_at'] ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-1.5 gap-2 flex items-center">
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_comment/' . $comment['id']); ?>">
-                                                    Edit
-                                                </a>
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('Admin/delete_comment/' . $comment['id']); ?>"
-                                                    onclick="return confirm('Apakah adan yakin ingin menghapus comment ini')">
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span class="block text-sm text-gray-800">4</span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3 text-start">
+                                                    <span
+                                                        class="text-sm text-gray-500"><?php echo $comment['created_at'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-1.5 gap-2 flex items-center">
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        href="<?= base_url('admin/update_comment/' . $comment['id']); ?>">
+                                                        Edit
+                                                    </a>
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        href="<?= base_url('Admin/delete_comment/' . $comment['id']); ?>"
+                                                        onclick="return confirm('Apakah adan yakin ingin menghapus comment ini')">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </td>
                                         <?php } ?>
                                     </tr>
                                 </tbody>

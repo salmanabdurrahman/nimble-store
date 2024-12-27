@@ -42,16 +42,19 @@
             class="block w-[20px] lg:hidden" loading="lazy" id="hamburger-menu">
         <h3 class="font-rubik font-bold text-[25px] lg:text-[40px] cursor-pointer text-dark-charcoal"
             onclick="location.href='<?= base_url('home'); ?>'">NIMBLE</h3>
+        <div class="flex items-center gap-[9px] lg:gap-[40px]"></div>
         <div class="flex items-center gap-[9px] lg:gap-[40px]">
-            <input type="text" name="search"
-                class="hidden lg:block rounded-[46px] py-[8px] px-[16px] shadow-[-1px_1px_5px_1px_rgb(0,0,0,0.1)] focus:outline-none focus:border-none focus:ring-0 font-rubik font-normal text-lg placeholder:text-[#99A2A5]"
-                placeholder="Find shoes">
+            <!-- belum login -->
             <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
                 class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
-                loading="lazy">
+                loading="lazy" onclick="location.href='<?= base_url('login'); ?>'">
+            <!-- udah login -->
+            <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
+                class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                loading="lazy" onclick="location.href='<?= base_url('user/dashboard'); ?>'">
             <img src="<?= base_url('public/icons/header/shopping-cart.png'); ?>" alt="shopping-cart"
                 class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
-                loading="lazy">
+                loading="lazy" onclick="location.href='<?= base_url('cart'); ?>'">
         </div>
     </header>
     <!-- ======= HEADER SECTION END ======= -->
@@ -70,11 +73,6 @@
                 id="nav-link-3">About</a>
             <a href="<?= base_url('contact'); ?>" class="font-rubik nav-link text-base font-medium text-dark-charcoal"
                 id="nav-link-4">Contact</a>
-        </div>
-        <div>
-            <input type="text" name="search"
-                class="flex items-center lg:hidden rounded-[46px] py-[8px] px-[16px] shadow-[-1px_1px_5px_1px_rgb(0,0,0,0.1)] focus:outline-none focus:border-none focus:ring-0 font-rubik font-normal text-sm placeholder:text-[#99A2A5]"
-                placeholder="Find shoes">
         </div>
     </nav>
 
