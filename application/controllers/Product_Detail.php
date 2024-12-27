@@ -6,6 +6,7 @@ class Product_Detail extends CI_Controller
         $data['header_title'] = 'Nimble | Product Detail';
         $this->load->model('Products_model');
         $data['sizes'] = $this->db->get('sizes')->result_array();
+        $query['categories'] = $this->db->get('categories')->result_array();
         $this->load->model('Comments_model');
     
         // Get product ID from request
@@ -28,7 +29,7 @@ class Product_Detail extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('pages/product_detail/index', $data); // Ensure data is passed to the view
         $this->load->view('templates/subscribe');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer', $query);
     }
     
 }
