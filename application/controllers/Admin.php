@@ -309,7 +309,7 @@ class Admin extends CI_Controller
     {
         $data['header_title'] = 'Nimble | Dashboard';
         $data['comments'] = $this->Comments_model->get_comments();
-        $data['count_all_comment'] = $this->Comments_model-> count_all_comments();
+        $data['count_all_comment'] = $this->Comments_model->count_all_comments();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/comments', $data);
@@ -354,6 +354,7 @@ class Admin extends CI_Controller
     public function update_comment($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
+        $data['comment'] = $this->Comments_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/comments/update_comment', $data);
