@@ -26,8 +26,8 @@ class Contact extends CI_Controller
                 $this->session->set_flashdata('success', 'Your message has been sent successfully!');
                 redirect('contact');
             } else {
-                // Set flashdata error
-                $this->session->set_flashdata('error', validation_errors());
+                // Jika validasi gagal, set flashdata error
+                $this->session->set_flashdata('error', validation_errors('<li>', '</li>'));
                 redirect('contact');
             }
         }
@@ -38,6 +38,3 @@ class Contact extends CI_Controller
         $this->load->view('templates/footer', $query);
     }
 }
-
-
-

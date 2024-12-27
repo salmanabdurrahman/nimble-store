@@ -13,13 +13,14 @@
         <form action="" method="post" class="flex flex-col gap-5 items-start justify-center w-full lg:gap-6">
             <input type="text" name="name"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
-                placeholder="Name*" required>
+                placeholder="Name*" required autocomplete="off">
             <input type="email" name="email"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
-                placeholder="Email*" required>
+                placeholder="Email*" required autocomplete="off">
             <textarea name="message" id="" cols="30" rows="5" class="rounded-lg border border-solid
                 border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal
-                text-dark-charcoal text-base placeholder:text=[#79767C]" placeholder="Message*" required></textarea>
+                text-dark-charcoal text-base placeholder:text=[#79767C]" placeholder="Message*" required
+                autocomplete="off"></textarea>
             <button type="submit"
                 class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2">Submit
                 <img src="<?= base_url('public/icons/register/arrow-forward.png'); ?>" alt="arrow"
@@ -84,7 +85,7 @@
     <script>
         Swal.fire({
             title: "Error!",
-            text: "<?= $this->session->flashdata('error'); ?>",
+            html: "<ul><?= $this->session->flashdata('error'); ?></ul>",
             icon: "error",
             confirmButtonText: "OK"
         });

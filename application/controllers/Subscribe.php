@@ -5,27 +5,35 @@ class Subscribe extends CI_Controller
 {
     public function add_subscribe_action()
     {
-        $email = $this->input->post('email');
-
-        $data = array(
-            'email' => $email,
-
-        );
         $this->load->model('Subscribe_model');
-        $this->Subscribe_model->insert_subscribe($data);
+        $this->load->library(['form_validation', 'session']);
 
-        if ($this->db->affected_rows()) {
-            redirect('home');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|trim');
+
+        if ($this->form_validation->run() === TRUE) {
+            $email = $this->input->post('email', TRUE);
+            $data = ['email' => $email];
+
+            $this->Subscribe_model->insert_subscribe($data);
+
+            if ($this->db->affected_rows()) {
+                // Set flashdata sukses
+                $this->session->set_flashdata('success', 'Thank you for subscribing!');
+            } else {
+                // Jika insert gagal
+                $this->session->set_flashdata('error', 'Failed to save your email. Please try again.');
+            }
         } else {
-            redirect('home');
+            $this->session->set_flashdata('error', validation_errors('<li>', '</li>'));
         }
+
+        redirect($_SERVER['HTTP_REFERER']);
     }
+
     public function test_insert()
     {
         $this->load->model('Subscribe_model');
-        $data = [
-            'email' => 'test@example.com',
-        ];
+        $data = ['email' => 'test@example.com'];
 
         if ($this->Subscribe_model->insert_subscribe($data)) {
             echo 'Insert successful!';
@@ -33,6 +41,4 @@ class Subscribe extends CI_Controller
             echo 'Insert failed!';
         }
     }
-
 }
-
