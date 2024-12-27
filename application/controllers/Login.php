@@ -8,6 +8,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Login_model');
+        $this->load->library('session');
     }
 
     public function index()
@@ -44,6 +45,7 @@ class Login extends CI_Controller
         $response = $this->db->get_where('users', array('username' => $username, 'password' => $password))->row_array();
         if ($response) {
             $data = array(
+                'user_logged_in' => TRUE,
                 'role' => $response['role'],
                 'profile_picture' => $response['profile_picture'],
                 'email' => $response['email']

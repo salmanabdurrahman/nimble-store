@@ -13,9 +13,10 @@ class User extends CI_Controller
     public function dashboard()
     {
         $data['header_title'] = 'Nimble | User Dashboard';
+        $data['user_email'] = $this->session->userdata('user_email');
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
-        $this->load->view('user/dashboard');
+        $this->load->view('user/dashboard', $data);
         $this->load->view('templates/admin_footer');
     }
 

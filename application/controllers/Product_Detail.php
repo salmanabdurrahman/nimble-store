@@ -35,5 +35,4 @@ class Product_Detail extends CI_Controller
         $this->load->view('templates/subscribe');
         $this->load->view('templates/footer', $query);
     }
-
 }
