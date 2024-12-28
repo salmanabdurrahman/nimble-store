@@ -190,7 +190,7 @@ class User extends CI_Controller
         $data['comments'] = $this->Admin_model->get_comments_by_user_id();
         $data['count_comments_by_user_id'] = $this->Admin_model->count_comments_by_user_id();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_user_layout');
         $this->load->view('User/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
