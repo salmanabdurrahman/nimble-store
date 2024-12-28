@@ -50,11 +50,16 @@
                     class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
                     loading="lazy" onclick="location.href='<?= base_url('login'); ?>'">
             <?php endif; ?>
-            <!-- udah login -->
-            <?php if ($this->session->userdata('user_logged_in')): ?>
+            <!-- udah login sebagai user -->
+            <?php if ($this->session->userdata('user_logged_in') && $this->session->userdata('role') == 'user'): ?>
                 <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
                     class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
                     loading="lazy" onclick="location.href='<?= base_url('user/dashboard'); ?>'">
+            <!-- udah login sebagai admin -->
+            <?php elseif ($this->session->userdata('user_logged_in') && $this->session->userdata('role') == 'admin'): ?>
+                <img src="<?= base_url('public/icons/header/user-icon.png'); ?>" alt="user-icon"
+                    class="block w-[20px] cursor-pointer duration-300 transition-all hover:scale-105 lg:w-[24px]"
+                    loading="lazy" onclick="location.href='<?= base_url('admin/dashboard'); ?>'">
             <?php endif; ?>
             <!-- Keranjang belanja -->
             <img src="<?= base_url('public/icons/header/shopping-cart.png'); ?>" alt="shopping-cart"

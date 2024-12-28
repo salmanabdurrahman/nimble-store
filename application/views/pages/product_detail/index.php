@@ -44,15 +44,29 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
             </div>
         </div>
         <div class="flex flex-col gap-2 items-center justify-center w-full">
-            <button type="button"
-                class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
-                onclick="window.location.href = '<?php echo base_url('cart'); ?>'">Add
-                To Cart</button>
-            <!-- BUY BUTTON -->
-            <button type="button"
-                class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]">
-                Buy It Now
-            </button>
+            <?php if ($this->session->userdata('user_logged_in')): ?>
+                <button type="button"
+                    class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
+                    onclick="window.location.href = '<?php echo base_url('cart'); ?>'">Add
+                    To Cart</button>
+                <!-- BUY BUTTON -->
+                <button type="button"
+                    class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
+                    onclick="window.location.href = '<?php echo base_url('checkout'); ?>' ">
+                    Buy It Now
+                </button>
+            <?php else: ?>
+                <button type="button"
+                    class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
+                    onclick="window.location.href = '<?php echo base_url('login'); ?>'">Add
+                    To Cart</button>
+                <!-- BUY BUTTON -->
+                <button type="button"
+                    class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
+                    onclick="window.location.href = '<?php echo base_url('login'); ?>' ">
+                    Buy It Now
+                </button>
+            <?php endif; ?>
         </div>
         <div class="flex flex-col gap-2 items-start justify-center w-full">
             <h3 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">About the product</h3>
