@@ -129,11 +129,29 @@ class Admin_model extends CI_Model
 
     public function get_comments_by_product_id($product_id)
     {
-        $this->db->select('comments.*, users.full_name as user_name, users.profile_picture as user_profile');
+        $this->db->select('comments.*, users.full_name as user_name','products.image_url as image_url');
         $this->db->from('comments');
         $this->db->join('users', 'comments.user_id = users.id', 'left');
         $this->db->where('comments.product_id', $product_id);
         $query = $this->db->get();
         return $query->result_array();
+    }
+
+    public function get_comments_by_user_id()
+    {
+        $this->db->select('comments.id, comments.product_id, comments.user_id, comments.comment, comments.rating, comments.created_at, 
+                               users.full_name as user_name, products.name as product_name');
+        $this->db->from('comments');
+        $this->db->join('users', 'comments.user_id = users.id', 'left');
+        $this->db->join('products', 'comments.product_id = products.id', 'left');
+        $this->db->where('comments.user_id', $this->session->userdata('id'));
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function count_comments_by_user_id()
+    {
+        $this->db->where('user_id', $this->session->userdata('id'));
+        return $this->db->count_all_results('comments');
     }
 }

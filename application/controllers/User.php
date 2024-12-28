@@ -3,11 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User extends CI_Controller
 {
-    // public function __construct()
-    // {
-    //     parent::__construct();
-    //     $this->load->model('Admin_model');
-    // }
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Admin_model');
+        $this->load->library('session');
+    }
 
     // DASHBOARD
     public function dashboard()
@@ -185,10 +186,12 @@ class User extends CI_Controller
     // COMMENTS
     public function comments()
     {
-        $data['header_title'] = 'Nimble | User Dashboard';
+        $data['header_title'] = 'Nimble | Dashboard';
+        $data['comments'] = $this->Admin_model->get_comments_by_user_id();
+        $data['count_comments_by_user_id'] = $this->Admin_model->count_comments_by_user_id();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_user_layout');
-        $this->load->view('user/comments/comments');
+        $this->load->view('templates/dashboard_layout');
+        $this->load->view('User/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
 
@@ -201,12 +204,50 @@ class User extends CI_Controller
         $this->load->view('templates/admin_footer');
     }
 
-    public function update_comment()
+    public function update_comment_user($id)
     {
         $data['header_title'] = 'Nimble | User Dashboard';
+        $data['comment'] = $this->Admin_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
         $this->load->view('user/comments/update_comment');
         $this->load->view('templates/admin_footer');
+    }
+
+    public function update_add_comment_action_user()
+    {
+        $comment_id = $this->input->post('id');
+        $product_id = $this->input->post('product_id');
+        $user_id = $this->input->post('user_id');
+        $comment = $this->input->post('comment');
+        $rating = $this->input->post('rating');
+
+
+
+        $data = array(
+            'product_id' => $product_id,
+            'user_id' => $user_id,
+            'comment' => $comment,
+            'rating' => $rating
+        );
+
+        $this->Admin_model->update_comment($data, $comment_id);
+
+        if ($this->db->affected_rows()) {
+            redirect('user/comments');
+        } else {
+            echo "Failed to update/add comment";
+        }
+    }
+
+    
+    public function delete_comment($id)
+    {
+        $this->Admin_model->delete_comment_user($id);
+        if ($this->db->affected_rows()) {
+            redirect('user/comments');
+        } else {
+            echo "Data gagal dihapus";
+        }
     }
 }
