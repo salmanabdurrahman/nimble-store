@@ -7,6 +7,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_model');
+        $this->load->library('session');
     }
 
     // DASHBOARD
@@ -328,26 +329,42 @@ class Admin extends CI_Controller
 
     public function add_comment_action()
     {
-        $product_name = $this->input->post('product_id');
-        $user_id = $this->input->post('user_id');
+        $comment_id = $this->input->post('id');
+        $product_id = $this->input->post('product_id');
+        $user_id = $this->input->post('user_id'); 
         $comment = $this->input->post('comment');
         $rating = $this->input->post('rating');
-
+        
+        if (empty($user_id)) {
+            $user_id = $this->session->all_userdata()['id']; 
+            if (empty($user_id)) {
+                echo "User ID is missing or not logged in.";
+                return; 
+            }
+        }
+        
+    
+        if ($rating < 1 || $rating > 5) {
+            echo "Rating must be between 1 and 5.";
+            return; 
+        }
+    
         $data = array(
-            'product_id' => $product_name,
+            'product_id' => $product_id,
             'user_id' => $user_id,
             'comment' => $comment,
             'rating' => $rating
         );
-
-        $this->Admin_model->add_comment($data);
-
+    
+        $this->Admin_model->add_comment($data, $comment_id);
+    
         if ($this->db->affected_rows()) {
-            redirect('Admin/products');
+            redirect('product_detail/?id=' . $product_id); 
         } else {
-            redirect('Admin/add_product');
+            echo "Failed to update/add comment"; 
         }
     }
+    
 
 
     public function update_comment($id)
