@@ -46,6 +46,7 @@ class Login extends CI_Controller
         if ($response) {
             $data = array(
                 'user_logged_in' => TRUE,
+                'id' => $response['id'],
                 'role' => $response['role'],
                 'profile_picture' => $response['profile_picture'],
                 'email' => $response['email']
