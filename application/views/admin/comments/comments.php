@@ -145,7 +145,7 @@
                                         </td> -->
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3 text-start">
-                                                    <span class="block text-sm text-gray-800">4</span>
+                                                    <span class="block text-sm text-gray-800"><?php echo $comment['rating'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
