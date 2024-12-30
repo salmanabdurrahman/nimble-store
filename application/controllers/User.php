@@ -243,7 +243,7 @@ class User extends CI_Controller
     
     public function delete_comment($id)
     {
-        $this->Admin_model->delete_comment_user($id);
+        $this->Admin_model->delete_comment($id);
         if ($this->db->affected_rows()) {
             redirect('user/comments');
         } else {
