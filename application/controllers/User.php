@@ -45,11 +45,71 @@ class User extends CI_Controller
 
     public function update_user()
     {
+        $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | User Dashboard';
+        $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
-        $this->load->view('user/user/update_user');
+        $this->load->view('user/user/update_user', $data);
         $this->load->view('templates/admin_footer');
+    }   
+
+    public function update_user_action()
+    {
+        $id = $this->session->userdata('id');
+        $fullname = $this->input->post('fullname');
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $phone = $this->input->post('phone');
+        $gender = $this->input->post('gender');
+        $province = $this->input->post('province');
+        $city = $this->input->post('city');
+        $district = $this->input->post('district');
+        $subdistrict = $this->input->post('subdistrict');
+        $street = $this->input->post('street');
+        $description = $this->input->post('description');
+        $zip_code = $this->input->post('zip_code');
+
+        $user = $this->Admin_model->get_users_by_id($id)->row_array();
+        $picture_old = $user['profile_picture'];
+
+        $config['upload_path'] = './public/uploads/users';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('picture')) {
+            $picture = $this->upload->data('file_name');
+        } else {
+            $picture = $picture_old;
+            $error = $this->upload->display_errors();
+        }
+
+        $data = array(
+            'full_name' => $fullname,
+            'username' => $username,
+            'email' => $email,
+            'password' => $password,
+            'phone' => $phone,
+            'gender' => $gender,
+            'address_province' => $province,
+            'address_city' => $city,
+            'address_district' => $district,
+            'address_subdistrict' => $subdistrict,
+            'street_name' => $street,
+            'address_description' => $description,
+            'zip_code' => $zip_code,
+            'profile_picture' => $picture
+        );
+
+        $this->Admin_model->update_user($data, $id);
+
+        if ($this->db->affected_rows()) {
+            redirect('user/dashboard');
+        } else {
+            redirect('user/update_user');
+        }
     }
 
     // // PRODUCTS

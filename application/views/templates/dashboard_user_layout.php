@@ -145,7 +145,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav>  
             </div>
             <!-- End Content -->
         </div>
