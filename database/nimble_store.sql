@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2024 at 11:43 AM
+-- Generation Time: Dec 30, 2024 at 04:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jjj`
+-- Database: `nimble_store`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +34,16 @@ CREATE TABLE `cart` (
   `quantity` int(11) NOT NULL CHECK (`quantity` > 0),
   `added_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `added_at`) VALUES
+(1, 1, 3, 1, '2024-12-30 12:58:41'),
+(2, 1, 21, 1, '2024-12-30 12:58:41'),
+(3, 3, 6, 1, '2024-12-30 14:20:36'),
+(4, 3, 9, 1, '2024-12-30 14:20:36');
 
 -- --------------------------------------------------------
 
@@ -128,7 +138,14 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `product_id`, `user_id`, `comment`, `rating`, `created_at`) VALUES
-(1, 1, 1, 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr', 3, '2024-12-24 02:02:54');
+(1, 21, 1, 'lerolero', 5, '2024-12-28 12:54:43'),
+(3, 22, 2, 'nyoba sparkle', 5, '2024-12-28 13:45:45'),
+(4, 10, 2, 'coba rating', 5, '2024-12-28 13:46:30'),
+(5, 10, 2, 'kurang memuaskann', 1, '2024-12-28 13:46:47'),
+(7, 1, 2, 'testing comment', 5, '2024-12-30 07:08:07'),
+(8, 21, 3, 'Keren banget kata ilham', 4, '2024-12-30 07:36:38'),
+(9, 13, 1, 'joss gandos', 5, '2024-12-30 11:16:20'),
+(10, 21, 1, 'lumayan bagus', 3, '2024-12-30 11:16:55');
 
 -- --------------------------------------------------------
 
@@ -143,6 +160,13 @@ CREATE TABLE `contacts` (
   `message` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `message`, `created_at`) VALUES
+(1, 'Salman', 'salman@gmail.com', 'Nice dude ????', '2024-12-30 07:42:03');
 
 -- --------------------------------------------------------
 
@@ -170,7 +194,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `stock`, `image_url`, `category_id`, `size_id`, `color_id`, `brand`, `created_at`, `updated_at`) VALUES
-(1, 'Adidas Ultra Boost', 'Running shoes with boost cushioning for maximum comfort.', 150.00, 20, 'adidas Men\'s Daily 3.0 Sneaker_GREY.jpg', 1, 3, 1, 'adidas', '2024-12-09 09:23:51', '2024-12-11 07:36:28'),
+(1, 'Adidas Ultra Boost', 'Running shoes with boost cushioning for maximum comfort.', 150.00, 21, 'adidas Men\'s Daily 3.0 Sneaker_GREY.jpg', 1, 3, 1, 'adidas', '2024-12-09 09:23:51', '2024-12-30 05:44:09'),
 (2, 'Nike Air Max 90', 'Stylish and comfortable sneakers with Air Max technology.', 120.00, 15, 'adidas Men\'s Ultraboost 1.0 Shoe_WHTIE.jpg', 2, 4, 2, 'nike', '2024-12-09 09:23:51', '2024-12-11 07:41:15'),
 (3, 'Puma Suede Classic', 'Casual shoes with a classic design.', 80.00, 30, 'PUMA Men\'s Axelion Cross Trainer_BLACK.jpg', 3, 5, 3, 'puma', '2024-12-09 09:23:51', '2024-12-11 07:41:30'),
 (4, 'Reebok Classic Leather', 'Timeless design with soft leather for comfort.', 90.00, 25, 'Reebok Unisex Adult Classic Leather_BLACK.jpg', 3, 2, 4, 'reebok', '2024-12-09 09:23:51', '2024-12-11 07:42:30'),
@@ -182,7 +206,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `stock`, `image_ur
 (10, 'Puma RS-X3', 'Casual sneakers with a bold design.', 110.00, 20, 'Reebok Unisex Adult Court Advance_GREY.jpg', 3, 5, 5, 'puma', '2024-12-09 09:23:51', '2024-12-11 07:43:41'),
 (13, 'Testing nama 1', 'Testing deskripsi 1', 46.00, 6, 'product4.png', 3, 3, 3, 'reebok', '2024-12-19 08:31:14', '2024-12-19 08:31:14'),
 (21, 'testing abbad', 'testing deskripsi abbad', 2000.00, 1, 'Rectangle_10.png', 4, 6, 5, 'adidas', '2024-12-24 07:10:11', '2024-12-24 11:06:25'),
-(22, 'testing ga ganti gambar', 'testing sparkle', 6900.00, 1, 'sparkle.jpg', 1, 3, 5, 'nike', '2024-12-25 12:28:01', '2024-12-26 05:20:43');
+(22, 'testing ga ganti gambar', 'testing sparkle', 6900.00, 69, 'sparkle.jpg', 1, 3, 5, 'nike', '2024-12-25 12:28:01', '2024-12-30 05:43:30');
 
 -- --------------------------------------------------------
 
@@ -228,10 +252,7 @@ CREATE TABLE `subscribers` (
 --
 
 INSERT INTO `subscribers` (`id`, `email`, `created_at`) VALUES
-(1, 'test@example.com', '2024-12-19 02:53:00'),
-(2, 'rafiqyaftafadilah12@gmail.com', '2024-12-19 03:27:58'),
-(4, 'kafka@students.amikom.ac.id', '2024-12-19 03:28:53'),
-(5, 'rafikiafdilah120905@gmail.com', '2024-12-19 03:29:57');
+(1, 'salman@gmail.com', '2024-12-30 07:41:34');
 
 -- --------------------------------------------------------
 
@@ -265,11 +286,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `full_name`, `username`, `email`, `password`, `gender`, `phone`, `address_province`, `address_city`, `address_district`, `address_subdistrict`, `street_name`, `address_description`, `zip_code`, `profile_picture`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'Rifan Mabel', 'Rifan', 'rifan@gmail.com', '', 'male', '012345678', 'Yogyakarta', 'Sleman', 'Condong catur', 'Dero', 'Jl.Nakulo', 'Rumah Ijo', '57214', 'anime.jpg', 'user', '2024-12-23 04:07:19', '2024-12-23 04:27:48'),
-(5, 'Gundam', 'admin', 'awke@sada.com', 'admin', 'male', '9217', '                                                                        asd', 'dasd', 'asd', 'asd', 'asd', 'asd', '00982', '1231281.jpg', 'user', '2024-12-24 06:32:44', '2024-12-26 00:34:46'),
-(6, 'Barbatos Lupus Rex', 'Barbatos', 'barbatos@tekaddan.co.id', 'kom123', 'male', '6289786220752', 'Merkurius', 'Redurs', 'Rikrus', 'Rirs', 'Jl.Angkasa Pura II', 'Mako Tekaddan', '00982', 'barbatos.jpg', 'user', '2024-12-24 08:55:52', '2024-12-24 08:55:52'),
-(8, 'Sopi', 'Sopi', 'sopi@gmail.com', '123', 'female', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'user', '2024-12-25 23:18:18', '2024-12-25 23:18:18'),
-(10, 'tes', 'tes', 'tes@gmail.com', '123', 'other', '0971263', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'user', '2024-12-26 01:34:50', '2024-12-26 01:34:50');
+(1, 'Rifan Mabel Tofani', 'Rifan', 'aaa@gmail.com', '123', 'male', '081213800436', '                                                                                                                                                                                                                                                            Jaw', 'Bogor', 'Ciomas', 'Ciomas', 'jl. sukamulya 2', 'tembok abu', '16610', 'Banner_2.png', 'user', '2024-12-26 06:17:34', '2024-12-30 11:15:52'),
+(2, 'admin', 'admin', 'admin@outlook.com', 'admin', 'male', '0869', 'kepo lu', 'kepo lu', 'kepo lu', 'kepo lu', 'kepo lu', 'kepo lu', '16610', 'senku_einstein_pose1.jpg', 'admin', '2024-12-27 08:24:36', '2024-12-30 11:34:20'),
+(3, 'pap', 'pap', 'pap@gmail.com', '123', 'male', '0822', 'shrgerhfehsas                   ', 'sas', 'p', 's', 's', 'as', '55111', NULL, 'user', '2024-12-30 06:11:03', '2024-12-30 11:45:34');
 
 --
 -- Indexes for dumped tables
@@ -365,7 +384,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -383,25 +402,25 @@ ALTER TABLE `checkout`
 -- AUTO_INCREMENT for table `colors`
 --
 ALTER TABLE `colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `sizes`
@@ -413,13 +432,13 @@ ALTER TABLE `sizes`
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
