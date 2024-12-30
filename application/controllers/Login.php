@@ -56,8 +56,6 @@ class Login extends CI_Controller
                 redirect(base_url('admin/products'));
             } elseif ($response['role'] == 'user') {
                 redirect(base_url('user/dashboard'));
-            } else {
-                redirect(base_url('login'));
             }
             // if ($response->role == 'admin') {
             //     redirect(base_url('admin/dashboard'));
@@ -65,6 +63,9 @@ class Login extends CI_Controller
             //     $this->session->set_userdata($data);
             //     redirect(base_url('user/dashboard'));
             // }
+        } else {
+            $this->session->set_flashdata('error', 'Invalid username or password');
+            redirect(base_url('login'));
         }
     }
 

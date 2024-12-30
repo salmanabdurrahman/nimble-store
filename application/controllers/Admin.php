@@ -13,7 +13,9 @@ class Admin extends CI_Controller
     // DASHBOARD
     public function dashboard()
     {
+        $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $data['admin'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/dashboard');
@@ -23,10 +25,12 @@ class Admin extends CI_Controller
     // USERS
     public function users()
     {
+        $id = $this->session->userdata('id');
         $this->load->model('Admin_model');
         $query['users'] = $this->Admin_model->get_users();
         $query['total_users'] = $this->Admin_model->count_users();
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $data['admin'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/users', $query);
@@ -35,7 +39,9 @@ class Admin extends CI_Controller
 
     public function add_user()
     {
+        $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $data['admin'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/users/add_user');
@@ -98,10 +104,12 @@ class Admin extends CI_Controller
 
     public function update_user($id)
     {
+        $id_admin = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | Dashboard';
         $this->load->view('templates/admin_header', $data);
         $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
-        $this->load->view('templates/dashboard_layout');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/users/update_user', $data);
         $this->load->view('templates/admin_footer');
     }
@@ -177,12 +185,14 @@ class Admin extends CI_Controller
     // PRODUCTS
     public function products()
     {
+        $data['header_title'] = 'Nimble | Admin Dashboard';
+        $id_admin = $this->session->userdata('id');
         $this->load->model('Admin_model');
         $query['products'] = $this->Admin_model->get_product();
         $query['count_all_products'] = $this->Admin_model->count_all_products();
-        $data['header_title'] = 'Nimble | Admin Dashboard';
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/products/products', $query);
         $this->load->view('templates/admin_footer');
     }
@@ -190,8 +200,10 @@ class Admin extends CI_Controller
     public function add_product()
     {
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $id_admin = $this->session->userdata('id');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/products/add_product');
         $this->load->view('templates/admin_footer');
     }
@@ -242,9 +254,11 @@ class Admin extends CI_Controller
     public function update_product($id)
     {
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $id_admin = $this->session->userdata('id');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['product'] = $this->Admin_model->get_product_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/products/update_product', $data);
         $this->load->view('templates/admin_footer');
     }
@@ -308,10 +322,12 @@ class Admin extends CI_Controller
     public function comments()
     {
         $data['header_title'] = 'Nimble | Dashboard';
+        $id_admin = $this->session->userdata('id');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['comments'] = $this->Admin_model->get_comments();
         $data['count_all_comment'] = $this->Admin_model->count_all_comments();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
@@ -321,8 +337,10 @@ class Admin extends CI_Controller
     public function add_comment()
     {
         $data['header_title'] = 'Nimble | Admin Dashboard';
+        $id_admin = $this->session->userdata('id');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/comments/add_comment');
         $this->load->view('templates/admin_footer');
     }
@@ -370,9 +388,11 @@ class Admin extends CI_Controller
     public function update_comment($id)
     {
         $data['header_title'] = 'Nimble | Dashboard';
+        $id_admin = $this->session->userdata('id');
+        $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['comment'] = $this->Admin_model->get_comment_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout');
+        $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/comments/update_comment', $data);
         $this->load->view('templates/admin_footer');
     }

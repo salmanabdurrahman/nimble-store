@@ -271,6 +271,7 @@ class User extends CI_Controller
     {
         $data['header_title'] = 'Nimble | User Dashboard';
         $data['comment'] = $this->Admin_model->get_comment_by_id($id)->row_array();
+        $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
         $this->load->view('user/comments/update_comment');

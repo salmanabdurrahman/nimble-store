@@ -13,26 +13,26 @@
                 make them yours
             </p>
             <!-- CART ITEMS -->
-            <?php for ($i = 0; $i < 5; $i++) { ?>
+            <?php foreach ($carts as $cart) { ?>
                 <div class="w-full grid grid-cols-2 items-start justify-center gap-4 lg:gap-6 lg:mb-1">
-                    <img src="<?= base_url('public/images/home/dummy-product.png'); ?>"
+                    <img src="<?= base_url('public/uploads/' . $cart['product_image']); ?>"
                         class="block w-full h-[216px] rounded-3xl object-cover lg:h-[225px]" alt="dummy-product" loading="lazy">
                     <div class="flex flex-col items-start justify-center gap-2 w-full lg:gap-6">
                         <div class="flex flex-col gap-1 w-full lg:gap-2">
-                            <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">DROPSET TRAINER SHOES
+                            <h4 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl">
+                                <?php echo $cart['product_name'] ?>
                             </h4>
-                            <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Men’s Road Running
-                                Shoes</p>
-                            <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">Enamel Blue/
-                                University White
+                            <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">
+                                <?php echo $cart['product_description'] ?>
                             </p>
+                            <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#<?php echo $cart['product_color_name'] ?></p>
                         </div>
                         <div class="flex gap-4 items-center justify-start w-full">
-                            <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size 10</p>
+                            <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size <?php echo $cart['product_size_name'] ?></p>
                             <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Quantity 1</p>
                         </div>
                         <div class="flex items-center justify-between w-full">
-                            <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$130.00</p>
+                            <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$<?php echo $cart['product_price'] ?></p>
                             <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
                                 class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
                         </div>
@@ -47,23 +47,23 @@
             <div class="flex flex-col gap-4 items-center justify-center w-full">
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
-                    <p>1 ITEM</p>
-                    <p class="text-dark-charcoal/80">$130.00</p>
+                    <p><?php echo $total_product_at_cart ?> ITEM</p>
+                    <p class="text-dark-charcoal/80"><?php echo ($total_item_price > 0) ? '$' . number_format($total_item_price, 2) : '-'; ?></p>
                 </div>
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
                     <p>Delivery</p>
-                    <p class="text-dark-charcoal/80">$6.99</p>
+                    <p class="text-dark-charcoal/80">$<?php echo $delivery ?></p>
                 </div>
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
                     <p>Sales Tax</p>
-                    <p class="text-dark-charcoal/80">-</p>
+                    <p class="text-dark-charcoal/80"><?php echo ($ppn > 0) ? '$' . number_format($ppn, 2) : '-'; ?></p>
                 </div>
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-dark-charcoal w-full text-xl lg:text-2xl">
                     <p>Total</p>
-                    <p class="text-dark-charcoal/80">$136.99</p>
+                    <p class="text-dark-charcoal/80"><?php echo ($total > 0) ? '$' . number_format($total, 2) : '-'; ?></p>
                 </div>
             </div>
             <button type="button"
