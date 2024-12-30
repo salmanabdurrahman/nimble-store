@@ -6,29 +6,29 @@
     </h1> -->
     <div
         class="swiper-wrapper w-full rounded-[24px] max-h-[750px] lg:rounded-[64px] flex items-center justify-start flex-nowrap">
-        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+        <img src="<?= base_url('public/images/home/Banner 1.png'); ?>"
             class="swiper-slide slide-1 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
             alt="slider-image-1">
-        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+        <img src="<?= base_url('public/images/home/Banner 2.png'); ?>"
             class="swiper-slide slide-2 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
             alt="slider-image-2">
-        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+        <img src="<?= base_url('public/images/home/Banner 3.png'); ?>"
             class="swiper-slide slide-3 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
             alt="slider-image-3">
-        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+        <img src="<?= base_url('public/images/home/Banner 4.png'); ?>"
             class="swiper-slide slide-4 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
             alt="slider-image-4">
-        <img src="<?= base_url('public/images/home/slider-image-1.png'); ?>"
+        <img src="<?= base_url('public/images/home/Banner 5.png'); ?>"
             class="swiper-slide slide-5 block w-full rounded-[24px] max-h-[750px] bg-center bg-cover lg:rounded-[64px]"
             alt="slider-image-5">
     </div>
     <div
         class="flex items-center justify-between absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full z-10 mx-0">
         <img src="<?= base_url('public/icons/home/prev-slider-button.png'); ?>"
-            class="swiper-button-prev block rounded-full size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
+            class="swiper-button-prev block rounded-full shadow-lg bg-dark-charcoal size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
             alt="prev-button" loading="lazy">
         <img src="<?= base_url('public/icons/home/next-slider-button.png'); ?>"
-            class="swiper-button-next block rounded-full size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
+            class="swiper-button-next block rounded-full shadow-lg bg-dark-charcoal size-7 lg:size-[46px] cursor-pointer duration-300 transition-all hover:scale-110"
             alt="next-button" loading="lazy">
     </div>
 </section>
@@ -71,7 +71,7 @@
             class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase">Shop
             new drops</button>
     </div>
-    <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
+    <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-4 lg:grid-cols-4">
         <!-- CARD -->
         <?php
         foreach ($recent_products as $key => $item) { ?>
