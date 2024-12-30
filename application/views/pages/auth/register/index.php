@@ -68,6 +68,15 @@
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
                 placeholder="Confirm Password">
         </div>
+        <div class="flex justify-start items-center w-full gap-1">
+            <p class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal">Do
+                you already have an account?
+            </p>
+            <a href="<?= base_url('login'); ?>"
+                class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal transition-all duration-300 hover:underline no-underline hover:text-royal-blue">
+                Please log in
+            </a>
+        </div>
         <button type="submit"
             class="rounded-lg bg-dark-charcoal py-4 px-[102px] w-full text-white font-rubik text-sm font-medium">Register</button>
     </form>

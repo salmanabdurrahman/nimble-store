@@ -37,11 +37,13 @@
                     class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
                     placeholder="Password">
             </div>
-            <div class="flex justify-between items-center gap-2 w-full lg:gap-4">
-                <input type="checkbox" name="terms" id="terms" class="accent-royal-blue">
-                <label for="terms" class="font-open-sans font-semibold text-sm lg:text-base">Keep me logged in - applies to
-                    all log in
-                    options below. More info</label>
+            <div class="flex justify-start items-center w-full gap-1">
+                <p class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal">Don't have an account yet?
+                </p>
+                <a href="<?= base_url('register'); ?>"
+                    class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal transition-all duration-300 hover:underline no-underline hover:text-royal-blue">
+                    Please sign up first
+                </a>
             </div>
             <button type="submit"
                 class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2">Username
