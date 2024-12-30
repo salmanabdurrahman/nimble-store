@@ -75,7 +75,7 @@
     <!-- ======= NEW PRODUCTS SECTION START ======= -->
     <section class="w-full mt-[45px] flex flex-col container items-start justify-center gap-6 lg:mt-[100px] lg:gap-8">
         <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-5xl">You May Also Like</h3>
-        <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
+        <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-4 lg:grid-cols-4">
             <!-- CARD -->
             <?php
             foreach ($random_product as $key => $item) { ?>

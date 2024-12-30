@@ -90,7 +90,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
         <?php endif; ?>
     </div>
     <!-- COMMENTS -->
-    <div class="grid grid-cols-1 gap-y-6 gap-x-4 items-center justify-center w-full lg:gap-4 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-4 lg:grid-cols-4">
         <?php if (!empty($comments)) { ?>
             <?php foreach ($comments as $comment) { ?>
                 <div class="flex flex-col items-center justify-center w-full bg-off-white p-4 rounded-[16px] gap-4">
@@ -115,7 +115,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
                             </div>
                         </div>
                         <img src="<?= base_url("public/uploads/" . (isset($product['image_url']) ? $product['image_url'] : 'default-image.png')); ?>"
-                        class="block w-full h-full max-h-[280px] rounded-2xl object-cover lg:max-h-[872px]" alt="product-image"loading="lazy">
+                            class="block size-12 lg:size-24 rounded-full object-cover" alt="product-image" loading="lazy">
                     </div>
                 </div>
             <?php } ?>
@@ -129,27 +129,27 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
 
 <!-- ======= ADD REVIEWS SECTION START ======= -->
 <section
-    class="mt-[32px] bg-off-white container w-full rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-5 items-center justify-center lg:mt-[60px] lg:gap-6 lg:pt-6 lg:pb-[45px] lg:rounded-3xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 lg:w-[600px] hidden"
+    class="mt-[32px] bg-off-white container w-[60%] rounded-2xl px-4 pt-6 pb-[34px] flex flex-col gap-5 items-center justify-center lg:mt-[60px] lg:gap-6 lg:pt-6 lg:pb-[45px] lg:rounded-3xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 lg:w-[600px] hidden"
     id="add-review">
     <div class="flex flex-col gap-2 items-center justify-center lg:max-w-[480px]">
         <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal lg:text-4xl">Add Review</h3>
     </div>
     <!-- FORM INPUTS -->
-    <form action="<?php echo site_url('Admin/add_comment_action')?>" method="post"
+    <form action="<?php echo site_url('Admin/add_comment_action') ?>" method="post"
         class="flex flex-col gap-5 items-center justify-center w-full lg:max-w-[480px] lg:gap-6">
         <!-- Input tambahan untuk product_id -->
         <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
 
         <!-- Input tambahan untuk user_name -->
         <input type="hidden" name="user_id" value="<?= $this->session->all_userdata()['id']; ?>">
-        
+
 
         <!-- Input untuk komentar -->
         <div class="flex flex-col gap-4 items-start justify-center w-full lg:gap-5">
             <textarea name="comment" id="comment" rows="4"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
                 placeholder="Comment"></textarea>
-            
+
             <!-- Input untuk rating -->
             <input type="number" name="rating" id="rating" min="1" max="5"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"

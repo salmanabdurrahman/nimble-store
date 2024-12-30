@@ -13,8 +13,9 @@ class User extends CI_Controller
     // DASHBOARD
     public function dashboard()
     {
+        $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | User Dashboard';
-        $data['user_email'] = $this->session->userdata('user_email');
+        $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
         $this->load->view('user/dashboard', $data);
@@ -246,9 +247,11 @@ class User extends CI_Controller
     // COMMENTS
     public function comments()
     {
+        $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | Dashboard';
         $data['comments'] = $this->Admin_model->get_comments_by_user_id();
         $data['count_comments_by_user_id'] = $this->Admin_model->count_comments_by_user_id();
+        $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
         $this->load->view('User/comments/comments', $data);
