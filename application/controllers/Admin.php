@@ -108,7 +108,7 @@ class Admin extends CI_Controller
 
     public function update_user_action()
     {
-        $id = $this->input->post('id');
+        $id = $this->input->post('id'   );
         $fullname = $this->input->post('fullname');
         $username = $this->input->post('username');
         $email = $this->input->post('email');

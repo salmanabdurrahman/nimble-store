@@ -13,7 +13,7 @@
                         Manage your name, password and account settings.
                     </p>
                 </div>
-                <form action="<?php echo site_url('Admin/update_user_action') ?>" method="post"
+                <form action="<?php echo site_url('Admin/update_user_action/') ?>" method="post"
                     enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
