@@ -161,7 +161,7 @@
                                                         Edit
                                                     </a>
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                        href="<?= base_url('User/delete_comment_user/' . $comment['id']); ?>"
+                                                        href="<?= base_url('User/delete_comment/' . $comment['id']); ?>"
                                                         onclick="return confirm('Apakah adan yakin ingin menghapus comment ini')">
                                                         Delete
                                                     </a>
