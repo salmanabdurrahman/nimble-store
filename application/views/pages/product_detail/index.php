@@ -47,7 +47,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
             <?php if ($this->session->userdata('user_logged_in')): ?>
                 <button type="button"
                     class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px]"
-                    onclick="window.location.href = '<?php echo base_url('cart'); ?>'">Add
+                    onclick="window.location.href = '<?php echo base_url('cart/add/' . $product['id']); ?>'">Add
                     To Cart</button>
                 <!-- BUY BUTTON -->
                 <button type="button"

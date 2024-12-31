@@ -202,8 +202,11 @@ class Admin extends CI_Controller
         $data['header_title'] = 'Nimble | Admin Dashboard';
         $id_admin = $this->session->userdata('id');
         $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
+        $query['categories'] = $this->db->get('categories')->result_array();
+        $query['colors'] = $this->db->get('colors')->result_array();
+        $query['sizes'] = $this->db->get('sizes')->result_array();
         $this->load->view('templates/admin_header', $data);
-        $this->load->view('templates/dashboard_layout', $data_admin);
+        $this->load->view('templates/dashboard_layout', $data_admin + $query);
         $this->load->view('admin/products/add_product');
         $this->load->view('templates/admin_footer');
     }
@@ -257,9 +260,12 @@ class Admin extends CI_Controller
         $id_admin = $this->session->userdata('id');
         $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['product'] = $this->Admin_model->get_product_by_id($id)->row_array();
+        $query['categories'] = $this->db->get('categories')->result_array();
+        $query['colors'] = $this->db->get('colors')->result_array();
+        $query['sizes'] = $this->db->get('sizes')->result_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout', $data_admin);
-        $this->load->view('admin/products/update_product', $data);
+        $this->load->view('admin/products/update_product', $data + $query);
         $this->load->view('templates/admin_footer');
     }
 

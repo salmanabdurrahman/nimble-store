@@ -13,7 +13,7 @@
                         Manage your product data, description, price and more.
                     </p>
                 </div>
-                <form action="<?php echo site_url('Admin/update_product_action')?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/update_product_action') ?>" method="post" enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
@@ -113,36 +113,57 @@
                         </div>
                         <!-- CATEGORY -->
                         <div class="sm:col-span-3">
-                            <label for="af-account-email" class="inline-block text-sm text-gray-800 mt-2.5">
+                            <label for="af-account-category" class="inline-block text-sm text-gray-800 mt-2.5">
                                 Category
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="text"
-                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="category" value="<?php echo $product['category_id']; ?>" placeholder="Running">
+                            <select id="af-account-category" name="category"
+                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option value="" disabled <?php echo empty($product['category_id']) ? 'selected' : ''; ?>>Select Category</option>
+                                <?php foreach ($categories as $category) : ?>
+                                    <option value="<?php echo $category['id']; ?>"
+                                        <?php echo $category['id'] == $product['category_id'] ? 'selected' : ''; ?>>
+                                        <?php echo $category['name']; ?>
+                                    </option>
+                                <?php endforeach ?>
+                            </select>
                         </div>
                         <!-- SIZE -->
                         <div class="sm:col-span-3">
-                            <label for="af-account-email" class="inline-block text-sm text-gray-800 mt-2.5">
+                            <label for="af-account-size" class="inline-block text-sm text-gray-800 mt-2.5">
                                 Size
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="text"
-                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="size" value="<?php echo $product['size_id']; ?>" placeholder="35">
+                            <select id="af-account-size" name="size"
+                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option value="" disabled <?php echo empty($product['size_id']) ? 'selected' : ''; ?>>Select Size</option>
+                                <?php foreach ($sizes as $size) : ?>
+                                    <option value="<?php echo $size['id']; ?>"
+                                        <?php echo $size['id'] == $product['size_id'] ? 'selected' : ''; ?>>
+                                        <?php echo $size['name']; ?>
+                                    </option>
+                                <?php endforeach ?>
+                            </select>
                         </div>
                         <!-- COLOR -->
                         <div class="sm:col-span-3">
-                            <label for="af-account-email" class="inline-block text-sm text-gray-800 mt-2.5">
+                            <label for="af-account-color" class="inline-block text-sm text-gray-800 mt-2.5">
                                 Color
                             </label>
                         </div>
                         <div class="sm:col-span-9">
-                            <input id="af-account-email" type="text"
-                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="color" value="<?php echo $product['color_id']; ?>" placeholder="Black">
+                            <select id="af-account-color" name="color"
+                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option value="" disabled <?php echo empty($product['color_id']) ? 'selected' : ''; ?>>Select Color</option>
+                                <?php foreach ($colors as $color) : ?>
+                                    <option value="<?php echo $color['id']; ?>"
+                                        <?php echo $color['id'] == $product['color_id'] ? 'selected' : ''; ?>>
+                                        #<?php echo $color['name']; ?>
+                                    </option>
+                                <?php endforeach ?>
+                            </select>
                         </div>
                         <!-- BRAND -->
                         <div class="sm:col-span-3">
