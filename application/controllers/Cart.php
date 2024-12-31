@@ -19,7 +19,13 @@ class Cart extends CI_Controller
         $data['random_product'] = $this->Products_model->get_random_products(4);
         $data['total_product_at_cart'] = $this->Cart_model->count_cart_by_user_id($id);
         $data['total_item_price'] = $this->Cart_model->total_item($id);
-        $delivery = 6.99;
+        
+        if ($data['total_item_price'] == 0) {
+            $delivery = 0;
+        } else {
+            $delivery = 6.99;
+        }
+        
         $data['delivery'] = $delivery;
         $ppn = 0.12;
         $data['ppn'] = ($data['total_item_price'] + $delivery) * $ppn;
@@ -28,5 +34,25 @@ class Cart extends CI_Controller
         $this->load->view('pages/cart/index', $data);
         $this->load->view('templates/subscribe');
         $this->load->view('templates/footer', $query);
+    }
+
+    public function add($product_id) {
+        $user_id = $this->session->userdata('id');
+        $quantity = 1;
+        $data = array(
+            'user_id' => $user_id,
+            'product_id' => $product_id,
+            'quantity' => $quantity
+        );
+        $this->Cart_model->add_cart($data);
+
+        if ($this->db->affected_rows()) {
+            redirect('cart');
+        }
+    }
+
+    public function delete($id){
+        $this->Cart_model->delete_cart($id);
+        redirect('cart');
     }
 }

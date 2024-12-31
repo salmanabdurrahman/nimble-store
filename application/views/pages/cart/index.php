@@ -25,7 +25,8 @@
                             <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">
                                 <?php echo $cart['product_description'] ?>
                             </p>
-                            <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#<?php echo $cart['product_color_name'] ?></p>
+                            <span class="size-6 rounded-full bg-[#<?= $cart['product_color_name']; ?>] lg:size-8"></span>
+                            <!-- <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#<?php echo $cart['product_color_name'] ?></p> -->
                         </div>
                         <div class="flex gap-4 items-center justify-start w-full">
                             <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size <?php echo $cart['product_size_name'] ?></p>
@@ -34,7 +35,8 @@
                         <div class="flex items-center justify-between w-full">
                             <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$<?php echo $cart['product_price'] ?></p>
                             <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                                class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy">
+                                class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy"
+                                onclick="return confirm('Are you sure you want to delete this item from your cart?') ? location.href='<?= base_url('cart/delete/' . $cart['id']); ?>' : '';">
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,7 @@
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
                     <p>Delivery</p>
-                    <p class="text-dark-charcoal/80">$<?php echo $delivery ?></p>
+                    <p class="text-dark-charcoal/80"><?php echo ($delivery > 0) ? '$' . number_format($delivery, 2) : '-'; ?></p>
                 </div>
                 <div
                     class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">

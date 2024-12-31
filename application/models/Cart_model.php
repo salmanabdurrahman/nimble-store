@@ -63,11 +63,16 @@ class Cart_model extends CI_Model
     }
 
 
-    public function contoh_add()
+    public function add_cart($data)
     {
         // INSERT INTO `cart` (`user_id`, `product_id`, `quantity`) VALUES
         // (1, 1, 2),
         // (5, 2, 1);
+        $this->db->insert('cart', $data);
+    }
 
+    public function delete_cart($id){
+        $this->db->where('id', $id);
+        $this->db->delete('cart');
     }
 }

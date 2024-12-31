@@ -10,20 +10,16 @@ class Product_Detail extends CI_Controller
         $this->load->model('Admin_model');
         $data['sizes'] = $this->db->get('sizes')->result_array();
         $query['categories'] = $this->db->get('categories')->result_array();
-
-        $query['categories'] = $this->db->get('categories')->result_array();
         // Get product ID from request
         $id = $this->input->get('id');
         if ($id) {
             // Fetch product details by ID
             $data['product'] = $this->Products_model->get_product_by_id($id);
             $data['categories'] = $this->Products_model->get_products_by_category($id);
-
             // Check if product exists
             if (empty($data['product'])) {
                 show_404(); // Product not found
             }
-
             // Fetch comments for the product
             $data['comments'] = $this->Admin_model->get_comments_by_product_id($id);
         } else {
