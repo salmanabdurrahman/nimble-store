@@ -10,7 +10,7 @@
             </div>
             <div class="w-full flex items-center justify-end ms-auto md:justify-between gap-x-1 md:gap-x-3">
                 <div class="hidden md:block"></div>
-                <div class="flex flex-row items-center justify-end gap-1">
+                <div class="flex flex-r ow items-center justify-end gap-1">
                     <!-- Dropdown -->
                     <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
                         <button id="hs-dropdown-account" type="button"
