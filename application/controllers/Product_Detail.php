@@ -8,7 +8,8 @@ class Product_Detail extends CI_Controller
         $data['header_title'] = 'Nimble | Product Detail';
         $this->load->model('Products_model');
         $this->load->model('Admin_model');
-        $data['sizes'] = $this->db->get('sizes')->result_array();
+        $data['product_sizes'] = $this->Products_model->get_sizes_by_product();
+        $data['size_ada'] = $this->Products_model->get_sizes_by_product_name($this->input->get('id'));
         $query['categories'] = $this->db->get('categories')->result_array();
         // Get product ID from request
         $id = $this->input->get('id');
