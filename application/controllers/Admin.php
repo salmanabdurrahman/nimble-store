@@ -7,6 +7,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_model');
+        $this->load->model('Size_model');
         $this->load->library('session');
     }
 
@@ -247,8 +248,12 @@ class Admin extends CI_Controller
         );
         $this->Admin_model->add_product($data);
 
+        $this->db->select_max('id');
+        $query = $this->db->get('products')->row_array();
+        $id = $query['id'];
+
         if ($this->db->affected_rows()) {
-            redirect('Admin/products');
+            redirect('Admin/update_product/' . $id);
         } else {
             redirect('Admin/add_product');
         }
@@ -263,6 +268,8 @@ class Admin extends CI_Controller
         $query['categories'] = $this->db->get('categories')->result_array();
         $query['colors'] = $this->db->get('colors')->result_array();
         $query['sizes'] = $this->db->get('sizes')->result_array();
+        $data['products_sizes'] = $this->Size_model->get_size_by_product_id($id);
+        $data['count_all_product_sizes'] = $this->Size_model->count_all_product_sizes_by_product_id($id);
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/products/update_product', $data + $query);

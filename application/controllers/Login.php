@@ -53,7 +53,7 @@ class Login extends CI_Controller
             );
             $this->session->set_userdata($data);
             if ($response['role'] == 'admin') {
-                redirect(base_url('admin/products'));
+                redirect(base_url('admin/dashboard'));
             } elseif ($response['role'] == 'user') {
                 redirect(base_url('user/dashboard'));
             }

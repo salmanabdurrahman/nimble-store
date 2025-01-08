@@ -3,9 +3,7 @@
     class="mt-[60px] bg-off-white container rounded-3xl py-[130px] px-[260px] flex flex-col gap-[15px] items-center justify-center">
     <h1 class="font-rubik font-semibold text-dark-charcoal text-[50px]">NIMBLE <span
             class="text-royal-blue">STORE</span></h1>
-    <p class="font-open-sans font-normal text-dark-charcoal text-[20px] text-center">Lorem Ipsum is simply dummy text of
-        the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-        1500s, when an </p>
+    <p class="font-open-sans font-normal text-dark-charcoal text-[20px] text-center">We are a trusted shoe store that provides various exclusive collections and the latest products for you. With our wide range of products, you can find the perfect pair of shoes that suits your style and preferences.</p>
 </section>
 <!-- ======= ABOUT SECTION END ======= -->
 
@@ -13,18 +11,17 @@
 <section class="w-full grid grid-cols-3 gap-[60px] items-stretch justify-center mt-[42px] container">
     <div class="bg-off-white w-full rounded-3xl flex items-center justify-center py-[150px] px-[40px] gap-5">
         <p class="text-royal-blue font-rubik font-semibold text-[50px]">20+</p>
-        <p class="text-dark-charcoal font-rubik font-semibold text-xl">Tersedia <span class="text-royal-blue">Berbagai
-                Jenis</span> Sepatu</p>
+        <p class="text-dark-charcoal font-rubik font-semibold text-xl">Available in <span class="text-royal-blue">Multiple
+                Types</span> of Shoes</p>
     </div>
     <div class="bg-off-white w-full rounded-3xl flex items-center justify-center py-[150px] px-[40px] gap-5">
         <p class="text-royal-blue font-rubik font-semibold text-[50px]">150+</p>
-        <p class="text-dark-charcoal font-rubik font-semibold text-xl">Kami telah <span class="text-royal-blue">menjual
-                ratusan </span>produk sepatu</p>
+        <p class="text-dark-charcoal font-rubik font-semibold text-xl">We have <span class="text-royal-blue">sold hundreds</span> of shoe products</p>
     </div>
     <div class="bg-off-white w-full rounded-3xl flex items-center justify-center py-[150px] px-[40px] gap-5">
         <p class="text-royal-blue font-rubik font-semibold text-[50px]">100+</p>
-        <p class="text-dark-charcoal font-rubik font-semibold text-xl">Kami memiliki <span
-                class="text-royal-blue">ratusan pelanggan</span> yang terdaftar
+        <p class="text-dark-charcoal font-rubik font-semibold text-xl">We have <span class="text-royal-blue">hundreds of
+                registered customers</span>
         </p>
     </div>
 </section>
@@ -36,23 +33,23 @@
     <div class="flex flex-wrap w-full max-w-[1130px] items-center justify-center gap-x-[35px] gap-y-[17px]">
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/aziz.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[100%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/wisnu.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[100%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
-            <img src="<?= base_url('public/images/about/contoh.JPG'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
+            <img src="<?= base_url('public/images/about/rifan.jpg'); ?>" alt="profile"
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[100%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/salman.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[100%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
-            <img src="<?= base_url('public/images/about/contoh.JPG'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
+            <img src="<?= base_url('public/images/about/rafiqy.jpg'); ?>" alt="profile"
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[100%] hover:grayscale-0" loading="lazy">
         </div>
     </div>
 </section>

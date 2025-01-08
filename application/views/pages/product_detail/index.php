@@ -16,7 +16,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     <img src="<?= base_url("public/uploads/" . (isset($product['image_url']) ? $product['image_url'] : 'default-image.png')); ?>"
         class="block w-full h-full max-h-[280px] rounded-2xl object-cover lg:max-h-[872px]" alt="product-image"
         loading="lazy">
-    <form method="post" action="<?php echo site_url('Cart/add_to_cart'); ?>" class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
+    <form method="post" action="<?php echo site_url('Cart/add/' . $product['id']); ?>" class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
             <?php if ($isNewRelease) { ?>
                 <span
@@ -37,10 +37,15 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
             <div class="flex flex-wrap gap-2 items-center justify-start lg:gap-1 w-full">
                 <!-- Size Select -->
                 <select class="max-w-[75px] rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 w-full border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none">
-                    <?php foreach ($sizes as $size) { ?>
-                        <option value="<?php echo $size['name']; ?>" class="transition-all duration-300 hover:bg-royal-blue">
-                            <?php echo $size['name']; ?>
-                        </option>
+                    <option name="size" value="null" class="transition-all duration-300 hover:bg-royal-blue">
+                        Size
+                    </option>
+                    <?php foreach ($product_sizes as $product_size) { ?>
+                        <?php if (!empty($size_ada)) { ?>
+                            <option name="size" value="<?php echo $product_size['id_sizes']; ?>" class="transition-all duration-300 hover:bg-royal-blue">
+                                <?php echo $product_size['size_name']; ?>
+                            </option>
+                        <?php } ?>
                     <?php } ?>
                 </select>
             </div>
@@ -48,26 +53,13 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
         <div class="flex flex-col gap-2 items-center justify-center w-full">
             <?php if ($this->session->userdata('user_logged_in')): ?>
                 <button type="submit"
-                    class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px] transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?php echo base_url('cart/add/' . $product['id']); ?>'">Add
+                    class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px] transition-all duration-300 hover:scale-105">Add
                     To Cart</button>
-                <!-- BUY BUTTON -->
-                <button type="submit"
-                    class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px] transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?php echo base_url('checkout'); ?>' ">
-                    Buy It Now
-                </button>
             <?php else: ?>
                 <button type="button"
                     class="w-full bg-dark-charcoal text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px] transition-all duration-300 hover:scale-105"
                     onclick="window.location.href = '<?php echo base_url('login'); ?>'">Add
                     To Cart</button>
-                <!-- BUY BUTTON -->
-                <button type="button"
-                    class="w-full bg-royal-blue text-off-white rounded-lg font-rubik font-medium text-sm uppercase py-[15.5px] transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?php echo base_url('login'); ?>' ">
-                    Buy It Now
-                </button>
             <?php endif; ?>
         </div>
         <div class="flex flex-col gap-2 items-start justify-center w-full">

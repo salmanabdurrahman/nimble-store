@@ -70,6 +70,10 @@ class Cart_model extends CI_Model
         // (5, 2, 1);
         $this->db->insert('cart', $data);
     }
+    
+    public function update_cart(){
+        
+    }
 
     public function delete_cart($id){
         $this->db->where('id', $id);

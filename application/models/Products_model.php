@@ -88,4 +88,23 @@ class Products_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    public function get_sizes_by_product_name($product_name)
+    {
+        $this->db->select('product_size.*, sizes.name AS size_name');
+        $this->db->from('product_size');
+        $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
+        $this->db->where('id_products', $product_name); // Filter berdasarkan nama produk
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function get_sizes_by_product(){
+        $this->db->select('product_size.*, sizes.name AS size_name');
+        $this->db->from('product_size');
+        $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
+        $this->db->order_by('sizes.name', 'ASC'); // Urutkan berdasarkan nama ukuran secara ascending
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }

@@ -99,14 +99,6 @@
                                             <div class="flex items-center gap-x-2">
                                                 <span
                                                     class="text-xs font-semibold uppercase tracking-wide text-gray-800">
-                                                    Size
-                                                </span>
-                                            </div>
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-start">
-                                            <div class="flex items-center gap-x-2">
-                                                <span
-                                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800">
                                                     Color
                                                 </span>
                                             </div>
@@ -188,11 +180,6 @@
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
                                                     <span class="block text-sm text-gray-800 capitalize"><?php echo $product['category_name'] ?></span>
-                                                </div>
-                                            </td>
-                                            <td class="size-px whitespace-nowrap">
-                                                <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['size_name'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
