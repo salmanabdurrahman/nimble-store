@@ -65,6 +65,11 @@ module.exports = {
 					900: "#1e3a8a",
 					950: "#172554",
 				},
+				"blue-01": "#4A69E2",
+				"black-01": "#232321",
+				"yellow-01": "#eab308",
+				"green-01": "#FFA52F",
+				"gray-01": "#C9CCC6",
 			},
 			screens: {
 				"2xl": "1320px",

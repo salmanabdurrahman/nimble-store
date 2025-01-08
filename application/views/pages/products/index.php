@@ -45,7 +45,6 @@
                 <?php } ?>
             </div>
         </div>
-
         <div class="flex flex-col items-start justify-start gap-4 w-full">
             <!-- COLOR -->
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">
@@ -53,7 +52,7 @@
             </h4>
             <div class="flex items-center justify-start gap-[18.75px] flex-wrap">
                 <?php foreach ($colors as $color) { ?>
-                    <button type="button" class="w-12 h-12 block rounded-lg bg-[#<?= $color['name'] ?>]"
+                    <button type="button" class="w-12 h-12 block rounded-lg bg-<?= $color['name'] ?>"
                         onclick="window.location.href = '<?= base_url('products'); ?>?id_color=<?= $color['id']; ?>'"></button>
                 <?php } ?>
             </div>
@@ -72,7 +71,6 @@
                 <?php } ?>
             </div>
         </div>
-
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-[38px] lg:grid-cols-3">
         <!-- CARD -->
@@ -88,7 +86,7 @@
                     <?php echo $item['name']; ?>
                 </h3>
                 <button type="button"
-                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
+                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
                     onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">
                     View Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?>
                     </span>

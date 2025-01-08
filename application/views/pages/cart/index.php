@@ -25,7 +25,7 @@
                             <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">
                                 <?php echo $cart['product_description'] ?>
                             </p>
-                            <span class="size-6 rounded-full bg-[#<?= $cart['product_color_name']; ?>] lg:size-8"></span>
+                            <span class="size-6 rounded-full bg-<?= $cart['product_color_name']; ?> lg:size-8"></span>
                             <!-- <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#<?php echo $cart['product_color_name'] ?></p> -->
                         </div>
                         <div class="flex gap-4 items-center justify-start w-full">
@@ -35,7 +35,7 @@
                         <div class="flex items-center justify-between w-full">
                             <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$<?php echo $cart['product_price'] ?></p>
                             <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                                class="block w-6 object-cover lg:w-8 cursor-pointer" loading="lazy"
+                                class="block w-6 object-cover lg:w-8 cursor-pointer transition-all duration-300 hover:scale-110" loading="lazy"
                                 onclick="return confirm('Are you sure you want to delete this item from your cart?') ? location.href='<?= base_url('cart/delete/' . $cart['id']); ?>' : '';">
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <button type="button"
-                class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full">Checkout</button>
+                class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full transition-all duration-300 hover:scale-105">Checkout</button>
         </div>
     </section>
     <!-- ======= CART SECTION END ======= -->
@@ -89,7 +89,7 @@
                     </div>
                     <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase"><?php echo $item['name'] ?></h3>
                     <button type="button"
-                        class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
+                        class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
                         onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">View
                         Product - <span class="text-golden-orange inline-block">$<?php echo $item['price'] ?></span></button>
                 </div>

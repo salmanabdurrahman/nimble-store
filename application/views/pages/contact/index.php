@@ -22,7 +22,7 @@
                 text-dark-charcoal text-base placeholder:text=[#79767C]" placeholder="Message*" required
                 autocomplete="off"></textarea>
             <button type="submit"
-                class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2">Submit
+                class="rounded-lg bg-dark-charcoal py-4 px-[74px] w-full text-white font-rubik text-sm font-medium flex gap-1 items-center justify-center lg:gap-2 transition-all duration-300 hover:scale-105">Submit
                 <img src="<?= base_url('public/icons/register/arrow-forward.png'); ?>" alt="arrow"
                     class="block w-4 text-base text-white" loading="lazy">
             </button>
