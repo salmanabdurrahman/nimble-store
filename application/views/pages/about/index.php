@@ -36,23 +36,23 @@
     <div class="flex flex-wrap w-full max-w-[1130px] items-center justify-center gap-x-[35px] gap-y-[17px]">
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/aziz.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/wisnu.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/contoh.JPG'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/salman.jpg'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
         </div>
         <div class="size-[350px] rounded-[28px] p-2 bg-off-white overflow-hidden">
             <img src="<?= base_url('public/images/about/contoh.JPG'); ?>" alt="profile"
-                class="block w-full h-full rounded-[28px] object-cover" loading="lazy">
+                class="block w-full h-full rounded-[28px] object-cover transition-all duration-300 grayscale-[50%] hover:grayscale-0" loading="lazy">
         </div>
     </div>
 </section>

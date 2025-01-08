@@ -11,7 +11,7 @@
             class="py-[10.5px] px-[16px] font-open-sans text-base font-normal rounded-[8px] bg-royal-blue ring-1 border-none ring-off-white placeholder:text-light-gray focus:outline-none focus:border-none focus:ring-1 focus:ring-off-white w-full lg:max-w-[458px] lg:py-[16px] lg:text-lg lg:placeholder:text-lg"
             placeholder="Email address" id="email" required autocomplete="off">
         <button type="submit" name="subscribe_submit"
-            class="bg-dark-charcoal rounded-[8px] py-[11.5px] px-[16px] text-white font-rubik text-sm font-medium lg:py-[18px] lg:px-[46px] lg:text-base">Submit</button>
+            class="bg-dark-charcoal rounded-[8px] py-[11.5px] px-[16px] text-white font-rubik text-sm font-medium lg:py-[18px] lg:px-[46px] lg:text-base transition-all duration-300 hover:scale-105">Submit</button>
     </form>
 </section>
 

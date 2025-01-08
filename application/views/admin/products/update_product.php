@@ -160,7 +160,7 @@
                                 <?php foreach ($colors as $color) : ?>
                                     <option value="<?php echo $color['id']; ?>"
                                         <?php echo $color['id'] == $product['color_id'] ? 'selected' : ''; ?>>
-                                        #<?php echo $color['name']; ?>
+                                        <?php echo $color['name']; ?>
                                     </option>
                                 <?php endforeach ?>
                             </select>

@@ -68,7 +68,7 @@
             out new drops
         </h3>
         <button type="button"
-            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase">Shop
+            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase transition-all duration-300 hover:scale-105">Shop
             new drops</button>
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-4 lg:grid-cols-4">
@@ -85,7 +85,7 @@
                     <?php echo $item['name']; ?>
                 </h3>
                 <button type="button"
-                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase"
+                    class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
                     onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">View
                     Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?></span></button>
             </div>
@@ -101,12 +101,12 @@
             <h3 class="font-rubik font-semibold text-2xl text-dark-charcoal uppercase lg:text-[74px]">Categories</h3>
             <div class="flex gap-2 items-center justify-center lg:gap-4">
                 <button type="button"
-                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
+                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3 transition-all duration-300 hover:scale-105">
                     <img src="<?= base_url('public/icons/home/prev-button.png'); ?>" class="block w-4" alt="prev-button"
                         loading="lazy">
                 </button>
                 <button type="button"
-                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3">
+                    class="bg-off-white flex items-center justify-center size-8 text-base rounded-lg p-2 lg:size-10 lg:p-3 transition-all duration-300 hover:scale-105">
                     <img src="<?= base_url('public/icons/home/next-button.png'); ?>" class="block w-4" alt="next-button"
                         loading="lazy">
                 </button>
@@ -122,7 +122,7 @@
                     Casual <span class="block">Shoes</span>
                 </h5>
                 <button type="button"
-                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]"
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px] transition-all duration-300 hover:scale-105"
                     onclick="window.location.href = '<?= base_url('products'); ?>?id_category=3'">
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
@@ -135,7 +135,7 @@
                     Basketball <span class="block">Shoes</span>
                 </h5>
                 <button type="button"
-                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px]"
+                    class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px] transition-all duration-300 hover:scale-105"
                     onclick="window.location.href = '<?= base_url('products'); ?>?id_category=4'">
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>

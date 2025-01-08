@@ -152,8 +152,8 @@
                                 <option value="" disabled selected>Select Color</option>
                                 <?php foreach ($colors as $color) : ?>
                                     <option value="<?php echo $color['id']; ?>"
-                                        style="background-color: #<?php echo $color['name']; ?>; color: white;">
-                                        <?php echo '#' . $color['name']; ?>
+                                        style="background-color: <?php echo $color['name']; ?>; color: white;">
+                                        <?php echo $color['name']; ?>
                                     </option>
                                 <?php endforeach ?>
                             </select>

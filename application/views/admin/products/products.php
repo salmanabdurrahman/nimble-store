@@ -197,8 +197,8 @@
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                <span class="size-6 rounded-full bg-[#<?php echo $product['color_name']; ?>] lg:size-8"></span>
-                                                    <span class="block text-sm text-gray-800 capitalize">#<?php echo $product['color_name'] ?></span>
+                                                    <span class="size-6 rounded-full bg-<?php echo $product['color_name']; ?> lg:size-8"></span>
+                                                    <span class="block text-sm text-gray-800"><?php echo $product['color_name'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
@@ -214,7 +214,7 @@
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-1.5 gap-2 flex items-center">
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                        href="<?= base_url('Admin/update_product/' . $product['id'] ); ?>">
+                                                        href="<?= base_url('Admin/update_product/' . $product['id']); ?>">
                                                         Edit
                                                     </a>
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"

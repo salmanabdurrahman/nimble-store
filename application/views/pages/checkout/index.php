@@ -158,7 +158,7 @@
                 </div>
             </div>
             <button type="submit"
-                class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full capitalize">Review
+                class="rounded-lg bg-dark-charcoal text-off-white py-[15.5px] font-rubik font-medium text-sm w-full capitalize transition-all duration-300 hover:scale-105">Review
                 And Pay</button>
         </form>
     </section>
