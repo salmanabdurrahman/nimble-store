@@ -36,12 +36,14 @@ class Cart extends CI_Controller
         $this->load->view('templates/footer', $query);
     }
 
-    public function add($product_id) {
+    public function add($id_product) {
+        $id_size = $this->input->post('size');
+        $data_product_size = $this->Cart_model->get_product_size($id_size, $id_product);
         $user_id = $this->session->userdata('id');
         $quantity = 1;
         $data = array(
             'user_id' => $user_id,
-            'product_id' => $product_id,
+            'product_size_id' => $data_product_size['id'],
             'quantity' => $quantity
         );
         $this->Cart_model->add_cart($data);

@@ -177,8 +177,8 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="province" placeholder="Jawa Barat" value="
-                                    <?php echo $user['address_province']; ?>">
+                                    name="province" placeholder="Jawa Barat" 
+                                    value="<?php echo $user['address_province']; ?>">
                             </div>
                         </div>
                         <!-- CITY -->
