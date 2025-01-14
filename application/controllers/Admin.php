@@ -356,6 +356,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/dashboard_layout', $data_admin);
         $this->load->view('admin/comments/add_comment');
         $this->load->view('templates/admin_footer');
+        $this->load->helper('url');
     }
 
     public function add_comment_action()
@@ -390,10 +391,14 @@ class Admin extends CI_Controller
         $this->Admin_model->add_comment($data, $comment_id);
     
         if ($this->db->affected_rows()) {
-            redirect('product_detail/?id=' . $product_id); 
+            $this->session->set_flashdata('success','Comment added successfully.');
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
-            echo "Failed to update/add comment"; 
+            // Jika insert gagal
+            $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+            redirect($_SERVER['HTTP_REFERER']);
         }
+
     }
     
 
@@ -430,7 +435,8 @@ class Admin extends CI_Controller
         $this->Admin_model->update_comment($data, $comment_id);
 
         if ($this->db->affected_rows()) {
-            redirect('Admin/comments');
+            $this->session->set_flashdata('success','Comment added successfully.');
+            redirect("Admin/comments");
         } else {
             echo "Failed to update/add comment";
         }
@@ -440,9 +446,14 @@ class Admin extends CI_Controller
     {
         $this->Admin_model->delete_comment($id);
         if ($this->db->affected_rows()) {
-            redirect('admin/comments');
-        } else {
-            echo "Data gagal dihapus";
+            if ($this->db->affected_rows()) {
+                $this->session->set_flashdata('success','Comment added successfully.');
+                redirect($_SERVER['HTTP_REFERER']);
+            } else {
+                // Jika insert gagal
+                $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
         }
     }
 }
