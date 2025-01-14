@@ -438,7 +438,8 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('success','Comment added successfully.');
             redirect("Admin/comments");
         } else {
-            echo "Failed to update/add comment";
+            $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+            redirect("Admin/comments");
         }
     }
 
@@ -448,12 +449,12 @@ class Admin extends CI_Controller
         if ($this->db->affected_rows()) {
             if ($this->db->affected_rows()) {
                 $this->session->set_flashdata('success','Comment added successfully.');
-                redirect($_SERVER['HTTP_REFERER']);
+                redirect("Admin/comments");
             } else {
                 // Jika insert gagal
                 $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
-                redirect($_SERVER['HTTP_REFERER']);
-            }
+                redirect("Admin/comments");
+        }
         }
     }
 }

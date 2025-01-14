@@ -299,9 +299,11 @@ class User extends CI_Controller
         $this->Admin_model->update_comment($data, $comment_id);
 
         if ($this->db->affected_rows()) {
-            redirect('user/comments');
+            $this->session->set_flashdata('success','Comment updated successfully.');
+            redirect("user/comments");
         } else {
-            echo "Failed to update/add comment";
+            $this->session->set_flashdata('error', 'Failed to delete your comment. Please try again.');
+            redirect("user/comments");
         }
     }
 
@@ -310,9 +312,12 @@ class User extends CI_Controller
     {
         $this->Admin_model->delete_comment($id);
         if ($this->db->affected_rows()) {
-            redirect('user/comments');
+            $this->session->set_flashdata('success','Comment added successfully.');
+            redirect("user/comments");
         } else {
-            echo "Data gagal dihapus";
-        }
+            // Jika insert gagal
+            $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+            redirect("user/comments");
+    }
     }
 }
