@@ -179,10 +179,7 @@
     </div>
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
-<?php 
-// print_r($this->session->flashdata());
-// exit;
-?>
+
 <?php if ($this->session->flashdata('success')): ?>
     <script>
         Swal.fire({
