@@ -32,6 +32,7 @@ class Register extends CI_Controller
         );
 
         if ($this->Register_model->register_user($data)) {
+            $this->session->set_flashdata('success', 'Registrasi berhasil.');
             redirect('login');
         } else {
             $this->session->set_flashdata('error', 'Registrasi gagal, silakan coba lagi.');

@@ -24,22 +24,6 @@ class Login extends CI_Controller
 
     public function authenticate()
     {
-        // // Ambil data dari form
-        // $username = $this->input->post('username');
-        // $password = $this->input->post('password');
-
-        // // Validasi login
-        // $user = $this->Login_model->validate($username, $password);
-
-        // if ($user) {
-        //     // Jika valid, set session dan redirect
-        //     $this->session->set_userdata('user_id', $user->id);
-        //     redirect('admin/products'); // Ganti dengan halaman yang sesuai
-        // } else {
-        //     // Jika tidak valid, kembali ke halaman login dengan pesan error
-        //     $this->session->set_flashdata('error', 'Username atau password salah');
-        //     redirect('login');
-        // }
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $response = $this->db->get_where('users', array('username' => $username, 'password' => $password))->row_array();
@@ -53,18 +37,14 @@ class Login extends CI_Controller
             );
             $this->session->set_userdata($data);
             if ($response['role'] == 'admin') {
+                $this->session->set_flashdata('success', 'Login berhasil.');
                 redirect(base_url('admin/dashboard'));
             } elseif ($response['role'] == 'user') {
+                $this->session->set_flashdata('success', 'Login berhasil.');
                 redirect(base_url('user/dashboard'));
             }
-            // if ($response->role == 'admin') {
-            //     redirect(base_url('admin/dashboard'));
-            // } elseif ($response->role == 'user') {
-            //     $this->session->set_userdata($data);
-            //     redirect(base_url('user/dashboard'));
-            // }
         } else {
-            $this->session->set_flashdata('error', 'Invalid username or password');
+            $this->session->set_flashdata('error', 'Username atau Password salah. Silahkan coba lagi.');
             redirect(base_url('login'));
         }
     }
