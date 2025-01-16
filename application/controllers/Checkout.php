@@ -3,10 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Checkout extends CI_Controller
 {
-    public function index()
+    public function __construct()
     {
+        parent::__construct();
         $this->load->model('Cart_model');
         $this->load->model('Checkout_model');
+
+    }
+    public function index()
+    {
         $id = $this->session->userdata('id');
         $data['order_details'] = $this->Cart_model->get_cart_by_user_id($id);
         $data['total_product_at_cart'] = $this->Cart_model->count_cart_by_user_id($id);
@@ -31,5 +36,55 @@ class Checkout extends CI_Controller
         $this->load->view('pages/checkout/index');
         $this->load->view('templates/subscribe');
         $this->load->view('templates/footer', $query);
+    }
+
+    public function checkout_action(){
+        $id = $this->session->userdata('id');
+        $fullname = $this->input->post('fullname');
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $phone = $this->input->post('phone');
+        $gender = $this->input->post('gender');
+        $province = $this->input->post('province');
+        $city = $this->input->post('city');
+        $district = $this->input->post('district');
+        $subdistrict = $this->input->post('subdistrict');
+        $street = $this->input->post('street');
+        $description = $this->input->post('description');
+        $zip_code = $this->input->post('zip_code');
+
+        $user = $this->Checkout_model->get_user($id);
+        $picture_old = $user['profile_picture'];
+
+        $config['upload_path'] = './public/uploads/users';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('picture')) {
+            $picture = $this->upload->data('file_name');
+        } else {
+            $picture = $picture_old;
+            $error = $this->upload->display_errors();
+        }
+
+        $data = array(
+            'full_name' => $fullname,
+            'email' => $email,
+            'phone' => $phone,
+            'address_province' => $province,
+            'address_city' => $city,
+            'address_district' => $district,
+            'address_subdistrict' => $subdistrict,
+            'street_name' => $street,
+            'address_description' => $description,
+            'zip_code' => $zip_code,
+            'profile_picture' => $picture
+        );
+
+        $this->Checkout_model->update_user($data, $id);
+
+        redirect('checkout');
     }
 }

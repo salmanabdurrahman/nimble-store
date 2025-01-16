@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <!-- FORM INPUTS -->
-                <form method="post" action=""
+                <form method="post" action="<?php echo site_url('Checkout/checkout_action') ?>"
                     class="w-full lg:mt-[60px] flex flex-col items-start justify-center gap-5 lg:order-1 lg:gap-8">
                     <div class="w-full flex flex-col gap-2 items-start justify-center">
                         <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-[32px]">Contact Details</h4>
@@ -110,7 +110,7 @@
                             placeholder="Subdistrict*" value="<?php echo $user['address_subdistrict']; ?>" required>
                     </div>
                     <div class="grid grid-cols-1 items-start justify-center gap-5 lg:gap-8 lg:grid-cols-2 w-full">
-                        <input type="text" name="street_name"
+                        <input type="text" name="street"
                             class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C] bg-light-gray"
                             placeholder="Street Name*" value="<?php echo $user['street_name']; ?>" required>
                         <input type="text" name="zip_code"

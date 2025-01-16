@@ -49,12 +49,14 @@ class Cart extends CI_Controller
         $this->Cart_model->add_cart($data);
 
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Add Product to Cart successfully.');
             redirect('cart');
         }
     }
 
     public function delete($id){
         $this->Cart_model->delete_cart($id);
+        $this->session->set_flashdata('success', 'Delete Product from Cart successfully.');
         redirect('cart');
     }
 }
