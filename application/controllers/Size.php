@@ -23,6 +23,7 @@ class Size extends CI_Controller
             $this->Size_model->add_size($data);
 
             if ($this->db->affected_rows()) {
+                $this->session->set_flashdata('success', 'Add product size successfully.');
                 redirect('Admin/update_product/' . $id);
             } else {
                 $this->session->set_flashdata('error', 'Failed to add size. Please try again.');

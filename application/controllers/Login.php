@@ -37,14 +37,14 @@ class Login extends CI_Controller
             );
             $this->session->set_userdata($data);
             if ($response['role'] == 'admin') {
-                $this->session->set_flashdata('success', 'Login berhasil.');
+                $this->session->set_flashdata('success', 'Login success.');
                 redirect(base_url('admin/dashboard'));
             } elseif ($response['role'] == 'user') {
-                $this->session->set_flashdata('success', 'Login berhasil.');
+                $this->session->set_flashdata('success', 'Login success.');
                 redirect(base_url('user/dashboard'));
             }
         } else {
-            $this->session->set_flashdata('error', 'Username atau Password salah. Silahkan coba lagi.');
+            $this->session->set_flashdata('error', 'Username or Password is incorrect. Please try again.');
             redirect(base_url('login'));
         }
     }

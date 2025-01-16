@@ -117,7 +117,7 @@ class Admin extends CI_Controller
 
     public function update_user_action()
     {
-        $id = $this->input->post('id'   );
+        $id = $this->input->post('id');
         $fullname = $this->input->post('fullname');
         $username = $this->input->post('username');
         $email = $this->input->post('email');
@@ -252,9 +252,12 @@ class Admin extends CI_Controller
         $query = $this->db->get('products')->row_array();
         $id = $query['id'];
 
+
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Add Product successfully.');
             redirect('Admin/update_product/' . $id);
         } else {
+            $this->session->set_flashdata('error', 'Failed to add product. Please try again.');
             redirect('Admin/add_product');
         }
     }
@@ -316,8 +319,10 @@ class Admin extends CI_Controller
         $this->Admin_model->update_product($data, $id);
 
         if ($this->db->affected_rows()) {
-            redirect('Admin/products');
+            $this->session->set_flashdata('success', 'Update Product successfully.');
+            redirect('Admin/update_product/' . $id);
         } else {
+            $this->session->set_flashdata('error', 'Failed to update product. Please try again.');
             redirect('Admin/update_product/' . $id);
         }
     }
@@ -326,6 +331,7 @@ class Admin extends CI_Controller
     {
         $this->Admin_model->delete_product($id_product);
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Delete Product successfully.');
             redirect('Admin/products');
         } else {
             echo "Data gagal dihapus";
@@ -363,44 +369,43 @@ class Admin extends CI_Controller
     {
         $comment_id = $this->input->post('id');
         $product_id = $this->input->post('product_id');
-        $user_id = $this->input->post('user_id'); 
+        $user_id = $this->input->post('user_id');
         $comment = $this->input->post('comment');
         $rating = $this->input->post('rating');
-        
+
         if (empty($user_id)) {
-            $user_id = $this->session->all_userdata()['id']; 
+            $user_id = $this->session->all_userdata()['id'];
             if (empty($user_id)) {
                 echo "User ID is missing or not logged in.";
-                return; 
+                return;
             }
         }
-        
-    
+
+
         if ($rating < 1 || $rating > 5) {
             echo "Rating must be between 1 and 5.";
-            return; 
+            return;
         }
-    
+
         $data = array(
             'product_id' => $product_id,
             'user_id' => $user_id,
             'comment' => $comment,
             'rating' => $rating
         );
-    
+
         $this->Admin_model->add_comment($data, $comment_id);
-    
+
         if ($this->db->affected_rows()) {
-            $this->session->set_flashdata('success','Comment added successfully.');
+            $this->session->set_flashdata('success', 'Comment added successfully.');
             redirect($_SERVER['HTTP_REFERER']);
         } else {
             // Jika insert gagal
             $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
             redirect($_SERVER['HTTP_REFERER']);
         }
-
     }
-    
+
 
 
     public function update_comment($id)
@@ -435,10 +440,10 @@ class Admin extends CI_Controller
         $this->Admin_model->update_comment($data, $comment_id);
 
         if ($this->db->affected_rows()) {
-            $this->session->set_flashdata('success','Comment added successfully.');
+            $this->session->set_flashdata('success', 'Comment edit successfully.');
             redirect("Admin/comments");
         } else {
-            $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+            $this->session->set_flashdata('error', 'Failed to edit the comment. Please try again.');
             redirect("Admin/comments");
         }
     }
@@ -448,13 +453,13 @@ class Admin extends CI_Controller
         $this->Admin_model->delete_comment($id);
         if ($this->db->affected_rows()) {
             if ($this->db->affected_rows()) {
-                $this->session->set_flashdata('success','Comment added successfully.');
+                $this->session->set_flashdata('success', 'Delete comment successfully.');
                 redirect("Admin/comments");
             } else {
                 // Jika insert gagal
-                $this->session->set_flashdata('error', 'Failed to save your comment. Please try again.');
+                $this->session->set_flashdata('error', 'Failed to delete the comment. Please try again.');
                 redirect("Admin/comments");
-        }
+            }
         }
     }
 }

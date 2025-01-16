@@ -205,7 +205,7 @@
                                                         Edit
                                                     </a>
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                        href="<?= base_url('Admin/delete_product/' . $product['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')">
+                                                        href="<?= base_url('Admin/delete_product/' . $product['id']); ?>" onclick="return confirm('Are you sure you want to delete this product?')">
                                                         Delete
                                                     </a>
                                                 </div>
@@ -231,3 +231,28 @@
     </div>
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
+
+<!-- ======= SWEETALERT ADD PRODUCT START ======= -->
+
+<?php if ($this->session->flashdata('success')): ?>
+    <script>
+        Swal.fire({
+            title: "Success!",
+            text: "<?= $this->session->flashdata('success'); ?>",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')): ?>
+    <script>
+        Swal.fire({
+            title: "Error!",
+            html: "<ul><?= $this->session->flashdata('error'); ?></ul>",
+            icon: "error",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+<!-- ======= SWEETALERT ADD PRODUCT END ======= -->
