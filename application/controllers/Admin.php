@@ -106,7 +106,7 @@ class Admin extends CI_Controller
     public function update_user($id)
     {
         $id_admin = $this->session->userdata('id');
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $this->load->view('templates/admin_header', $data);
         $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
@@ -337,10 +337,11 @@ class Admin extends CI_Controller
             echo "Data gagal dihapus";
         }
     }
+
     // COMMENTS
     public function comments()
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $id_admin = $this->session->userdata('id');
         $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['comments'] = $this->Admin_model->get_comments();
@@ -350,8 +351,6 @@ class Admin extends CI_Controller
         $this->load->view('admin/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
-
-
 
     public function add_comment()
     {
@@ -406,11 +405,9 @@ class Admin extends CI_Controller
         }
     }
 
-
-
     public function update_comment($id)
     {
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | Admin Dashboard';
         $id_admin = $this->session->userdata('id');
         $data_admin['admin'] = $this->Admin_model->get_users_by_id($id_admin)->row_array();
         $data['comment'] = $this->Admin_model->get_comment_by_id($id)->row_array();

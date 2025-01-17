@@ -30,13 +30,16 @@
                                 <!-- <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#</p> -->
                             </div>
                             <div class="flex gap-4 items-center justify-start w-full">
-                                <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size <?php echo $cart['product_size_name'] ?></p>
+                                <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size
+                                    <?php echo $cart['product_size_name'] ?></p>
                                 <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Quantity 1</p>
                             </div>
                             <div class="flex items-center justify-between w-full">
-                                <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">$<?php echo $cart['product_price'] ?></p>
+                                <p class="font-rubik font-semibold text-xl text-royal-blue lg:text-2xl">
+                                    $<?php echo $cart['product_price'] ?></p>
                                 <img src="<?= base_url('public/icons/cart/bin.png'); ?>" alt="bin"
-                                    class="block w-6 object-cover lg:w-8 cursor-pointer transition-all duration-300 hover:scale-110" loading="lazy"
+                                    class="block w-6 object-cover lg:w-8 cursor-pointer transition-all duration-300 hover:scale-110"
+                                    loading="lazy"
                                     onclick="return confirm('Are you sure you want to delete this item from your cart?') ? location.href='<?= base_url('cart/delete/' . $cart['id']); ?>' : '';">
                             </div>
                         </div>
@@ -51,12 +54,14 @@
                     <div
                         class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
                         <p><?php echo $total_product_at_cart ?> ITEM</p>
-                        <p class="text-dark-charcoal/80"><?php echo ($total_item_price > 0) ? '$' . number_format($total_item_price, 2) : '-'; ?></p>
+                        <p class="text-dark-charcoal/80">
+                            <?php echo ($total_item_price > 0) ? '$' . number_format($total_item_price, 2) : '-'; ?></p>
                     </div>
                     <div
                         class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
                         <p>Delivery</p>
-                        <p class="text-dark-charcoal/80"><?php echo ($delivery > 0) ? '$' . number_format($delivery, 2) : '-'; ?></p>
+                        <p class="text-dark-charcoal/80">
+                            <?php echo ($delivery > 0) ? '$' . number_format($delivery, 2) : '-'; ?></p>
                     </div>
                     <div
                         class="flex items-center justify-between font-open-sans font-semibold text-base text-dark-charcoal w-full lg:text-xl">
@@ -91,7 +96,8 @@
                                 class="block w-full h-full max-h-[164px] object-cover rounded-xl lg:rounded-3xl lg:max-h-[334px]"
                                 loading="lazy">
                         </div>
-                        <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase"><?php echo $item['name'] ?></h3>
+                        <h3 class="font-rubik font-semibold text-base text-dark-charcoal lg:text-2xl uppercase">
+                            <?php echo $item['name'] ?></h3>
                         <button type="button"
                             class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
                             onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">View

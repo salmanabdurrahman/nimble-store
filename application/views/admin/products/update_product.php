@@ -371,8 +371,7 @@
     });
 </script>
 
-<!-- ======= SWEETALERT ADD PRODUCT START ======= -->
-
+<!-- ======= SWEETALERT START ======= -->
 <?php if ($this->session->flashdata('success')): ?>
     <script>
         Swal.fire({
@@ -394,4 +393,4 @@
         });
     </script>
 <?php endif; ?>
-<!-- ======= SWEETALERT ADD PRODUCT END ======= -->
+<!-- ======= SWEETALERT END ======= -->

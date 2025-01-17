@@ -97,7 +97,7 @@ class User extends CI_Controller
     public function comments()
     {
         $id = $this->session->userdata('id');
-        $data['header_title'] = 'Nimble | Dashboard';
+        $data['header_title'] = 'Nimble | User Dashboard';
         $data['comments'] = $this->Admin_model->get_comments_by_user_id();
         $data['count_comments_by_user_id'] = $this->Admin_model->count_comments_by_user_id();
         $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
@@ -155,7 +155,6 @@ class User extends CI_Controller
             redirect("user/comments");
         }
     }
-
 
     public function delete_comment($id)
     {

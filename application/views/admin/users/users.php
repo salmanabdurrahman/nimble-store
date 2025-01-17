@@ -175,40 +175,40 @@
                                 <!-- TABLE BODY -->
                                 <tbody class="divide-y divide-gray-200">
                                     <?php foreach ($users as $user) { ?>
-                                    <tr>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                            <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm font-semibold text-gray-800"><?php echo $user['id'] ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div
-                                                class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 flex items-center justify-center">
-                                                <div class="flex items-center gap-x-3">
-                                                    <img class="inline-block size-[38px] rounded-full"
-                                                        src="<?= base_url('public/uploads/users/' . $user['profile_picture']) ?>"
-                                                        alt="Avatar">
+                                        <tr>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                                <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3"></div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm font-semibold text-gray-800"><?php echo $user['id'] ?></span>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $user['username']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="h-px w-72 whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $user['full_name']; ?></span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="size-px whitespace-nowrap">
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div
+                                                    class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 flex items-center justify-center">
+                                                    <div class="flex items-center gap-x-3">
+                                                        <img class="inline-block size-[38px] rounded-full"
+                                                            src="<?= base_url('public/uploads/users/' . $user['profile_picture']) ?>"
+                                                            alt="Avatar">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $user['username']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="h-px w-72 whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $user['full_name']; ?></span>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
                                                 <span
                                                     class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
@@ -221,91 +221,91 @@
                                                 </span>
                                             </div>
                                         </td> -->
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800"><?php echo $user['email']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['gender']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['phone']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['address_province']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['address_city']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['address_district']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['address_subdistrict']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['street_name']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['address_description']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['zip_code']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="block text-sm text-gray-800 capitalize"><?php echo $user['role']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-3">
-                                                <span
-                                                    class="text-sm text-gray-500"><?php echo $user['created_at']; ?></span>
-                                            </div>
-                                        </td>
-                                        <td class="size-px whitespace-nowrap">
-                                            <div class="px-6 py-1.5 gap-2 flex items-center">
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    href="<?= base_url('admin/update_user/' . $user['id']); ?>">
-                                                    Edit
-                                                </a>
-                                                <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                    onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')"
-                                                    href="<?= base_url('Admin/delete_user/' . $user['id']) ?>">
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $user['email']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['gender']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['phone']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['address_province']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['address_city']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['address_district']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['address_subdistrict']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['street_name']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['address_description']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['zip_code']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $user['role']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-3">
+                                                    <span
+                                                        class="text-sm text-gray-500"><?php echo $user['created_at']; ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="size-px whitespace-nowrap">
+                                                <div class="px-6 py-1.5 gap-2 flex items-center">
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        href="<?= base_url('admin/update_user/' . $user['id']); ?>">
+                                                        Edit
+                                                    </a>
+                                                    <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                                                        onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')"
+                                                        href="<?= base_url('Admin/delete_user/' . $user['id']) ?>">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </td>
                                         <?php } ?>
                                     </tr>
                                 </tbody>
@@ -328,3 +328,27 @@
     </div>
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
+
+<!-- ======= SWEETALERT START ======= -->
+<?php if ($this->session->flashdata('success')): ?>
+    <script>
+        Swal.fire({
+            title: "Success!",
+            text: "<?= $this->session->flashdata('success'); ?>",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')): ?>
+    <script>
+        Swal.fire({
+            title: "Error!",
+            html: "<ul><?= $this->session->flashdata('error'); ?></ul>",
+            icon: "error",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+<!-- ======= SWEETALERT END ======= -->

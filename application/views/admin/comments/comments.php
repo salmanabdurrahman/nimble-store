@@ -16,7 +16,7 @@
                                         Comments
                                     </h2>
                                     <p class="text-sm text-gray-600">
-                                        Add comments, edit and more.
+                                        Edit comments and more.
                                     </p>
                                 </div>
                                 <div>
@@ -134,7 +134,8 @@
                                         </td> -->
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3 text-start">
-                                                    <span class="block text-sm text-gray-800"><?php echo $comment['rating'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $comment['rating'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
@@ -157,7 +158,7 @@
                                                 </div>
                                             </td>
                                         <?php } ?>
-                                        </tr>
+                                    </tr>
                                 </tbody>
                             </table>
                             <!-- FOOTER -->
@@ -180,6 +181,7 @@
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
 
+<!-- ======= SWEETALERT START ======= -->
 <?php if ($this->session->flashdata('success')): ?>
     <script>
         Swal.fire({
@@ -201,3 +203,4 @@
         });
     </script>
 <?php endif; ?>
+<!-- ======= SWEETALERT END ======= -->

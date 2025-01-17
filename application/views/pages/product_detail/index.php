@@ -16,10 +16,13 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     <img src="<?= base_url("public/uploads/" . (isset($product['image_url']) ? $product['image_url'] : 'default-image.png')); ?>"
         class="block w-full h-full max-h-[280px] rounded-2xl object-cover lg:max-h-[872px]" alt="product-image"
         loading="lazy">
-    <form method="post" action="<?php echo site_url('Cart/add/' . $product['id']); ?>" class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8" id="add-to-cart-form">
+    <form method="post" action="<?php echo site_url('Cart/add/' . $product['id']); ?>"
+        class="flex flex-col gap-6 items-start justify-center w-full lg:gap-8" id="add-to-cart-form">
         <div class="flex flex-col gap-2 w-full items-start justify-center lg:gap-4">
             <?php if ($isNewRelease) { ?>
-                <span class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New Release</span>
+                <span
+                    class="bg-royal-blue rounded-lg font-rubik font-semibold text-xs text-white py-2 px-4 lg:rounded-xl lg:py-3">New
+                    Release</span>
             <?php } ?>
             <h3 class="font-rubik font-semibold text-xl text-dark-charcoal uppercase lg:text-[32px]">
                 <?= $product['name']; ?>
@@ -34,11 +37,13 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Size</h4>
             <div class="flex flex-wrap gap-2 items-center justify-start lg:gap-1 w-full">
                 <!-- Size Select -->
-                <select id="size-select" name="size" class="max-w-[75px] rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 w-full border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none">
+                <select id="size-select" name="size"
+                    class="max-w-[75px] rounded-lg bg-white text-dark-charcoal font-rubik font-medium text-sm py-[15.5px] px-4 w-full border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none">
                     <option value="" class="transition-all duration-300 hover:bg-royal-blue">Size</option>
                     <?php foreach ($product_sizes as $product_size) { ?>
                         <?php if (!empty($size_ada)) { ?>
-                            <option value="<?php echo $product_size['id_sizes']; ?>" class="transition-all duration-300 hover:bg-royal-blue">
+                            <option value="<?php echo $product_size['id_sizes']; ?>"
+                                class="transition-all duration-300 hover:bg-royal-blue">
                                 <?php echo $product_size['size_name']; ?>
                             </option>
                         <?php } ?>
@@ -99,7 +104,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
                                     for ($i = 1; $i <= $comment['rating']; $i++) { ?>
                                         <img src="<?= base_url('public/icons/products/star.png'); ?>" alt="star"
                                             class="block size-4 lg:size-6" loading="lazy">
-                                <?php }
+                                    <?php }
                                 } ?>
                                 <p class="font-open-sans font-semibold text-sm text-dark-charcoal ml-1">
                                     <?= number_format($comment['rating'], 1); ?>
@@ -172,7 +177,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
     const cancelAddReview = document.getElementById('cancel-add-review');
     const addReview = document.getElementById('add-review');
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (event.target === buttonAddReview) {
             addReview.classList.remove('hidden');
         }
@@ -185,7 +190,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
 
 <!-- JavaScript for form validation -->
 <script>
-    document.getElementById('add-to-cart-form').addEventListener('submit', function(event) {
+    document.getElementById('add-to-cart-form').addEventListener('submit', function (event) {
         var sizeSelect = document.getElementById('size-select');
         if (sizeSelect.value === "") {
             // Menampilkan peringatan jika ukuran belum dipilih

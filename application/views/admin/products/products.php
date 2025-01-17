@@ -131,7 +131,8 @@
                                             </td>
                                             <td class="h-px w-72 whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm font-semibold text-gray-800"><?php echo $product['id'] ?></span>
+                                                    <span
+                                                        class="block text-sm font-semibold text-gray-800"><?php echo $product['id'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
@@ -146,12 +147,14 @@
                                             </td>
                                             <td class="h-px w-72 whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800"><?php echo $product['name'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $product['name'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="h-px w-72 whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800"> <?php echo $product['description'] ?> </span>
+                                                    <span class="block text-sm text-gray-800">
+                                                        <?php echo $product['description'] ?> </span>
                                                 </div>
                                             </td>
                                             <!-- <td class="size-px whitespace-nowrap">
@@ -169,33 +172,40 @@
                                         </td> -->
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800">$<?php echo $product['price'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800">$<?php echo $product['price'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['stock'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $product['stock'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['category_name'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $product['category_name'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="size-6 rounded-full bg-<?php echo $product['color_name']; ?> lg:size-8"></span>
-                                                    <span class="block text-sm text-gray-800"><?php echo $product['color_name'] ?></span>
+                                                    <span
+                                                        class="size-6 rounded-full bg-<?php echo $product['color_name']; ?> lg:size-8"></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800"><?php echo $product['color_name'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="block text-sm text-gray-800 capitalize"><?php echo $product['brand'] ?></span>
+                                                    <span
+                                                        class="block text-sm text-gray-800 capitalize"><?php echo $product['brand'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-3">
-                                                    <span class="text-sm text-gray-500"><?php echo $product['created_at'] ?></span>
+                                                    <span
+                                                        class="text-sm text-gray-500"><?php echo $product['created_at'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
@@ -205,13 +215,14 @@
                                                         Edit
                                                     </a>
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                        href="<?= base_url('Admin/delete_product/' . $product['id']); ?>" onclick="return confirm('Are you sure you want to delete this product?')">
+                                                        href="<?= base_url('Admin/delete_product/' . $product['id']); ?>"
+                                                        onclick="return confirm('Are you sure you want to delete this product?')">
                                                         Delete
                                                     </a>
                                                 </div>
                                             </td>
                                         <?php } ?>
-                                        </tr>
+                                    </tr>
                                 </tbody>
                             </table>
                             <!-- FOOTER -->
@@ -219,7 +230,9 @@
                                 class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                                 <div>
                                     <p class="text-sm text-gray-600">
-                                        <span class="font-semibold text-gray-800"><?php echo $count_all_products ?></span> results
+                                        <span
+                                            class="font-semibold text-gray-800"><?php echo $count_all_products ?></span>
+                                        results
                                     </p>
                                 </div>
                             </div>
@@ -232,8 +245,7 @@
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
 
-<!-- ======= SWEETALERT ADD PRODUCT START ======= -->
-
+<!-- ======= SWEETALERT START ======= -->
 <?php if ($this->session->flashdata('success')): ?>
     <script>
         Swal.fire({
@@ -255,4 +267,4 @@
         });
     </script>
 <?php endif; ?>
-<!-- ======= SWEETALERT ADD PRODUCT END ======= -->
+<!-- ======= SWEETALERT END ======= -->

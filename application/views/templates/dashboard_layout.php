@@ -17,8 +17,7 @@
                             class="size-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             <img class="shrink-0 size-[38px] rounded-full"
-                                src="<?= base_url('public/uploads/users/') . $admin['profile_picture'] ?>"
-                                alt="Avatar">
+                                src="<?= base_url('public/uploads/users/') . $admin['profile_picture'] ?>" alt="Avatar">
                         </button>
                         <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
                             role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-account">
@@ -105,7 +104,7 @@
                 <nav class="hs-accordion-group p-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
                     <ul class="flex flex-col space-y-1">
                         <li>
-                            <a class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+                            <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
                                 href="<?= base_url('admin/dashboard'); ?>">
                                 <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -172,4 +171,3 @@
     </script>
 <?php endif; ?>
 <!-- ======= SIDEBAR SECTION END ======= -->
-
