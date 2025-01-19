@@ -6,9 +6,9 @@ class Checkout extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Admin_model');
         $this->load->model('Cart_model');
         $this->load->model('Checkout_model');
-
     }
     public function index()
     {
@@ -23,7 +23,7 @@ class Checkout extends CI_Controller
         } else {
             $delivery = 6.99;
         }
-        
+
         $data['delivery'] = $delivery;
         $ppn = 0.12;
         $data['ppn'] = ($data['total_item_price'] + $delivery) * $ppn;
@@ -38,7 +38,8 @@ class Checkout extends CI_Controller
         $this->load->view('templates/footer', $query);
     }
 
-    public function checkout_action(){
+    public function checkout_action()
+    {
         $id = $this->session->userdata('id');
         $fullname = $this->input->post('fullname');
         $username = $this->input->post('username');
@@ -85,6 +86,23 @@ class Checkout extends CI_Controller
 
         $this->Checkout_model->update_user($data, $id);
 
-        redirect('checkout');
+        $get_data_product = $this->Cart_model->get_cart_by_user_id($id);
+
+        if (!empty($get_data_product)) {
+            $order_number = $this->db->query('SELECT generate_order_number() AS order_number')->row()->order_number;
+
+            foreach ($get_data_product as $product) {
+                $data = array(
+                    'user_id' => $id,
+                    'product_size_id' => $product['product_size_id'],
+                    'status' => 'pending',
+                    'order_number' => $order_number
+                );
+                $this->Admin_model->add_order($data);
+            }
+            $this->session->set_flashdata('order_number', $order_number);
+        }
+        
+        redirect('payment');
     }
 }
