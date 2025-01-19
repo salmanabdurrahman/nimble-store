@@ -74,4 +74,9 @@ class Cart_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('cart');
     }
+
+    public function empty_cart($user_id){
+        $this->db->where('user_id', $user_id);
+        $this->db->delete('cart');
+    }
 }

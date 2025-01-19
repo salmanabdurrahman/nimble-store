@@ -16,6 +16,8 @@ class User extends CI_Controller
         $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | User Dashboard';
         $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
+        $data['orders'] = $this->Admin_model->get_order_by_user_id($id);
+        $data['results'] = $this->Admin_model->order_result_by_user_id($id);
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
         $this->load->view('user/dashboard', $data);
@@ -166,5 +168,13 @@ class User extends CI_Controller
             $this->session->set_flashdata('error', 'Failed to delete your comment. Please try again.');
             redirect("user/comments");
         }
+    }
+
+    public function order_cancel($id)
+    {
+        $status = 'cancelled';
+        $this->db->query("CALL update_order_status($id, '$status');");
+        $this->session->set_flashdata('success', 'Order Cancelled.');
+        redirect("user/dashboard");
     }
 }

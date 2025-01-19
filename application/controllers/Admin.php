@@ -17,6 +17,8 @@ class Admin extends CI_Controller
         $id = $this->session->userdata('id');
         $data['header_title'] = 'Nimble | Admin Dashboard';
         $data['admin'] = $this->Admin_model->get_users_by_id($id)->row_array();
+        $data['orders'] = $this->Admin_model->get_orders();
+        $data['results'] = $this->Admin_model->count_orders();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_layout');
         $this->load->view('admin/dashboard');
@@ -457,6 +459,20 @@ class Admin extends CI_Controller
                 $this->session->set_flashdata('error', 'Failed to delete the comment. Please try again.');
                 redirect("Admin/comments");
             }
+        }
+    }
+
+    public function order($id, $status){
+        if ($status == 'accept'){
+            $status = 'completed';
+            $this->db->query("CALL update_order_status($id, '$status');");
+            $this->session->set_flashdata('success', 'Order Accepted.');
+            redirect("Admin/dashboard");
+        } elseif ($status == 'cancel'){
+            $status = 'cancelled';
+            $this->db->query("CALL update_order_status($id, '$status');");
+            $this->session->set_flashdata('success', 'Order Cancelled.');
+            redirect("admin/dashboard");
         }
     }
 }
