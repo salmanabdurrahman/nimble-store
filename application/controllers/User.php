@@ -105,7 +105,7 @@ class User extends CI_Controller
         $data['user'] = $this->Admin_model->get_users_by_id($id)->row_array();
         $this->load->view('templates/admin_header', $data);
         $this->load->view('templates/dashboard_user_layout');
-        $this->load->view('User/comments/comments', $data);
+        $this->load->view('user/comments/comments', $data);
         $this->load->view('templates/admin_footer');
     }
 

@@ -462,13 +462,14 @@ class Admin extends CI_Controller
         }
     }
 
-    public function order($id, $status){
-        if ($status == 'accept'){
+    public function order($id, $status)
+    {
+        if ($status == 'accept') {
             $status = 'completed';
             $this->db->query("CALL update_order_status($id, '$status');");
             $this->session->set_flashdata('success', 'Order Accepted.');
             redirect("Admin/dashboard");
-        } elseif ($status == 'cancel'){
+        } elseif ($status == 'cancel') {
             $status = 'cancelled';
             $this->db->query("CALL update_order_status($id, '$status');");
             $this->session->set_flashdata('success', 'Order Cancelled.');

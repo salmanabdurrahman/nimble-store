@@ -53,7 +53,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="product_name" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="product_name" placeholder="ADIDAS 4DFWD X PARLEY" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- USERNAME -->
@@ -66,7 +66,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="username" placeholder="salmanabd">
+                                    name="username" placeholder="salmanabd" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- COMMENT -->
@@ -94,7 +94,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="rating" placeholder="1 - 5">
+                                    name="rating" placeholder="1 - 5" autocomplete="off" required>
                             </div>
                         </div>
                     </div>
@@ -117,4 +117,3 @@
     </div>
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
-

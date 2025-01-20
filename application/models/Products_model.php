@@ -100,8 +100,8 @@ class Products_model extends CI_Model
         $this->db->from('product_size');
         $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
         $this->db->join('products', 'product_size.id_products = products.id', 'left');
-        $this->db->where('product_size.id_sizes', $id_sizes); 
-        $this->db->order_by('created_at', 'DESC'); 
+        $this->db->where('product_size.id_sizes', $id_sizes);
+        $this->db->order_by('created_at', 'DESC');
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -127,7 +127,7 @@ class Products_model extends CI_Model
         $this->db->select('product_size.*, sizes.name AS size_name');
         $this->db->from('product_size');
         $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
-        $this->db->where('id_products', $product_name); 
+        $this->db->where('id_products', $product_name);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -137,7 +137,7 @@ class Products_model extends CI_Model
         $this->db->select('product_size.*, sizes.name AS size_name');
         $this->db->from('product_size');
         $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
-        $this->db->where('id_products', $id_product); 
+        $this->db->where('id_products', $id_product);
         $this->db->order_by('sizes.name', 'ASC');
         $query = $this->db->get();
         return $query->result_array();

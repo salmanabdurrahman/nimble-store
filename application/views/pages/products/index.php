@@ -39,7 +39,8 @@
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">Size</h4>
             <div class="flex items-center justify-start gap-4 flex-wrap">
                 <?php foreach ($sizes as $size) { ?>
-                    <button type="button" class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
+                    <button type="button"
+                        class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
                         onclick="window.location.href = '<?= base_url('products/filter/size/' . $size['id']); ?>'"><?= $size['name']; ?></button>
                 <?php } ?>
             </div>
@@ -63,7 +64,7 @@
                 <?php foreach ($categories as $category) { ?>
                     <div class="flex items-center justify-start gap-4 w-full">
                         <input type="checkbox" name="category" id="category<?= $category['id']; ?>" class="text-xl"
-                        onclick="window.location.href = '<?= base_url('products/filter/category/' . $category['id']); ?>'"></button>
+                            onclick="window.location.href = '<?= base_url('products/filter/category/' . $category['id']); ?>'"></button>
                         <label for="category<?= $category['id']; ?>"
                             class="font-open-sans text-base font-semibold text-dark-charcoal"><?= $category['name']; ?></label>
                     </div>

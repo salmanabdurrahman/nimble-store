@@ -31,17 +31,18 @@
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Your Name</h4>
             <input type="text" name="fullname" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Full Name">
+                placeholder="Full Name" autocomplete="off" required>
             <input type="text" name="username" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Username">
+                placeholder="Username" autocomplete="off" required>
         </div>
         <div class="flex flex-col gap-4 items-center justify-center w-full lg:gap-5">
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Gender</h4>
             <div class="flex gap-[30px] items-center justify-center w-full">
                 <div class="flex gap-2 items-center justify-start">
                     <input type="radio" name="gender" value="male" required class="accent-royal-blue" id="male">
-                    <label for="male" class="font-open-sans font-semibold text-base text-dark-charcoal">Male</label>
+                    <label for="male" class="font-open-sans font-semibold text-base text-dark-charcoal"
+                        autocomplete="off" required>Male</label>
                 </div>
                 <div class="flex gap-2 items-center justify-start">
                     <input type="radio" name="gender" value="female" required class="accent-royal-blue" id="female">
@@ -57,16 +58,16 @@
             <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Login Details</h4>
             <input type="tel" name="phone" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Phone Number">
+                placeholder="Phone Number" autocomplete="off" required>
             <input type="email" name="email" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Email">
+                placeholder="Email" autocomplete="off" required>
             <input type="password" name="password" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Password">
+                placeholder="Password" autocomplete="off" required>
             <input type="password" name="confirm_password" required
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                placeholder="Confirm Password">
+                placeholder="Confirm Password" autocomplete="off" required>
         </div>
         <div class="flex justify-start items-center w-full gap-1">
             <p class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal">Do

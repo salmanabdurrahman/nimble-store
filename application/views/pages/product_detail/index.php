@@ -150,7 +150,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
             <!-- Input untuk rating -->
             <input type="number" name="rating" id="rating" min="1" max="5"
                 class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text-[#79767C]"
-                placeholder="Rating (1-5)">
+                placeholder="Rating (1-5)" autocomplete="off" required>
         </div>
 
         <!-- Tombol Kirim -->

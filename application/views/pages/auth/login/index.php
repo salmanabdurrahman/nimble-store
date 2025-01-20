@@ -32,10 +32,10 @@
                 <h4 class="font-rubik font-semibold text-xl text-dark-charcoal lg:text-2xl">Username</h4>
                 <input type="text" name="username"
                     class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                    placeholder="Username">
+                    placeholder="Username" autocomplete="off" required>
                 <input type="password" name="password"
                     class="rounded-lg border border-solid border-dark-charcoal focus:ring-0 focus:outline-none w-full py-[14.5px] px-4 font-rubik font-normal text-dark-charcoal text-base placeholder:text=[#79767C]"
-                    placeholder="Password">
+                    placeholder="Password" autocomplete="off" required>
             </div>
             <div class="flex justify-start items-center w-full gap-1">
                 <p class="font-open-sans font-semibold text-sm lg:text-base text-dark-charcoal">Don't have an account yet?

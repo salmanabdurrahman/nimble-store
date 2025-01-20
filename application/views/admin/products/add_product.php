@@ -13,7 +13,8 @@
                         Manage your product data, description, price and more.
                     </p>
                 </div>
-                <form action="<?php echo site_url('Admin/add_product_action') ?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo site_url('Admin/add_product_action') ?>" method="post"
+                    enctype="multipart/form-data">
                     <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
                         <div class="sm:col-span-3">
                             <label class="inline-block text-sm text-gray-800 mt-2.5">
@@ -52,7 +53,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-picture" type="file"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="picture" placeholder="Upload photo">
+                                    name="picture" placeholder="Upload photo" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- NAME -->
@@ -65,7 +66,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- DESCRIPTION -->
@@ -96,7 +97,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="price" placeholder="125">
+                                    name="price" placeholder="125" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- STOCK -->
@@ -108,7 +109,7 @@
                         <div class="sm:col-span-9">
                             <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="stock" placeholder="10">
+                                name="stock" placeholder="10" autocomplete="off" required>
                         </div>
                         <!-- CATEGORY -->
                         <div class="sm:col-span-3">
@@ -120,7 +121,7 @@
                             <select id="af-account-category" name="category"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <option value="" disabled selected>Select Category</option>
-                                <?php foreach ($categories as $category) : ?>
+                                <?php foreach ($categories as $category): ?>
                                     <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
                                 <?php endforeach ?>
                             </select>
@@ -135,7 +136,7 @@
                             <select id="af-account-color" name="color"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <option value="" disabled selected>Select Color</option>
-                                <?php foreach ($colors as $color) : ?>
+                                <?php foreach ($colors as $color): ?>
                                     <option value="<?php echo $color['id']; ?>"
                                         style="background-color: <?php echo $color['name']; ?>; color: white;">
                                         <?php echo $color['name']; ?>
@@ -152,7 +153,7 @@
                         <div class="sm:col-span-9">
                             <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="brand" placeholder="Adidas">
+                                name="brand" placeholder="Adidas" autocomplete="off" required>
                         </div>
                     </div>
                     <!-- BUTTON CANCEL AND SAVE -->
