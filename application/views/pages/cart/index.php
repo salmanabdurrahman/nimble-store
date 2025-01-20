@@ -26,8 +26,7 @@
                                 <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">
                                     <?php echo $cart['product_description'] ?>
                                 </p>
-                                <span class="size-6 rounded-full bg-<?= $cart['product_color_name']; ?> lg:size-8"></span>
-                                <!-- <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-xl">#</p> -->
+                                <span class="size-6 rounded-full lg:size-8" style="background-color: <?php echo $cart['product_color_name']; ?>"></span>
                             </div>
                             <div class="flex gap-4 items-center justify-start w-full">
                                 <p class="font-open-sans font-semibold text-base text-dark-charcoal/80 lg:text-xl">Size
@@ -100,7 +99,7 @@
                             <?php echo $item['name'] ?></h3>
                         <button type="button"
                             class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
-                            onclick="window.location.href = '<?php echo base_url('product_detail/' . $item['id']); ?>'">View
+                            onclick="window.location.href = '<?php echo base_url('products/detail/' . $item['id']); ?>'">View
                             Product - <span class="text-golden-orange inline-block">$<?php echo $item['price'] ?></span></button>
                     </div>
                 <?php } ?>
