@@ -39,9 +39,8 @@
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal uppercase">Size</h4>
             <div class="flex items-center justify-start gap-4 flex-wrap">
                 <?php foreach ($sizes as $size) { ?>
-                    <button type="button"
-                        class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
-                        onclick="window.location.href = '<?= base_url('products'); ?>?id_size=<?= $size['id']; ?>'"><?= $size['name']; ?></button>
+                    <button type="button" class="rounded-lg bg-off-white text-dark-charcoal font-rubik font-medium text-sm transition-all duration-300 hover:bg-dark-charcoal hover:text-off-white p-[15.5px]"
+                        onclick="window.location.href = '<?= base_url('products/filter/size/' . $size['id']); ?>'"><?= $size['name']; ?></button>
                 <?php } ?>
             </div>
         </div>
@@ -53,7 +52,7 @@
             <div class="flex items-center justify-start gap-[18.75px] flex-wrap">
                 <?php foreach ($colors as $color) { ?>
                     <button type="button" class="w-12 h-12 block rounded-lg bg-<?= $color['name'] ?>"
-                        onclick="window.location.href = '<?= base_url('products'); ?>?id_color=<?= $color['id']; ?>'"></button>
+                        onclick="window.location.href = '<?= base_url('products/filter/color/' . $color['id']); ?>'"></button>
                 <?php } ?>
             </div>
         </div>
@@ -64,7 +63,7 @@
                 <?php foreach ($categories as $category) { ?>
                     <div class="flex items-center justify-start gap-4 w-full">
                         <input type="checkbox" name="category" id="category<?= $category['id']; ?>" class="text-xl"
-                            onclick="window.location.href = '<?= base_url('products'); ?>?id_category=<?= $category['id']; ?>'">
+                        onclick="window.location.href = '<?= base_url('products/filter/category/' . $category['id']); ?>'"></button>
                         <label for="category<?= $category['id']; ?>"
                             class="font-open-sans text-base font-semibold text-dark-charcoal"><?= $category['name']; ?></label>
                     </div>
@@ -87,8 +86,8 @@
                 </h3>
                 <button type="button"
                     class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['product_id']; ?>'">
-                    View Product - <span class="text-golden-orange inline-block">$<?php echo $item['product_price']; ?>
+                    onclick="window.location.href = '<?= base_url('product_detail/' . $item['product_id']); ?>'">
+                    View Product - <span class="text-golden-orange inline-block">$<?= $item['product_price']; ?>
                     </span>
                 </button>
             </div>

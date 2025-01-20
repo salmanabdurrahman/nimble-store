@@ -36,6 +36,7 @@ class Size extends CI_Controller
     {
         $this->load->model('Size_model');
         $this->Size_model->delete_size($product_size);
+        $this->session->set_flashdata('success', 'Delete product size successfully.');
         redirect($_SERVER['HTTP_REFERER']);
     }
 }

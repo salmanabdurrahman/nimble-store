@@ -322,7 +322,7 @@ class Admin extends CI_Controller
 
         if ($this->db->affected_rows()) {
             $this->session->set_flashdata('success', 'Update Product successfully.');
-            redirect('Admin/update_product/' . $id);
+            redirect('Admin/products');
         } else {
             $this->session->set_flashdata('error', 'Failed to update product. Please try again.');
             redirect('Admin/update_product/' . $id);
