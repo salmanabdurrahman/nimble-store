@@ -86,7 +86,7 @@
                 </h3>
                 <button type="button"
                     class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?php echo base_url('product_detail/' . $item['id']); ?>'">View
+                    onclick="window.location.href = '<?php echo base_url('products/detail/' . $item['id']); ?>'">View
                     Product - <span class="text-golden-orange inline-block">$<?php echo $item['price']; ?></span></button>
             </div>
         <?php } ?>
@@ -123,7 +123,7 @@
                 </h5>
                 <button type="button"
                     class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px] transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?= base_url('products'); ?>?id_category=3'">
+                    onclick="window.location.href = '<?= base_url('products/filter/category/3'); ?>'">
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>
@@ -136,7 +136,7 @@
                 </h5>
                 <button type="button"
                     class="absolute bottom-4 right-4 bg-dark-charcoal size-8 rounded-[4px] p-2 lg:size-12 lg:rounded-lg  lg:right-12 lg:bottom-[30px] flex items-center justify-center lg:text-[32px] transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?= base_url('products'); ?>?id_category=4'">
+                    onclick="window.location.href = '<?= base_url('products/filter/category/4'); ?>'">
                     <img src="<?= base_url('public/icons/home/arrow-up.png'); ?>" class="block w-5" alt="arrow">
                 </button>
             </div>

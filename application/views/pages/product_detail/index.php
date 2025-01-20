@@ -31,7 +31,7 @@ $isNewRelease = $productTimestamp >= $sevenDaysAgo;
         </div>
         <div class="flex flex-col gap-2 items-start justify-center w-full lg:gap-4">
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Color</h4>
-            <span class="size-6 rounded-full bg-<?= $product['color_name']; ?> lg:size-8"></span>
+            <span class="size-6 rounded-full lg:size-8" style="background-color: <?= $product['color_name']; ?>"></span>
         </div>
         <div class="flex flex-col gap-2 items-start justify-center w-full lg:gap-4">
             <h4 class="font-rubik font-semibold text-base text-dark-charcoal">Size</h4>

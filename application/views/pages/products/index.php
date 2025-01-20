@@ -51,7 +51,7 @@
             </h4>
             <div class="flex items-center justify-start gap-[18.75px] flex-wrap">
                 <?php foreach ($colors as $color) { ?>
-                    <button type="button" class="w-12 h-12 block rounded-lg bg-<?= $color['name'] ?>"
+                    <button type="button" class="w-12 h-12 block rounded-lg" style="background-color: <?= $color['name']; ?>;"
                         onclick="window.location.href = '<?= base_url('products/filter/color/' . $color['id']); ?>'"></button>
                 <?php } ?>
             </div>
@@ -86,7 +86,7 @@
                 </h3>
                 <button type="button"
                     class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
-                    onclick="window.location.href = '<?= base_url('product_detail/' . $item['product_id']); ?>'">
+                    onclick="window.location.href = '<?= base_url('products/detail/' . $item['product_id']); ?>'">
                     View Product - <span class="text-golden-orange inline-block">$<?= $item['product_price']; ?>
                     </span>
                 </button>
