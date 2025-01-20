@@ -174,11 +174,11 @@
                                                             Cancel
                                                         </a>
                                                     <?php elseif ($order['status'] == 'completed') : ?>
-                                                        <a class="inline-flex items-center gap-x-1 text-sm text-gray-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium">
+                                                        <a class="inline-flex items-center gap-x-1 text-sm text-gray-600 decoration-2 focus:outline-none focus:underline font-medium">
                                                             Completed
                                                         </a>
                                                     <?php elseif ($order['status'] == 'cancelled') : ?>
-                                                        <a class="inline-flex items-center gap-x-1 text-sm text-gray-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium">
+                                                        <a class="inline-flex items-center gap-x-1 text-sm text-gray-600 decoration-2 focus:outline-none focus:underline font-medium">
                                                             Cancelled
                                                         </a>
                                                     <?php endif; ?>

@@ -100,7 +100,7 @@
                             <?php echo $item['name'] ?></h3>
                         <button type="button"
                             class="bg-dark-charcoal rounded-lg w-full font-rubik font-medium text-xs text-white tracking-wider py-[13px] lg:text-sm lg:py-[15.5px] uppercase transition-all duration-300 hover:scale-105"
-                            onclick="window.location.href = '<?php echo base_url('product_detail'); ?>?id=<?php echo $item['id']; ?>'">View
+                            onclick="window.location.href = '<?php echo base_url('product_detail/' . $item['id']); ?>'">View
                             Product - <span class="text-golden-orange inline-block">$<?php echo $item['price'] ?></span></button>
                     </div>
                 <?php } ?>

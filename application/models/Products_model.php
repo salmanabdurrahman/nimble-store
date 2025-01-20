@@ -100,8 +100,8 @@ class Products_model extends CI_Model
         $this->db->from('product_size');
         $this->db->join('sizes', 'product_size.id_sizes = sizes.id', 'left');
         $this->db->join('products', 'product_size.id_products = products.id', 'left');
-        $this->db->where('product_size.id_sizes', $id_sizes); // Filter berdasarkan ID ukuran
-        $this->db->order_by('created_at', 'DESC'); // Urutkan berdasarkan created_at secara menurun
+        $this->db->where('product_size.id_sizes', $id_sizes); 
+        $this->db->order_by('created_at', 'DESC'); 
         $query = $this->db->get();
         return $query->result_array();
     }
