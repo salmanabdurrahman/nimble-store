@@ -23,9 +23,7 @@
                                             <?php echo $order_detail['product_name']; ?>
                                         </h4>
                                         <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-base"><?php echo $order_detail['product_description']; ?></p>
-                                        <p class="font-open-sans font-semibold text-sm text-dark-charcoal/80 lg:text-base">
-                                            <?php echo $order_detail['product_color_name']; ?>
-                                        </p>
+                                        <span class="size-6 rounded-full lg:size-8" style="background-color: <?php echo $order_detail['product_color_name']; ?>"></span>
                                     </div>
                                     <div class="flex gap-4 items-center justify-start w-full">
                                         <p class="font-open-sans font-semibold text-base text-dark-charcoal/80">Size <?php echo $order_detail['product_size_name'] ?></p>
