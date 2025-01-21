@@ -68,7 +68,8 @@
             out new drops
         </h3>
         <button type="button"
-            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase transition-all duration-300 hover:scale-105">Shop
+            class="bg-royal-blue rounded-[8px] font-rubik font-medium text-sm text-white py-[11.5px] px-4 w-full max-w-[157px] lg:text-lg lg:py-4 lg:px-14 lg:max-w-[270px] uppercase transition-all duration-300 hover:scale-105"
+            onclick="location.href='<?= base_url('products'); ?>'">Shop
             new drops</button>
     </div>
     <div class="grid grid-cols-2 gap-y-6 gap-x-4 items-stretch justify-center w-full lg:gap-4 lg:grid-cols-4">

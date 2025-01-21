@@ -66,7 +66,7 @@
                                 <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="name" value="<?php echo $product['name']; ?>" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="name" value="<?php echo $product['name']; ?>" placeholder="ADIDAS 4DFWD X PARLEY" autocomplete="off">
                             </div>
                         </div>
                         <!-- DESCRIPTION -->
@@ -97,7 +97,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="price" value="<?php echo $product['price']; ?>" placeholder="125">
+                                    name="price" value="<?php echo $product['price']; ?>" placeholder="125" autocomplete="off">
                             </div>
                         </div>
                         <!-- STOCK -->
@@ -109,7 +109,7 @@
                         <div class="sm:col-span-9">
                             <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="stock" value="<?php echo $product['stock']; ?>" placeholder="10">
+                                name="stock" value="<?php echo $product['stock']; ?>" placeholder="10" autocomplete="off">
                         </div>
                         <!-- CATEGORY -->
                         <div class="sm:col-span-3">
@@ -156,7 +156,7 @@
                         <div class="sm:col-span-9">
                             <input id="af-account-email" type="text"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="brand" value="<?php echo $product['brand']; ?>" placeholder="Adidas">
+                                name="brand" value="<?php echo $product['brand']; ?>" placeholder="Adidas" autocomplete="off">
                         </div>
                     </div>
                     <!-- BUTTON CANCEL AND SAVE -->

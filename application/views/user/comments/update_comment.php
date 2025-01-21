@@ -100,7 +100,8 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="rating" placeholder="1 - 5" value="<?php echo $comment['rating'] ?>">
+                                    name="rating" placeholder="1 - 5" value="<?php echo $comment['rating'] ?>"
+                                    autocomplete="off">
                             </div>
                         </div>
                     </div>

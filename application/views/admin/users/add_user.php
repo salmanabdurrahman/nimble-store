@@ -171,7 +171,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="province" placeholder="Jawa Barat">
+                                    name="province" placeholder="Jawa Barat" autocomplete="off">
                             </div>
                         </div>
                         <!-- CITY -->
@@ -189,7 +189,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="city" placeholder="Karawang">
+                                    name="city" placeholder="Karawang" autocomplete="off">
                             </div>
                         </div>
                         <!-- DISTRICT -->
@@ -207,7 +207,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="district" placeholder="Cikampek">
+                                    name="district" placeholder="Cikampek" autocomplete="off">
                             </div>
                         </div>
                         <!-- SUBDISTRICT -->
@@ -225,7 +225,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="subdistrict" placeholder="Cibuaya">
+                                    name="subdistrict" placeholder="Cibuaya" autocomplete="off">
                             </div>
                         </div>
                         <!-- STREET -->
@@ -243,7 +243,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="street" placeholder="Jl. Raya Cikampek">
+                                    name="street" placeholder="Jl. Raya Cikampek" autocomplete="off">
                             </div>
                         </div>
                         <!-- DESCRIPTION -->
@@ -280,7 +280,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="zip_code" placeholder="50123">
+                                    name="zip_code" placeholder="50123" autocomplete="off">
                             </div>
                         </div>
                     </div>

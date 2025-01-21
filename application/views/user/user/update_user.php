@@ -68,7 +68,7 @@
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="fullname" placeholder="Salman Abdurrahman"
-                                    value="<?php echo $user['full_name']; ?>">
+                                    value="<?php echo $user['full_name']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- USERNAME -->
@@ -81,7 +81,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="username" placeholder="salmanabd" value="<?php echo $user['username']; ?>">
+                                    name="username" placeholder="salmanabd" value="<?php echo $user['username']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- EMAIL -->
@@ -93,7 +93,7 @@
                         <div class="sm:col-span-9">
                             <input id="af-account-email" type="email"
                                 class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                name="email" placeholder="salman@gmail.com" value="<?php echo $user['email']; ?>">
+                                name="email" placeholder="salman@gmail.com" value="<?php echo $user['email']; ?>" autocomplete="off">
                         </div>
                         <!-- PASSWORD -->
                         <div class="sm:col-span-3">
@@ -106,11 +106,11 @@
                                 <input id="af-account-password" type="password"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="password" placeholder="Enter current password"
-                                    value="<?php echo $user['password']; ?>">
+                                    value="<?php echo $user['password']; ?>" autocomplete="off">
                                 <input type="password"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="new_password" placeholder="Enter new password"
-                                    value="<?php echo $user['password']; ?>">
+                                    value="<?php echo $user['password']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- PHONE -->
@@ -125,7 +125,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="phone" placeholder="+x(xxx)xxx-xx-xx" value="<?php echo $user['phone']; ?>">
+                                    name="phone" placeholder="+x(xxx)xxx-xx-xx" value="<?php echo $user['phone']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- GENDER -->
@@ -178,7 +178,7 @@
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="province" placeholder="Jawa Barat" 
-                                    value="<?php echo $user['address_province']; ?>">
+                                    value="<?php echo $user['address_province']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- CITY -->
@@ -196,7 +196,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="city" placeholder="Karawang" value="<?php echo $user['address_city']; ?>">
+                                    name="city" placeholder="Karawang" value="<?php echo $user['address_city']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- DISTRICT -->
@@ -215,7 +215,7 @@
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="district" placeholder="Cikampek"
-                                    value="<?php echo $user['address_district']; ?>">
+                                    value="<?php echo $user['address_district']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- SUBDISTRICT -->
@@ -234,7 +234,7 @@
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="subdistrict" placeholder="Cibuaya"
-                                    value="<?php echo $user['address_subdistrict']; ?>">
+                                    value="<?php echo $user['address_subdistrict']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- STREET -->
@@ -253,7 +253,7 @@
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     name="street" placeholder="Jl. Raya Cikampek"
-                                    value="<?php echo $user['street_name']; ?>">
+                                    value="<?php echo $user['street_name']; ?>" autocomplete="off">
                             </div>
                         </div>
                         <!-- DESCRIPTION -->
@@ -290,7 +290,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-phone" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="zip_code" placeholder="50123" value="<?php echo $user['zip_code']; ?>">
+                                    name="zip_code" placeholder="50123" value="<?php echo $user['zip_code']; ?>" autocomplete="off">
                             </div>
                         </div>
                     </div>

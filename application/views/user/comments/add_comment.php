@@ -52,7 +52,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY">
+                                    name="name" placeholder="ADIDAS 4DFWD X PARLEY" autocomplete="off">
                             </div>
                         </div>
                         <!-- USERNAME -->
@@ -65,7 +65,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="username" placeholder="salmanabd">
+                                    name="username" placeholder="salmanabd" autocomplete="off">
                             </div>
                         </div>
                         <!-- COMMENT -->
@@ -93,7 +93,7 @@
                             <div class="sm:flex">
                                 <input id="af-account-full-name" type="text"
                                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                    name="rating" placeholder="1 - 5">
+                                    name="rating" placeholder="1 - 5" autocomplete="off">
                             </div>
                         </div>
                     </div>
