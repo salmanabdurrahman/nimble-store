@@ -300,7 +300,7 @@
                                                         Edit
                                                     </a>
                                                     <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-                                                        onclick="return confirm('Apakah anda yakin ingin menghapus product ini?')"
+                                                        onclick="return confirm('Are you sure you want to delete this user?')"
                                                         href="<?= base_url('Admin/delete_user/' . $user['id']) ?>">
                                                         Delete
                                                     </a>

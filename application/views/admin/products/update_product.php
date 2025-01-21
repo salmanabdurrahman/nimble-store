@@ -364,6 +364,7 @@
 
     addSizeButton.addEventListener('click', function() {
         addSizeSection.classList.remove('hidden');
+        window.scrollBy(0, 600);
     });
 
     addSizeCancelButton.addEventListener('click', function() {

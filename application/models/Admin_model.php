@@ -178,20 +178,23 @@ class Admin_model extends CI_Model
         return $query->result_array();
     }
 
-    public function get_last_order_today($date){
+    public function get_last_order_today($date)
+    {
         $this->db->select('order_number');
         $this->db->from('checkout');
-        $this->db->like('order_number', $date, 'after'); 
+        $this->db->like('order_number', $date, 'after');
         $this->db->order_by('order_number', 'DESC');
         $this->db->limit(1);
         $query = $this->db->get();
-        return $query->row_array(); 
+        return $query->row_array();
     }
-    public function add_order($data){
+    public function add_order($data)
+    {
         $this->db->insert('checkout', $data);
     }
 
-    public function update_order_status($id, $status){
+    public function update_order_status($id, $status)
+    {
         $this->db->where('id', $id);
         $this->db->update('checkout', array('status' => $status));
     }
@@ -215,7 +218,8 @@ class Admin_model extends CI_Model
         return $query->result_array();
     }
 
-    public function order_result_by_user_id($user_id){
+    public function order_result_by_user_id($user_id)
+    {
         $this->db->where('user_id', $user_id);
         return $this->db->count_all_results('checkout');
     }

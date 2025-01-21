@@ -99,8 +99,10 @@ class Admin extends CI_Controller
         $this->Admin_model->add_user($data);
 
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Add user successfully.');
             redirect('Admin/users');
         } else {
+            $this->session->set_flashdata('error', 'Failed to add user. Please try again.');
             redirect('Admin/add_user');
         }
     }
@@ -169,8 +171,10 @@ class Admin extends CI_Controller
         $this->Admin_model->update_user($data, $id);
 
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Update user successfully.');
             redirect('Admin/users');
         } else {
+            $this->session->set_flashdata('error', 'Failed to update user. Please try again.');
             redirect('Admin/update_user' . $id);
         }
     }
@@ -179,6 +183,7 @@ class Admin extends CI_Controller
     {
         $this->Admin_model->delete_user($id_user);
         if ($this->db->affected_rows()) {
+            $this->session->set_flashdata('success', 'Delete user successfully.');
             redirect('Admin/users');
         } else {
             echo "Data gagal dihapus";

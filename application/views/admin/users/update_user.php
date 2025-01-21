@@ -312,3 +312,27 @@
     </div>
 </section>
 <!-- ======= CONTENT SECTION END ======= -->
+
+<!-- ======= SWEETALERT START ======= -->
+<?php if ($this->session->flashdata('success')): ?>
+    <script>
+        Swal.fire({
+            title: "Success!",
+            text: "<?= $this->session->flashdata('success'); ?>",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')): ?>
+    <script>
+        Swal.fire({
+            title: "Error!",
+            html: "<ul><?= $this->session->flashdata('error'); ?></ul>",
+            icon: "error",
+            confirmButtonText: "OK"
+        });
+    </script>
+<?php endif; ?>
+<!-- ======= SWEETALERT END ======= -->
