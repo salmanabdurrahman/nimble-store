@@ -70,6 +70,7 @@ Ikuti langkah-langkah berikut untuk mengunduh dan menjalankan Nimble Store di se
 
     ```bash
     npm install
+    composer install
     ```
 
 3. **Build CSS**
